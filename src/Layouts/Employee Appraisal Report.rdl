@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInformationRec_Picture">
+          <DataField>CompanyInformationRec_Picture</DataField>
+        </Field>
+        <Field Name="Company_Name">
+          <DataField>Company_Name</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_HREmployeeAppraisalHeader">
+          <DataField>GlobalDimension1Code_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HREmployeeAppraisalHeader">
+          <DataField>GlobalDimension2Code_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="SupervisorName_HREmployeeAppraisalHeader">
+          <DataField>SupervisorName_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="DateofAppointment_HREmployeeAppraisalHeader">
+          <DataField>DateofAppointment_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="DateAssignedCurrentPosition_HREmployeeAppraisalHeader">
+          <DataField>DateAssignedCurrentPosition_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="DateofLastAppraisal_HREmployeeAppraisalHeader">
+          <DataField>DateofLastAppraisal_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="EmploymentTerm_HREmployeeAppraisalHeader">
+          <DataField>EmploymentTerm_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HREmployeeAppraisalHeader">
+          <DataField>EmployeeNo_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="EmployeeName_HREmployeeAppraisalHeader">
+          <DataField>EmployeeName_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="Designation_HREmployeeAppraisalHeader">
+          <DataField>Designation_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="LastPerformanceRating_HREmployeeAppraisalHeader">
+          <DataField>LastPerformanceRating_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="AppraisalPeriod_HREmployeeAppraisalHeader">
+          <DataField>AppraisalPeriod_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="CommentsByHOD_HREmployeeAppraisalHeader">
+          <DataField>CommentsByHOD_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="JobGrade_HREmployeeAppraisalHeader">
+          <DataField>JobGrade_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="CommentsByHODHR_HREmployeeAppraisalHeader">
+          <DataField>CommentsByHODHR_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="No_HREmployeeAppraisalHeader">
+          <DataField>No_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="Status_HREmployeeAppraisalHeader">
+          <DataField>Status_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="FinalCommentsbyAppraiser_HREmployeeAppraisalHeader">
+          <DataField>FinalCommentsbyAppraiser_HREmployeeAppraisalHeader</DataField>
+        </Field>
+        <Field Name="Objective_Score">
+          <DataField>Objective_Score</DataField>
+        </Field>
+        <Field Name="Objective_ScoreFormat">
+          <DataField>Objective_ScoreFormat</DataField>
+        </Field>
+        <Field Name="TotalScore">
+          <DataField>TotalScore</DataField>
+        </Field>
+        <Field Name="TotalScoreFormat">
+          <DataField>TotalScoreFormat</DataField>
+        </Field>
+        <Field Name="Kpi_Total">
+          <DataField>Kpi_Total</DataField>
+        </Field>
+        <Field Name="Kpi_TotalFormat">
+          <DataField>Kpi_TotalFormat</DataField>
+        </Field>
+        <Field Name="PerformanceTarget_EmployeeQualification">
+          <DataField>PerformanceTarget_EmployeeQualification</DataField>
+        </Field>
+        <Field Name="Unit_EmployeeQualification">
+          <DataField>Unit_EmployeeQualification</DataField>
+        </Field>
+        <Field Name="MaximumScore_EmployeeQualification">
+          <DataField>MaximumScore_EmployeeQualification</DataField>
+        </Field>
+        <Field Name="MaximumScore_EmployeeQualificationFormat">
+          <DataField>MaximumScore_EmployeeQualificationFormat</DataField>
+        </Field>
+        <Field Name="Apprasee_EmployeeQualification">
+          <DataField>Apprasee_EmployeeQualification</DataField>
+        </Field>
+        <Field Name="Apprasee_EmployeeQualificationFormat">
+          <DataField>Apprasee_EmployeeQualificationFormat</DataField>
+        </Field>
+        <Field Name="Appraiser_EmployeeQualification">
+          <DataField>Appraiser_EmployeeQualification</DataField>
+        </Field>
+        <Field Name="Appraiser_EmployeeQualificationFormat">
+          <DataField>Appraiser_EmployeeQualificationFormat</DataField>
+        </Field>
+        <Field Name="ResponsibilityDuty_HRAppraisalRespDuties">
+          <DataField>ResponsibilityDuty_HRAppraisalRespDuties</DataField>
+        </Field>
+        <Field Name="NameofInstitution_HrAppraisalAcademicProfQua">
+          <DataField>NameofInstitution_HrAppraisalAcademicProfQua</DataField>
+        </Field>
+        <Field Name="QualificationAwarded_HrAppraisalAcademicProfQua">
+          <DataField>QualificationAwarded_HrAppraisalAcademicProfQua</DataField>
+        </Field>
+        <Field Name="PeriodOfStudy_HrAppraisalAcademicProfQua">
+          <DataField>PeriodOfStudy_HrAppraisalAcademicProfQua</DataField>
+        </Field>
+        <Field Name="QualificationCode_HRJobQualifications">
+          <DataField>QualificationCode_HRJobQualifications</DataField>
+        </Field>
+        <Field Name="Description_HRJobQualifications">
+          <DataField>Description_HRJobQualifications</DataField>
+        </Field>
+        <Field Name="Mandatory_HRJobQualifications">
+          <DataField>Mandatory_HRJobQualifications</DataField>
+        </Field>
+        <Field Name="Description_HRJobRequirements">
+          <DataField>Description_HRJobRequirements</DataField>
+        </Field>
+        <Field Name="NoofYears_HRJobRequirements">
+          <DataField>NoofYears_HRJobRequirements</DataField>
+        </Field>
+        <Field Name="Mandatory_HRJobRequirements">
+          <DataField>Mandatory_HRJobRequirements</DataField>
+        </Field>
+        <Field Name="ResponsibilityCode_HRJobResponsibilities">
+          <DataField>ResponsibilityCode_HRJobResponsibilities</DataField>
+        </Field>
+        <Field Name="Description_HRJobResponsibilities">
+          <DataField>Description_HRJobResponsibilities</DataField>
+        </Field>
+        <Field Name="Task_HRAppraisalSpecialTask">
+          <DataField>Task_HRAppraisalSpecialTask</DataField>
+        </Field>
+        <Field Name="ProblemChallenge_HRAppraisalProblemsChalleng">
+          <DataField>ProblemChallenge_HRAppraisalProblemsChalleng</DataField>
+        </Field>
+        <Field Name="PerformanceFactor_HRAppraisalPerformanceFacto">
+          <DataField>PerformanceFactor_HRAppraisalPerformanceFacto</DataField>
+        </Field>
+        <Field Name="CourseTraining_HRAppraisalCourseTraining">
+          <DataField>CourseTraining_HRAppraisalCourseTraining</DataField>
+        </Field>
+        <Field Name="TrainingRecommended_HRAppraisalTrainingRecommen">
+          <DataField>TrainingRecommended_HRAppraisalTrainingRecommen</DataField>
+        </Field>
+        <Field Name="Suggestion_HrAppraisalPerformaceSugge">
+          <DataField>Suggestion_HrAppraisalPerformaceSugge</DataField>
+        </Field>
+        <Field Name="TrainingNeedObjective_HRAppraisalTrainingNeedOb">
+          <DataField>TrainingNeedObjective_HRAppraisalTrainingNeedOb</DataField>
+        </Field>
+        <Field Name="IdentifiedPotential_HRAppraisalIdentifiedPotent">
+          <DataField>IdentifiedPotential_HRAppraisalIdentifiedPotent</DataField>
+        </Field>
+        <Field Name="Recommendation_HRAppraisalRecommendation">
+          <DataField>Recommendation_HRAppraisalRecommendation</DataField>
+        </Field>
+        <Field Name="Reason_HRAppraisalRecommendation">
+          <DataField>Reason_HRAppraisalRecommendation</DataField>
+        </Field>
+        <Field Name="AppraisalObjective_HRAppraisalObjectives">
+          <DataField>AppraisalObjective_HRAppraisalObjectives</DataField>
+        </Field>
+        <Field Name="Score_HRAppraisalObjectives">
+          <DataField>Score_HRAppraisalObjectives</DataField>
+        </Field>
+        <Field Name="Score_HRAppraisalObjectivesFormat">
+          <DataField>Score_HRAppraisalObjectivesFormat</DataField>
+        </Field>
+        <Field Name="SelfRating_HRAppraisalObjectives">
+          <DataField>SelfRating_HRAppraisalObjectives</DataField>
+        </Field>
+        <Field Name="SelfRating_HRAppraisalObjectivesFormat">
+          <DataField>SelfRating_HRAppraisalObjectivesFormat</DataField>
+        </Field>
+        <Field Name="Consensus_HRAppraisalObjectives">
+          <DataField>Consensus_HRAppraisalObjectives</DataField>
+        </Field>
+        <Field Name="Consensus_HRAppraisalObjectivesFormat">
+          <DataField>Consensus_HRAppraisalObjectivesFormat</DataField>
+        </Field>
+        <Field Name="Comments_HRAppraisalObjectives">
+          <DataField>Comments_HRAppraisalObjectives</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

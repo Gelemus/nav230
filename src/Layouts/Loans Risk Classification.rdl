@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LoanNo">
+          <DataField>LoanNo</DataField>
+        </Field>
+        <Field Name="OldLoanNo">
+          <DataField>OldLoanNo</DataField>
+        </Field>
+        <Field Name="ClientName">
+          <DataField>ClientName</DataField>
+        </Field>
+        <Field Name="Repayment_LoansRegister">
+          <DataField>Repayment_LoansRegister</DataField>
+        </Field>
+        <Field Name="PrincipleArrears">
+          <DataField>PrincipleArrears</DataField>
+        </Field>
+        <Field Name="PrincipleArrearsFormat">
+          <DataField>PrincipleArrearsFormat</DataField>
+        </Field>
+        <Field Name="InterestArrears">
+          <DataField>InterestArrears</DataField>
+        </Field>
+        <Field Name="InterestArrearsFormat">
+          <DataField>InterestArrearsFormat</DataField>
+        </Field>
+        <Field Name="PenaltyArrears">
+          <DataField>PenaltyArrears</DataField>
+        </Field>
+        <Field Name="PenaltyArrearsFormat">
+          <DataField>PenaltyArrearsFormat</DataField>
+        </Field>
+        <Field Name="LoanFeeArrears">
+          <DataField>LoanFeeArrears</DataField>
+        </Field>
+        <Field Name="LoanFeeArrearsFormat">
+          <DataField>LoanFeeArrearsFormat</DataField>
+        </Field>
+        <Field Name="TotalPastDue">
+          <DataField>TotalPastDue</DataField>
+        </Field>
+        <Field Name="TotalPastDueFormat">
+          <DataField>TotalPastDueFormat</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="Address2">
+          <DataField>Address2</DataField>
+        </Field>
+        <Field Name="PostCode">
+          <DataField>PostCode</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyFaxNo">
+          <DataField>CompanyFaxNo</DataField>
+        </Field>
+        <Field Name="E_mail">
+          <DataField>E_mail</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="ReportTitle">
+          <DataField>ReportTitle</DataField>
+        </Field>
+        <Field Name="RunDate">
+          <DataField>RunDate</DataField>
+        </Field>
+        <Field Name="NonDueBalance">
+          <DataField>NonDueBalance</DataField>
+        </Field>
+        <Field Name="NonDueBalanceFormat">
+          <DataField>NonDueBalanceFormat</DataField>
+        </Field>
+        <Field Name="CurrentPayOff">
+          <DataField>CurrentPayOff</DataField>
+        </Field>
+        <Field Name="CurrentPayOffFormat">
+          <DataField>CurrentPayOffFormat</DataField>
+        </Field>
+        <Field Name="NonDueInterest">
+          <DataField>NonDueInterest</DataField>
+        </Field>
+        <Field Name="NonDueInterestFormat">
+          <DataField>NonDueInterestFormat</DataField>
+        </Field>
+        <Field Name="GlobalDim1">
+          <DataField>GlobalDim1</DataField>
+        </Field>
+        <Field Name="RiskClassification">
+          <DataField>RiskClassification</DataField>
+        </Field>
+        <Field Name="T0to30Days">
+          <DataField>T0to30Days</DataField>
+        </Field>
+        <Field Name="T0to30DaysFormat">
+          <DataField>T0to30DaysFormat</DataField>
+        </Field>
+        <Field Name="T31to90Days">
+          <DataField>T31to90Days</DataField>
+        </Field>
+        <Field Name="T31to90DaysFormat">
+          <DataField>T31to90DaysFormat</DataField>
+        </Field>
+        <Field Name="T91to180Days">
+          <DataField>T91to180Days</DataField>
+        </Field>
+        <Field Name="T91to180DaysFormat">
+          <DataField>T91to180DaysFormat</DataField>
+        </Field>
+        <Field Name="T181to360Days">
+          <DataField>T181to360Days</DataField>
+        </Field>
+        <Field Name="T181to360DaysFormat">
+          <DataField>T181to360DaysFormat</DataField>
+        </Field>
+        <Field Name="Above360Days">
+          <DataField>Above360Days</DataField>
+        </Field>
+        <Field Name="Above360DaysFormat">
+          <DataField>Above360DaysFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

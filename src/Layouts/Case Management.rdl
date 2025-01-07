@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CaseNo">
+          <DataField>CaseNo</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="CaseTitle">
+          <DataField>CaseTitle</DataField>
+        </Field>
+        <Field Name="CaseType">
+          <DataField>CaseType</DataField>
+        </Field>
+        <Field Name="CourtType">
+          <DataField>CourtType</DataField>
+        </Field>
+        <Field Name="CourtName">
+          <DataField>CourtName</DataField>
+        </Field>
+        <Field Name="Courtcaseof">
+          <DataField>Courtcaseof</DataField>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+        </Field>
+        <Field Name="JudgeName">
+          <DataField>JudgeName</DataField>
+        </Field>
+        <Field Name="ClosingDate">
+          <DataField>ClosingDate</DataField>
+        </Field>
+        <Field Name="CompletionStatus">
+          <DataField>CompletionStatus</DataField>
+        </Field>
+        <Field Name="CompletionPercentage">
+          <DataField>CompletionPercentage</DataField>
+        </Field>
+        <Field Name="Description_CaseManagementHeader">
+          <DataField>Description_CaseManagementHeader</DataField>
+        </Field>
+        <Field Name="CaseDuration_CaseManagementHeader">
+          <DataField>CaseDuration_CaseManagementHeader</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+        <Field Name="Attendancedate">
+          <DataField>Attendancedate</DataField>
+        </Field>
+        <Field Name="Details">
+          <DataField>Details</DataField>
+        </Field>
+        <Field Name="StartTime">
+          <DataField>StartTime</DataField>
+        </Field>
+        <Field Name="EndTime">
+          <DataField>EndTime</DataField>
+        </Field>
+        <Field Name="Duration">
+          <DataField>Duration</DataField>
+        </Field>
+        <Field Name="LineStatus">
+          <DataField>LineStatus</DataField>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+        </Field>
+        <Field Name="CounselNames">
+          <DataField>CounselNames</DataField>
+        </Field>
+        <Field Name="CounselNamesFormat">
+          <DataField>CounselNamesFormat</DataField>
+        </Field>
+        <Field Name="CounselAddress">
+          <DataField>CounselAddress</DataField>
+        </Field>
+        <Field Name="CounselEmailAddress">
+          <DataField>CounselEmailAddress</DataField>
+        </Field>
+        <Field Name="CounselPhoneNo">
+          <DataField>CounselPhoneNo</DataField>
+        </Field>
+        <Field Name="CounselLineNo">
+          <DataField>CounselLineNo</DataField>
+        </Field>
+        <Field Name="WitnessNames">
+          <DataField>WitnessNames</DataField>
+        </Field>
+        <Field Name="WitnessNamesFormat">
+          <DataField>WitnessNamesFormat</DataField>
+        </Field>
+        <Field Name="WitnessAddress">
+          <DataField>WitnessAddress</DataField>
+        </Field>
+        <Field Name="WitnessEmailAddress">
+          <DataField>WitnessEmailAddress</DataField>
+        </Field>
+        <Field Name="WitnessPhoneNo">
+          <DataField>WitnessPhoneNo</DataField>
+        </Field>
+        <Field Name="WitnessLineNo">
+          <DataField>WitnessLineNo</DataField>
+        </Field>
+        <Field Name="DefendantsNames">
+          <DataField>DefendantsNames</DataField>
+        </Field>
+        <Field Name="DefendantsNamesFormat">
+          <DataField>DefendantsNamesFormat</DataField>
+        </Field>
+        <Field Name="DefendantsAddress">
+          <DataField>DefendantsAddress</DataField>
+        </Field>
+        <Field Name="DefendantsEmailAddress">
+          <DataField>DefendantsEmailAddress</DataField>
+        </Field>
+        <Field Name="DefendantsPhoneNo">
+          <DataField>DefendantsPhoneNo</DataField>
+        </Field>
+        <Field Name="DefendantLineNo">
+          <DataField>DefendantLineNo</DataField>
+        </Field>
+        <Field Name="ExpertsNames">
+          <DataField>ExpertsNames</DataField>
+        </Field>
+        <Field Name="ExpertsNamesFormat">
+          <DataField>ExpertsNamesFormat</DataField>
+        </Field>
+        <Field Name="ExpertsAddress">
+          <DataField>ExpertsAddress</DataField>
+        </Field>
+        <Field Name="ExpertsEmailAddress">
+          <DataField>ExpertsEmailAddress</DataField>
+        </Field>
+        <Field Name="ExpertsPhoneNo">
+          <DataField>ExpertsPhoneNo</DataField>
+        </Field>
+        <Field Name="ExpertLineNo">
+          <DataField>ExpertLineNo</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

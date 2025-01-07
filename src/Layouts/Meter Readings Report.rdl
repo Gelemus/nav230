@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_ElectricityMeterReadings">
+          <DataField>No_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="Property_ElectricityMeterReadings">
+          <DataField>Property_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="PropertyDescription_ElectricityMeterReadings">
+          <DataField>PropertyDescription_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="ElectricityMeterNo_ElectricityMeterReadings">
+          <DataField>ElectricityMeterNo_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="UserID_ElectricityMeterReadings">
+          <DataField>UserID_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="ReadingDate_ElectricityMeterReadings">
+          <DataField>ReadingDate_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="Remarks_ElectricityMeterReadings">
+          <DataField>Remarks_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="DocumentDate_ElectricityMeterReadings">
+          <DataField>DocumentDate_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="PreviousReading_ElectricityMeterReadings">
+          <DataField>PreviousReading_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="CurrentReading_ElectricityMeterReadings">
+          <DataField>CurrentReading_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="Posted_ElectricityMeterReadings">
+          <DataField>Posted_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="PostedBy_ElectricityMeterReadings">
+          <DataField>PostedBy_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="PostingDate_ElectricityMeterReadings">
+          <DataField>PostingDate_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="Status_ElectricityMeterReadings">
+          <DataField>Status_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="NoSeries_ElectricityMeterReadings">
+          <DataField>NoSeries_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="BlockCode_ElectricityMeterReadings">
+          <DataField>BlockCode_ElectricityMeterReadings</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="ReadingNo_ElectricityMeterReadingLine">
+          <DataField>ReadingNo_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="PropertyNo_ElectricityMeterReadingLine">
+          <DataField>PropertyNo_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="FloorNo_ElectricityMeterReadingLine">
+          <DataField>FloorNo_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="FloorMeterNo_ElectricityMeterReadingLine">
+          <DataField>FloorMeterNo_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="PreviousMeterReading_ElectricityMeterReadingLine">
+          <DataField>PreviousMeterReading_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="CurrentMeterReading_ElectricityMeterReadingLine">
+          <DataField>CurrentMeterReading_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="ReadingDate_ElectricityMeterReadingLine">
+          <DataField>ReadingDate_ElectricityMeterReadingLine</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="EmployeeFirstName">
+          <DataField>EmployeeFirstName</DataField>
+        </Field>
+        <Field Name="EmployeeMiddleName">
+          <DataField>EmployeeMiddleName</DataField>
+        </Field>
+        <Field Name="EmployeeLastName">
+          <DataField>EmployeeLastName</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

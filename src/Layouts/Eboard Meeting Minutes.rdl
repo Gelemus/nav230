@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_BoardMeeting">
+          <DataField>No_BoardMeeting</DataField>
+        </Field>
+        <Field Name="Title_BoardMeeting">
+          <DataField>Title_BoardMeeting</DataField>
+        </Field>
+        <Field Name="StartDate_BoardMeeting">
+          <DataField>StartDate_BoardMeeting</DataField>
+        </Field>
+        <Field Name="EndDate_BoardMeeting">
+          <DataField>EndDate_BoardMeeting</DataField>
+        </Field>
+        <Field Name="StartTime_BoardMeeting">
+          <DataField>StartTime_BoardMeeting</DataField>
+        </Field>
+        <Field Name="EndTime_BoardMeeting">
+          <DataField>EndTime_BoardMeeting</DataField>
+        </Field>
+        <Field Name="VenueLocation_BoardMeeting">
+          <DataField>VenueLocation_BoardMeeting</DataField>
+        </Field>
+        <Field Name="ConvenedBy_BoardMeeting">
+          <DataField>ConvenedBy_BoardMeeting</DataField>
+        </Field>
+        <Field Name="ConvenedByEmail_BoardMeeting">
+          <DataField>ConvenedByEmail_BoardMeeting</DataField>
+        </Field>
+        <Field Name="Description_BoardMeeting">
+          <DataField>Description_BoardMeeting</DataField>
+        </Field>
+        <Field Name="Status_BoardMeeting">
+          <DataField>Status_BoardMeeting</DataField>
+        </Field>
+        <Field Name="MeetingGroupCode_BoardMeeting">
+          <DataField>MeetingGroupCode_BoardMeeting</DataField>
+        </Field>
+        <Field Name="MeetingGroup_BoardMeeting">
+          <DataField>MeetingGroup_BoardMeeting</DataField>
+        </Field>
+        <Field Name="ConferenceVenue_BoardMeeting">
+          <DataField>ConferenceVenue_BoardMeeting</DataField>
+        </Field>
+        <Field Name="ParkingArrangement_BoardMeeting">
+          <DataField>ParkingArrangement_BoardMeeting</DataField>
+        </Field>
+        <Field Name="AccessRequirement_BoardMeeting">
+          <DataField>AccessRequirement_BoardMeeting</DataField>
+        </Field>
+        <Field Name="Published_BoardMeeting">
+          <DataField>Published_BoardMeeting</DataField>
+        </Field>
+        <Field Name="Reference_BoardMeeting">
+          <DataField>Reference_BoardMeeting</DataField>
+        </Field>
+        <Field Name="MeetingPapers_BoardMeeting">
+          <DataField>MeetingPapers_BoardMeeting</DataField>
+        </Field>
+        <Field Name="MeetingLink_BoardMeeting">
+          <DataField>MeetingLink_BoardMeeting</DataField>
+        </Field>
+        <Field Name="MeetingUserID_BoardMeeting">
+          <DataField>MeetingUserID_BoardMeeting</DataField>
+        </Field>
+        <Field Name="MeetingPassCode_BoardMeeting">
+          <DataField>MeetingPassCode_BoardMeeting</DataField>
+        </Field>
+        <Field Name="NatureoftheMeeting_BoardMeeting">
+          <DataField>NatureoftheMeeting_BoardMeeting</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyNameII">
+          <DataField>CompanyNameII</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="MeetingNo_MeetingAttendance">
+          <DataField>MeetingNo_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="MemberNo_MeetingAttendance">
+          <DataField>MemberNo_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="CommitteeCode_MeetingAttendance">
+          <DataField>CommitteeCode_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="CommitteeName_MeetingAttendance">
+          <DataField>CommitteeName_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="MeetingDate_MeetingAttendance">
+          <DataField>MeetingDate_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="MeetingName_MeetingAttendance">
+          <DataField>MeetingName_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="Venue_MeetingAttendance">
+          <DataField>Venue_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="MemberName_MeetingAttendance">
+          <DataField>MemberName_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="Inattendance_MeetingAttendance">
+          <DataField>Inattendance_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="VisitorInstitution_MeetingAttendance">
+          <DataField>VisitorInstitution_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="Remarks_MeetingAttendance">
+          <DataField>Remarks_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="EntryNo_MeetingAttendance">
+          <DataField>EntryNo_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="TypeofParticipant_MeetingAttendance">
+          <DataField>TypeofParticipant_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="MeetingRole_MeetingAttendance">
+          <DataField>MeetingRole_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="Attendanceduringthemeeting_MeetingAttendance">
+          <DataField>Attendanceduringthemeeting_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="Confirmationofaninvitation_MeetingAttendance">
+          <DataField>Confirmationofaninvitation_MeetingAttendance</DataField>
+        </Field>
+        <Field Name="MeetingNo_MeetingAgenda">
+          <DataField>MeetingNo_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="LineNo_MeetingAgenda">
+          <DataField>LineNo_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="AgendaCode_MeetingAgenda">
+          <DataField>AgendaCode_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="AgendaItem_MeetingAgenda">
+          <DataField>AgendaItem_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="AgendaPapers_MeetingAgenda">
+          <DataField>AgendaPapers_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="ScheduledTime_MeetingAgenda">
+          <DataField>ScheduledTime_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="Purpose_MeetingAgenda">
+          <DataField>Purpose_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="TypeofAgenda_MeetingAgenda">
+          <DataField>TypeofAgenda_MeetingAgenda</DataField>
+        </Field>
+        <Field Name="EntryNo_MeetingMinutes">
+          <DataField>EntryNo_MeetingMinutes</DataField>
+        </Field>
+        <Field Name="MeetingNo_MeetingMinutes">
+          <DataField>MeetingNo_MeetingMinutes</DataField>
+        </Field>
+        <Field Name="AgendaNo_MeetingMinutes">
+          <DataField>AgendaNo_MeetingMinutes</DataField>
+        </Field>
+        <Field Name="Minutes_MeetingMinutes">
+          <DataField>Minutes_MeetingMinutes</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

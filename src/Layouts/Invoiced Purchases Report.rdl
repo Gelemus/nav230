@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="PurchaseRequisition_PurchInvHeader">
+          <DataField>PurchaseRequisition_PurchInvHeader</DataField>
+        </Field>
+        <Field Name="InspectionNo_PurchInvHeader">
+          <DataField>InspectionNo_PurchInvHeader</DataField>
+        </Field>
+        <Field Name="DeliveryNoteNo_PurchInvHeader">
+          <DataField>DeliveryNoteNo_PurchInvHeader</DataField>
+        </Field>
+        <Field Name="Posted_Invoice_No">
+          <DataField>Posted_Invoice_No</DataField>
+        </Field>
+        <Field Name="Vendor_No">
+          <DataField>Vendor_No</DataField>
+        </Field>
+        <Field Name="Vendor_Name">
+          <DataField>Vendor_Name</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="LPO_No">
+          <DataField>LPO_No</DataField>
+        </Field>
+        <Field Name="Vendor_Invoice_No">
+          <DataField>Vendor_Invoice_No</DataField>
+        </Field>
+        <Field Name="Amount_Inclusive_Vat">
+          <DataField>Amount_Inclusive_Vat</DataField>
+        </Field>
+        <Field Name="Amount_Inclusive_VatFormat">
+          <DataField>Amount_Inclusive_VatFormat</DataField>
+        </Field>
+        <Field Name="Posting_Description">
+          <DataField>Posting_Description</DataField>
+        </Field>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CAddress2">
+          <DataField>CAddress2</DataField>
+        </Field>
+        <Field Name="CCity">
+          <DataField>CCity</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="CEmail">
+          <DataField>CEmail</DataField>
+        </Field>
+        <Field Name="CPhone">
+          <DataField>CPhone</DataField>
+        </Field>
+        <Field Name="Description_PurchaseRequisitions">
+          <DataField>Description_PurchaseRequisitions</DataField>
+        </Field>
+        <Field Name="UserID_PurchaseRequisitionHeader">
+          <DataField>UserID_PurchaseRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PrintDate">
+          <DataField>PrintDate</DataField>
+        </Field>
+        <Field Name="PrintTime">
+          <DataField>PrintTime</DataField>
+        </Field>
+        <Field Name="Start_Date">
+          <DataField>Start_Date</DataField>
+        </Field>
+        <Field Name="End_Date">
+          <DataField>End_Date</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="UnitofMeasure">
+          <DataField>UnitofMeasure</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="EstimatedUnitCost">
+          <DataField>EstimatedUnitCost</DataField>
+        </Field>
+        <Field Name="EstimatedUnitCostFormat">
+          <DataField>EstimatedUnitCostFormat</DataField>
+        </Field>
+        <Field Name="EstimatedTotalCost">
+          <DataField>EstimatedTotalCost</DataField>
+        </Field>
+        <Field Name="EstimatedTotalCostFormat">
+          <DataField>EstimatedTotalCostFormat</DataField>
+        </Field>
+        <Field Name="ActualCost">
+          <DataField>ActualCost</DataField>
+        </Field>
+        <Field Name="ActualCostFormat">
+          <DataField>ActualCostFormat</DataField>
+        </Field>
+        <Field Name="TenderQuotationRef">
+          <DataField>TenderQuotationRef</DataField>
+        </Field>
+        <Field Name="RequisitionCode_PurchaseRequisitionLine">
+          <DataField>RequisitionCode_PurchaseRequisitionLine</DataField>
+        </Field>
+        <Field Name="RequisitionType_PurchaseRequisitionLine">
+          <DataField>RequisitionType_PurchaseRequisitionLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_PurchaseRequisitionLine">
+          <DataField>UnitofMeasure_PurchaseRequisitionLine</DataField>
+        </Field>
+        <Field Name="Inventory_PurchaseRequisitionLine">
+          <DataField>Inventory_PurchaseRequisitionLine</DataField>
+        </Field>
+        <Field Name="Inventory_PurchaseRequisitionLineFormat">
+          <DataField>Inventory_PurchaseRequisitionLineFormat</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="ShowPreparedBy_">
+          <DataField>ShowPreparedBy_</DataField>
+        </Field>
+        <Field Name="ApprovedByCaption_">
+          <DataField>ApprovedByCaption_</DataField>
+        </Field>
+        <Field Name="PreparedByDesignation">
+          <DataField>PreparedByDesignation</DataField>
+        </Field>
+        <Field Name="PreparedByCaption_">
+          <DataField>PreparedByCaption_</DataField>
+        </Field>
+        <Field Name="PreparedDate">
+          <DataField>PreparedDate</DataField>
+        </Field>
+        <Field Name="UserSetupRec_SignatureI_">
+          <DataField>UserSetupRec_SignatureI_</DataField>
+        </Field>
+        <Field Name="UserSetupRec_Signature_">
+          <DataField>UserSetupRec_Signature_</DataField>
+        </Field>
+        <Field Name="FirstName_Employee">
+          <DataField>FirstName_Employee</DataField>
+        </Field>
+        <Field Name="MiddleName_Employee">
+          <DataField>MiddleName_Employee</DataField>
+        </Field>
+        <Field Name="LastName_Employee">
+          <DataField>LastName_Employee</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+        <Field Name="PositionTitle_Employee2">
+          <DataField>PositionTitle_Employee2</DataField>
+        </Field>
+        <Field Name="Position_Employee2">
+          <DataField>Position_Employee2</DataField>
+        </Field>
+        <Field Name="JobTitle_Employee2">
+          <DataField>JobTitle_Employee2</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

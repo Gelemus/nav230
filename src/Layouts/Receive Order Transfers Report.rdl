@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_TransferReceiptHeader">
+          <DataField>No_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="TransferfromCode_TransferReceiptHeader">
+          <DataField>TransferfromCode_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="TransferfromName_TransferReceiptHeader">
+          <DataField>TransferfromName_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="TransfertoCode_TransferReceiptHeader">
+          <DataField>TransfertoCode_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="TransfertoName_TransferReceiptHeader">
+          <DataField>TransfertoName_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_TransferReceiptHeader">
+          <DataField>PostingDate_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="ShipmentDate_TransferReceiptHeader">
+          <DataField>ShipmentDate_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="ReceiptDate_TransferReceiptHeader">
+          <DataField>ReceiptDate_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="InTransitCode_TransferReceiptHeader">
+          <DataField>InTransitCode_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="TimeReceived_TransferReceiptHeader">
+          <DataField>TimeReceived_TransferReceiptHeader</DataField>
+        </Field>
+        <Field Name="ShippingTime_TransferReceiptLine">
+          <DataField>ShippingTime_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_TransferReceiptLine">
+          <DataField>DocumentNo_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="ItemNo_TransferReceiptLine">
+          <DataField>ItemNo_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="Quantity_TransferReceiptLine">
+          <DataField>Quantity_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="Quantity_TransferReceiptLineFormat">
+          <DataField>Quantity_TransferReceiptLineFormat</DataField>
+        </Field>
+        <Field Name="Description_TransferReceiptLine">
+          <DataField>Description_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="UnitofMeasure_TransferReceiptLine">
+          <DataField>UnitofMeasure_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="QuantityBase_TransferReceiptLine">
+          <DataField>QuantityBase_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="QuantityBase_TransferReceiptLineFormat">
+          <DataField>QuantityBase_TransferReceiptLineFormat</DataField>
+        </Field>
+        <Field Name="ReceiptDate_TransferReceiptLine">
+          <DataField>ReceiptDate_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="InTransitCode_TransferReceiptLine">
+          <DataField>InTransitCode_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="TransferfromCode_TransferReceiptLine">
+          <DataField>TransferfromCode_TransferReceiptLine</DataField>
+        </Field>
+        <Field Name="TransfertoCode_TransferReceiptLine">
+          <DataField>TransfertoCode_TransferReceiptLine</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

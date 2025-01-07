@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Name">
+          <DataField>CI_Name</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="Lno">
+          <DataField>Lno</DataField>
+        </Field>
+        <Field Name="PostalAddress_HRJobApplications">
+          <DataField>PostalAddress_HRJobApplications</DataField>
+        </Field>
+        <Field Name="CityTown_HRJobApplications">
+          <DataField>CityTown_HRJobApplications</DataField>
+        </Field>
+        <Field Name="No_HRJobApplications">
+          <DataField>No_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmployeeRequisitionNo_HRJobApplications">
+          <DataField>EmployeeRequisitionNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobNo_HRJobApplications">
+          <DataField>JobNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobTitle_HRJobApplications">
+          <DataField>JobTitle_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Surname_HRJobApplications">
+          <DataField>Surname_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Firstname_HRJobApplications">
+          <DataField>Firstname_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Middlename_HRJobApplications">
+          <DataField>Middlename_HRJobApplications</DataField>
+        </Field>
+        <Field Name="FullName">
+          <DataField>FullName</DataField>
+        </Field>
+        <Field Name="Gender_HRJobApplications">
+          <DataField>Gender_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Age_HRJobApplications">
+          <DataField>Age_HRJobApplications</DataField>
+        </Field>
+        <Field Name="DateToday">
+          <DataField>DateToday</DataField>
+        </Field>
+        <Field Name="BasicAmount">
+          <DataField>BasicAmount</DataField>
+        </Field>
+        <Field Name="BasicAmountFormat">
+          <DataField>BasicAmountFormat</DataField>
+        </Field>
+        <Field Name="SalaryNotchString">
+          <DataField>SalaryNotchString</DataField>
+        </Field>
+        <Field Name="LongAllowancesString">
+          <DataField>LongAllowancesString</DataField>
+        </Field>
+        <Field Name="MaximumBasicPay">
+          <DataField>MaximumBasicPay</DataField>
+        </Field>
+        <Field Name="MaximumBasicPayFormat">
+          <DataField>MaximumBasicPayFormat</DataField>
+        </Field>
+        <Field Name="JobGrade">
+          <DataField>JobGrade</DataField>
+        </Field>
+        <Field Name="JobGrade_HRJobGradeLevels">
+          <DataField>JobGrade_HRJobGradeLevels</DataField>
+        </Field>
+        <Field Name="JobGradeLevel_HRJobGradeLevels">
+          <DataField>JobGradeLevel_HRJobGradeLevels</DataField>
+        </Field>
+        <Field Name="BasicPayAmount_HRJobGradeLevels">
+          <DataField>BasicPayAmount_HRJobGradeLevels</DataField>
+        </Field>
+        <Field Name="BasicPayAmount_HRJobGradeLevelsFormat">
+          <DataField>BasicPayAmount_HRJobGradeLevelsFormat</DataField>
+        </Field>
+        <Field Name="AllowanceCode_HRJobGradeLevels">
+          <DataField>AllowanceCode_HRJobGradeLevels</DataField>
+        </Field>
+        <Field Name="AllowanceDescription_HRJobGradeLevels">
+          <DataField>AllowanceDescription_HRJobGradeLevels</DataField>
+        </Field>
+        <Field Name="AllowanceAmount_HRJobGradeLevels">
+          <DataField>AllowanceAmount_HRJobGradeLevels</DataField>
+        </Field>
+        <Field Name="AllowanceAmount_HRJobGradeLevelsFormat">
+          <DataField>AllowanceAmount_HRJobGradeLevelsFormat</DataField>
+        </Field>
+        <Field Name="AllowanceSetup_HRJobGradeLevels">
+          <DataField>AllowanceSetup_HRJobGradeLevels</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

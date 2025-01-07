@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="Certificate_Date">
+          <DataField>Certificate_Date</DataField>
+        </Field>
+        <Field Name="No_AccountClosure">
+          <DataField>No_AccountClosure</DataField>
+        </Field>
+        <Field Name="Code_PaymentTerms">
+          <DataField>Code_PaymentTerms</DataField>
+        </Field>
+        <Field Name="DocumentDate_AccountClosure">
+          <DataField>DocumentDate_AccountClosure</DataField>
+        </Field>
+        <Field Name="CustomerRegistrationNo_AccountClosure">
+          <DataField>CustomerRegistrationNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="Name_AccountClosure">
+          <DataField>Name_AccountClosure</DataField>
+        </Field>
+        <Field Name="CustomerNo_AccountClosure">
+          <DataField>CustomerNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="CustomerName_AccountClosure">
+          <DataField>CustomerName_AccountClosure</DataField>
+        </Field>
+        <Field Name="CompanyRegistrationNo_AccountClosure">
+          <DataField>CompanyRegistrationNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="PinNo_AccountClosure">
+          <DataField>PinNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="VATRegistrationNo_AccountClosure">
+          <DataField>VATRegistrationNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="PostalCode_AccountClosure">
+          <DataField>PostalCode_AccountClosure</DataField>
+        </Field>
+        <Field Name="Address_AccountClosure">
+          <DataField>Address_AccountClosure</DataField>
+        </Field>
+        <Field Name="City_AccountClosure">
+          <DataField>City_AccountClosure</DataField>
+        </Field>
+        <Field Name="PhysicalAddress_AccountClosure">
+          <DataField>PhysicalAddress_AccountClosure</DataField>
+        </Field>
+        <Field Name="PhoneNo_AccountClosure">
+          <DataField>PhoneNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="PhoneNo2_AccountClosure">
+          <DataField>PhoneNo2_AccountClosure</DataField>
+        </Field>
+        <Field Name="EmailAddress_AccountClosure">
+          <DataField>EmailAddress_AccountClosure</DataField>
+        </Field>
+        <Field Name="AlternativeEmailAddress_AccountClosure">
+          <DataField>AlternativeEmailAddress_AccountClosure</DataField>
+        </Field>
+        <Field Name="HomePage_AccountClosure">
+          <DataField>HomePage_AccountClosure</DataField>
+        </Field>
+        <Field Name="AccountNo_AccountClosure">
+          <DataField>AccountNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="ApplicationNo_AccountClosure">
+          <DataField>ApplicationNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="ProductCategory_AccountClosure">
+          <DataField>ProductCategory_AccountClosure</DataField>
+        </Field>
+        <Field Name="ProductCode_AccountClosure">
+          <DataField>ProductCode_AccountClosure</DataField>
+        </Field>
+        <Field Name="CurrencyCode_AccountClosure">
+          <DataField>CurrencyCode_AccountClosure</DataField>
+        </Field>
+        <Field Name="AppliedAmount_AccountClosure">
+          <DataField>AppliedAmount_AccountClosure</DataField>
+        </Field>
+        <Field Name="AppliedAmountLCY_AccountClosure">
+          <DataField>AppliedAmountLCY_AccountClosure</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_AccountClosure">
+          <DataField>ApprovedAmount_AccountClosure</DataField>
+        </Field>
+        <Field Name="ApprovedAmountLCY_AccountClosure">
+          <DataField>ApprovedAmountLCY_AccountClosure</DataField>
+        </Field>
+        <Field Name="DisbursedAmount_AccountClosure">
+          <DataField>DisbursedAmount_AccountClosure</DataField>
+        </Field>
+        <Field Name="DisbursedAmountLCY_AccountClosure">
+          <DataField>DisbursedAmountLCY_AccountClosure</DataField>
+        </Field>
+        <Field Name="UndisbursedAmount_AccountClosure">
+          <DataField>UndisbursedAmount_AccountClosure</DataField>
+        </Field>
+        <Field Name="UndisbursedAmountLCY_AccountClosure">
+          <DataField>UndisbursedAmountLCY_AccountClosure</DataField>
+        </Field>
+        <Field Name="AnnualBaseInterestRate_AccountClosure">
+          <DataField>AnnualBaseInterestRate_AccountClosure</DataField>
+        </Field>
+        <Field Name="AnnualInterestMarginRate_AccountClosure">
+          <DataField>AnnualInterestMarginRate_AccountClosure</DataField>
+        </Field>
+        <Field Name="RepaymentFrequency_AccountClosure">
+          <DataField>RepaymentFrequency_AccountClosure</DataField>
+        </Field>
+        <Field Name="RepaymentPeriod_AccountClosure">
+          <DataField>RepaymentPeriod_AccountClosure</DataField>
+        </Field>
+        <Field Name="NoofInstallments_AccountClosure">
+          <DataField>NoofInstallments_AccountClosure</DataField>
+        </Field>
+        <Field Name="PrincipalMoratoriumPeriod_AccountClosure">
+          <DataField>PrincipalMoratoriumPeriod_AccountClosure</DataField>
+        </Field>
+        <Field Name="InterestMoratoriumPeriod_AccountClosure">
+          <DataField>InterestMoratoriumPeriod_AccountClosure</DataField>
+        </Field>
+        <Field Name="RepaymentStartDate_AccountClosure">
+          <DataField>RepaymentStartDate_AccountClosure</DataField>
+        </Field>
+        <Field Name="RepaymentEndDate_AccountClosure">
+          <DataField>RepaymentEndDate_AccountClosure</DataField>
+        </Field>
+        <Field Name="RepaymentAmount_AccountClosure">
+          <DataField>RepaymentAmount_AccountClosure</DataField>
+        </Field>
+        <Field Name="RiskClassification_AccountClosure">
+          <DataField>RiskClassification_AccountClosure</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_AccountClosure">
+          <DataField>GlobalDimension1Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_AccountClosure">
+          <DataField>GlobalDimension2Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_AccountClosure">
+          <DataField>ShortcutDimension3Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_AccountClosure">
+          <DataField>ShortcutDimension4Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_AccountClosure">
+          <DataField>ShortcutDimension5Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_AccountClosure">
+          <DataField>ShortcutDimension6Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_AccountClosure">
+          <DataField>ShortcutDimension7Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_AccountClosure">
+          <DataField>ShortcutDimension8Code_AccountClosure</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_AccountClosure">
+          <DataField>ResponsibilityCenter_AccountClosure</DataField>
+        </Field>
+        <Field Name="Description_AccountClosure">
+          <DataField>Description_AccountClosure</DataField>
+        </Field>
+        <Field Name="Type_AccountClosure">
+          <DataField>Type_AccountClosure</DataField>
+        </Field>
+        <Field Name="Option_AccountClosure">
+          <DataField>Option_AccountClosure</DataField>
+        </Field>
+        <Field Name="CreatedBy_AccountClosure">
+          <DataField>CreatedBy_AccountClosure</DataField>
+        </Field>
+        <Field Name="DateCreated_AccountClosure">
+          <DataField>DateCreated_AccountClosure</DataField>
+        </Field>
+        <Field Name="TimeCreated_AccountClosure">
+          <DataField>TimeCreated_AccountClosure</DataField>
+        </Field>
+        <Field Name="Status_AccountClosure">
+          <DataField>Status_AccountClosure</DataField>
+        </Field>
+        <Field Name="Rejected_AccountClosure">
+          <DataField>Rejected_AccountClosure</DataField>
+        </Field>
+        <Field Name="RejectedBy_AccountClosure">
+          <DataField>RejectedBy_AccountClosure</DataField>
+        </Field>
+        <Field Name="DateRejected_AccountClosure">
+          <DataField>DateRejected_AccountClosure</DataField>
+        </Field>
+        <Field Name="TimeRejected_AccountClosure">
+          <DataField>TimeRejected_AccountClosure</DataField>
+        </Field>
+        <Field Name="RejectionComments_AccountClosure">
+          <DataField>RejectionComments_AccountClosure</DataField>
+        </Field>
+        <Field Name="UserID_AccountClosure">
+          <DataField>UserID_AccountClosure</DataField>
+        </Field>
+        <Field Name="NoSeries_AccountClosure">
+          <DataField>NoSeries_AccountClosure</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_AccountClosure">
+          <DataField>IncomingDocumentEntryNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="DateFilter_AccountClosure">
+          <DataField>DateFilter_AccountClosure</DataField>
+        </Field>
+        <Field Name="DisbursementAccountNo_AccountClosure">
+          <DataField>DisbursementAccountNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="AccountBalance_AccountClosure">
+          <DataField>AccountBalance_AccountClosure</DataField>
+        </Field>
+        <Field Name="ArrearsDateFilter_AccountClosure">
+          <DataField>ArrearsDateFilter_AccountClosure</DataField>
+        </Field>
+        <Field Name="PrincipalInArrears_AccountClosure">
+          <DataField>PrincipalInArrears_AccountClosure</DataField>
+        </Field>
+        <Field Name="InterestInArrears_AccountClosure">
+          <DataField>InterestInArrears_AccountClosure</DataField>
+        </Field>
+        <Field Name="PenaltyInterestInArrears_AccountClosure">
+          <DataField>PenaltyInterestInArrears_AccountClosure</DataField>
+        </Field>
+        <Field Name="LoanFeeInArrears_AccountClosure">
+          <DataField>LoanFeeInArrears_AccountClosure</DataField>
+        </Field>
+        <Field Name="NonDueDateFilter_AccountClosure">
+          <DataField>NonDueDateFilter_AccountClosure</DataField>
+        </Field>
+        <Field Name="NonDuePrincipal_AccountClosure">
+          <DataField>NonDuePrincipal_AccountClosure</DataField>
+        </Field>
+        <Field Name="NonDueInterest_AccountClosure">
+          <DataField>NonDueInterest_AccountClosure</DataField>
+        </Field>
+        <Field Name="InterestAccruedCurrentMonth_AccountClosure">
+          <DataField>InterestAccruedCurrentMonth_AccountClosure</DataField>
+        </Field>
+        <Field Name="PenaltyArrearsDateFilter_AccountClosure">
+          <DataField>PenaltyArrearsDateFilter_AccountClosure</DataField>
+        </Field>
+        <Field Name="CurrentAccountPayoff_AccountClosure">
+          <DataField>CurrentAccountPayoff_AccountClosure</DataField>
+        </Field>
+        <Field Name="EnquiryNo_AccountClosure">
+          <DataField>EnquiryNo_AccountClosure</DataField>
+        </Field>
+        <Field Name="IndustryCode_AccountClosure">
+          <DataField>IndustryCode_AccountClosure</DataField>
+        </Field>
+        <Field Name="SectorCode_AccountClosure">
+          <DataField>SectorCode_AccountClosure</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

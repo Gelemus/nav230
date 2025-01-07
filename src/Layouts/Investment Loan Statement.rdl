@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_EmployeeLoanAccounts">
+          <DataField>No_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="EmployeeNo_EmployeeLoanAccounts">
+          <DataField>EmployeeNo_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="EmployeeName_EmployeeLoanAccounts">
+          <DataField>EmployeeName_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="LoanProductCode_EmployeeLoanAccounts">
+          <DataField>LoanProductCode_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="LoanProductDescription_EmployeeLoanAccounts">
+          <DataField>LoanProductDescription_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="RepaymentFrequency_EmployeeLoanAccounts">
+          <DataField>RepaymentFrequency_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="AppliedAmount_EmployeeLoanAccounts">
+          <DataField>AppliedAmount_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="EntitledAmount_EmployeeLoanAccounts">
+          <DataField>EntitledAmount_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="RepaymentStartDate_EmployeeLoanAccounts">
+          <DataField>RepaymentStartDate_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="RepaymentPeriod_EmployeeLoanAccounts">
+          <DataField>RepaymentPeriod_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="RepaymentEndDate_EmployeeLoanAccounts">
+          <DataField>RepaymentEndDate_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="NoofInstallments_EmployeeLoanAccounts">
+          <DataField>NoofInstallments_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="InterestRate_EmployeeLoanAccounts">
+          <DataField>InterestRate_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="RepaymentAmount_EmployeeLoanAccounts">
+          <DataField>RepaymentAmount_EmployeeLoanAccounts</DataField>
+        </Field>
+        <Field Name="DisbursedAmount">
+          <DataField>DisbursedAmount</DataField>
+        </Field>
+        <Field Name="AccountBalance">
+          <DataField>AccountBalance</DataField>
+        </Field>
+        <Field Name="AccountBalanceFormat">
+          <DataField>AccountBalanceFormat</DataField>
+        </Field>
+        <Field Name="CurrentPayOff">
+          <DataField>CurrentPayOff</DataField>
+        </Field>
+        <Field Name="CurrentPayOffFormat">
+          <DataField>CurrentPayOffFormat</DataField>
+        </Field>
+        <Field Name="Pic">
+          <DataField>Pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="PrincipalInArrears_LoanAccounts">
+          <DataField>PrincipalInArrears_LoanAccounts</DataField>
+        </Field>
+        <Field Name="PenaltyInterestInArrears_LoanAccounts">
+          <DataField>PenaltyInterestInArrears_LoanAccounts</DataField>
+        </Field>
+        <Field Name="InterestInArrears_LoanAccounts">
+          <DataField>InterestInArrears_LoanAccounts</DataField>
+        </Field>
+        <Field Name="LoanFeeInArrears_LoanAccounts">
+          <DataField>LoanFeeInArrears_LoanAccounts</DataField>
+        </Field>
+        <Field Name="InterestAccrued_LoanAccounts">
+          <DataField>InterestAccrued_LoanAccounts</DataField>
+        </Field>
+        <Field Name="NonDueDateFilter_LoanAccounts">
+          <DataField>NonDueDateFilter_LoanAccounts</DataField>
+        </Field>
+        <Field Name="NonDuePrincipal_LoanAccounts">
+          <DataField>NonDuePrincipal_LoanAccounts</DataField>
+        </Field>
+        <Field Name="NonDueInterest_LoanAccounts">
+          <DataField>NonDueInterest_LoanAccounts</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+        <Field Name="PostingDate_EmployeeLedgerEntry">
+          <DataField>PostingDate_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentType_EmployeeLedgerEntry">
+          <DataField>DocumentType_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_EmployeeLedgerEntry">
+          <DataField>DocumentNo_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="Description_EmployeeLedgerEntry">
+          <DataField>Description_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="CurrencyCode_EmployeeLedgerEntry">
+          <DataField>CurrencyCode_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_EmployeeLedgerEntry">
+          <DataField>Amount_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_EmployeeLedgerEntryFormat">
+          <DataField>Amount_EmployeeLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="RemainingAmount_EmployeeLedgerEntry">
+          <DataField>RemainingAmount_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="RemainingAmount_EmployeeLedgerEntryFormat">
+          <DataField>RemainingAmount_EmployeeLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="AmountLCY_EmployeeLedgerEntry">
+          <DataField>AmountLCY_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="AmountLCY_EmployeeLedgerEntryFormat">
+          <DataField>AmountLCY_EmployeeLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="Open_EmployeeLedgerEntry">
+          <DataField>Open_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="LoanTransactionType_EmployeeLedgerEntry">
+          <DataField>LoanTransactionType_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_EmployeeLedgerEntry">
+          <DataField>DebitAmount_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="CreditAmount_EmployeeLedgerEntry">
+          <DataField>CreditAmount_EmployeeLedgerEntry</DataField>
+        </Field>
+        <Field Name="RunningAmount">
+          <DataField>RunningAmount</DataField>
+        </Field>
+        <Field Name="RunningAmountFormat">
+          <DataField>RunningAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

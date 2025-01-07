@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Bank_Acc__Reconciliation_Line__Bank_Account_No__">
+          <DataField>Bank_Acc__Reconciliation_Line__Bank_Account_No__</DataField>
+        </Field>
+        <Field Name="BankStatBalance">
+          <DataField>BankStatBalance</DataField>
+        </Field>
+        <Field Name="BankStatBalanceFormat">
+          <DataField>BankStatBalanceFormat</DataField>
+        </Field>
+        <Field Name="BankLastBalance">
+          <DataField>BankLastBalance</DataField>
+        </Field>
+        <Field Name="BankLastBalanceFormat">
+          <DataField>BankLastBalanceFormat</DataField>
+        </Field>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+        </Field>
+        <Field Name="VarBankRec__Statement_Date_">
+          <DataField>VarBankRec__Statement_Date_</DataField>
+        </Field>
+        <Field Name="BankAccNo">
+          <DataField>BankAccNo</DataField>
+        </Field>
+        <Field Name="ReconciliationStatement">
+          <DataField>ReconciliationStatement</DataField>
+        </Field>
+        <Field Name="CashBkBal_BankStatBalance">
+          <DataField>CashBkBal_BankStatBalance</DataField>
+        </Field>
+        <Field Name="CashBkBal_BankStatBalanceFormat">
+          <DataField>CashBkBal_BankStatBalanceFormat</DataField>
+        </Field>
+        <Field Name="TotalUnPresented_TotalDifference">
+          <DataField>TotalUnPresented_TotalDifference</DataField>
+        </Field>
+        <Field Name="TotalUnPresented_TotalDifferenceFormat">
+          <DataField>TotalUnPresented_TotalDifferenceFormat</DataField>
+        </Field>
+        <Field Name="UncreditedChqs">
+          <DataField>UncreditedChqs</DataField>
+        </Field>
+        <Field Name="UncreditedChqsFormat">
+          <DataField>UncreditedChqsFormat</DataField>
+        </Field>
+        <Field Name="TotalUnpresentedChqs">
+          <DataField>TotalUnpresentedChqs</DataField>
+        </Field>
+        <Field Name="TotalUnpresentedChqsFormat">
+          <DataField>TotalUnpresentedChqsFormat</DataField>
+        </Field>
+        <Field Name="CashBkBal">
+          <DataField>CashBkBal</DataField>
+        </Field>
+        <Field Name="CashBkBalFormat">
+          <DataField>CashBkBalFormat</DataField>
+        </Field>
+        <Field Name="DebitDiff">
+          <DataField>DebitDiff</DataField>
+        </Field>
+        <Field Name="DebitDiffFormat">
+          <DataField>DebitDiffFormat</DataField>
+        </Field>
+        <Field Name="CreditDiff">
+          <DataField>CreditDiff</DataField>
+        </Field>
+        <Field Name="CreditDiffFormat">
+          <DataField>CreditDiffFormat</DataField>
+        </Field>
+        <Field Name="DebitDiff_UncreditedChqs">
+          <DataField>DebitDiff_UncreditedChqs</DataField>
+        </Field>
+        <Field Name="DebitDiff_UncreditedChqsFormat">
+          <DataField>DebitDiff_UncreditedChqsFormat</DataField>
+        </Field>
+        <Field Name="CreditDiff_TotalUnpresentedChqs">
+          <DataField>CreditDiff_TotalUnpresentedChqs</DataField>
+        </Field>
+        <Field Name="CreditDiff_TotalUnpresentedChqsFormat">
+          <DataField>CreditDiff_TotalUnpresentedChqsFormat</DataField>
+        </Field>
+        <Field Name="BANK_ACCOUNT_RECONCILIATION_REPORTCaption">
+          <DataField>BANK_ACCOUNT_RECONCILIATION_REPORTCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Bank_Code_Caption">
+          <DataField>Bank_Code_Caption</DataField>
+        </Field>
+        <Field Name="Bank_Name_Caption">
+          <DataField>Bank_Name_Caption</DataField>
+        </Field>
+        <Field Name="Reconciliation_as_at_Caption">
+          <DataField>Reconciliation_as_at_Caption</DataField>
+        </Field>
+        <Field Name="BANK_BALANCE_AS_PER_BANK_STATEMENTCaption">
+          <DataField>BANK_BALANCE_AS_PER_BANK_STATEMENTCaption</DataField>
+        </Field>
+        <Field Name="Bank_Account_No_Caption">
+          <DataField>Bank_Account_No_Caption</DataField>
+        </Field>
+        <Field Name="Difference_between_Cash_book_and_Bank_Statement_BalanceCaption">
+          <DataField>Difference_between_Cash_book_and_Bank_Statement_BalanceCaption</DataField>
+        </Field>
+        <Field Name="Total_Unreconciling_itemsCaption">
+          <DataField>Total_Unreconciling_itemsCaption</DataField>
+        </Field>
+        <Field Name="RECEIPTS_IN_CASHBOOK_NOT_IN_BANKCaption">
+          <DataField>RECEIPTS_IN_CASHBOOK_NOT_IN_BANKCaption</DataField>
+        </Field>
+        <Field Name="PAYMENTS_IN_CASHBOOK_NOT_IN_BANK__UNPRESENTED_CHEQUES_Caption">
+          <DataField>PAYMENTS_IN_CASHBOOK_NOT_IN_BANK__UNPRESENTED_CHEQUES_Caption</DataField>
+        </Field>
+        <Field Name="Add_Caption">
+          <DataField>Add_Caption</DataField>
+        </Field>
+        <Field Name="BANK_BALANCE_AS_PER_CASH_BOOKCaption">
+          <DataField>BANK_BALANCE_AS_PER_CASH_BOOKCaption</DataField>
+        </Field>
+        <Field Name="Less_Caption">
+          <DataField>Less_Caption</DataField>
+        </Field>
+        <Field Name="PAYMENTS_IN_BANK_NOT_IN_CASH_BOOKCaption">
+          <DataField>PAYMENTS_IN_BANK_NOT_IN_CASH_BOOKCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="RECEIPTS_IN_BANK_NOT_IN_CASH_BOOKCaption">
+          <DataField>RECEIPTS_IN_BANK_NOT_IN_CASH_BOOKCaption</DataField>
+        </Field>
+        <Field Name="ACCOUNTANTCaption">
+          <DataField>ACCOUNTANTCaption</DataField>
+        </Field>
+        <Field Name="Bank_Acc__Reconciliation_Line_Statement_No_">
+          <DataField>Bank_Acc__Reconciliation_Line_Statement_No_</DataField>
+        </Field>
+        <Field Name="Bank_Acc__Reconciliation_Line_Statement_Line_No_">
+          <DataField>Bank_Acc__Reconciliation_Line_Statement_Line_No_</DataField>
+        </Field>
+        <Field Name="Bank_Acc__Reconciliation_Line_Difference">
+          <DataField>Bank_Acc__Reconciliation_Line_Difference</DataField>
+        </Field>
+        <Field Name="Bank_Acc__Reconciliation_Line_DifferenceFormat">
+          <DataField>Bank_Acc__Reconciliation_Line_DifferenceFormat</DataField>
+        </Field>
+        <Field Name="DateChequeEFT">
+          <DataField>DateChequeEFT</DataField>
+        </Field>
+        <Field Name="ChequeEFT">
+          <DataField>ChequeEFT</DataField>
+        </Field>
+        <Field Name="DispatchDate">
+          <DataField>DispatchDate</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="DateReceipt">
+          <DataField>DateReceipt</DataField>
+        </Field>
+        <Field Name="ReceiptNumber">
+          <DataField>ReceiptNumber</DataField>
+        </Field>
+        <Field Name="DateBanked">
+          <DataField>DateBanked</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="AppliedAmount">
+          <DataField>AppliedAmount</DataField>
+        </Field>
+        <Field Name="AppliedAmountFormat">
+          <DataField>AppliedAmountFormat</DataField>
+        </Field>
+        <Field Name="DepositDiff">
+          <DataField>DepositDiff</DataField>
+        </Field>
+        <Field Name="DepositDiffFormat">
+          <DataField>DepositDiffFormat</DataField>
+        </Field>
+        <Field Name="DepositDiffCaption">
+          <DataField>DepositDiffCaption</DataField>
+        </Field>
+        <Field Name="Difference">
+          <DataField>Difference</DataField>
+        </Field>
+        <Field Name="DifferenceFormat">
+          <DataField>DifferenceFormat</DataField>
+        </Field>
+        <Field Name="companypic">
+          <DataField>companypic</DataField>
+        </Field>
+        <Field Name="CheckNo_BankAccReconciliationLine">
+          <DataField>CheckNo_BankAccReconciliationLine</DataField>
+        </Field>
+        <Field Name="TotalcashDBT">
+          <DataField>TotalcashDBT</DataField>
+        </Field>
+        <Field Name="TotalcashDBTFormat">
+          <DataField>TotalcashDBTFormat</DataField>
+        </Field>
+        <Field Name="TotalCashCRDT">
+          <DataField>TotalCashCRDT</DataField>
+        </Field>
+        <Field Name="TotalCashCRDTFormat">
+          <DataField>TotalCashCRDTFormat</DataField>
+        </Field>
+        <Field Name="ReceiptInBankNotInCB_">
+          <DataField>ReceiptInBankNotInCB_</DataField>
+        </Field>
+        <Field Name="ReceiptInBankNotInCB_Format">
+          <DataField>ReceiptInBankNotInCB_Format</DataField>
+        </Field>
+        <Field Name="StatementAmount_BankAccReconciliationLine">
+          <DataField>StatementAmount_BankAccReconciliationLine</DataField>
+        </Field>
+        <Field Name="StatementAmount_BankAccReconciliationLineFormat">
+          <DataField>StatementAmount_BankAccReconciliationLineFormat</DataField>
+        </Field>
+        <Field Name="TotalDebits">
+          <DataField>TotalDebits</DataField>
+        </Field>
+        <Field Name="TotalDebitsFormat">
+          <DataField>TotalDebitsFormat</DataField>
+        </Field>
+        <Field Name="TotalCredits">
+          <DataField>TotalCredits</DataField>
+        </Field>
+        <Field Name="TotalCreditsFormat">
+          <DataField>TotalCreditsFormat</DataField>
+        </Field>
+        <Field Name="TotalBalanceNow">
+          <DataField>TotalBalanceNow</DataField>
+        </Field>
+        <Field Name="TotalBalanceNowFormat">
+          <DataField>TotalBalanceNowFormat</DataField>
+        </Field>
+        <Field Name="NoofDebits">
+          <DataField>NoofDebits</DataField>
+        </Field>
+        <Field Name="NoofDebitsFormat">
+          <DataField>NoofDebitsFormat</DataField>
+        </Field>
+        <Field Name="NoofCredits">
+          <DataField>NoofCredits</DataField>
+        </Field>
+        <Field Name="NoofCreditsFormat">
+          <DataField>NoofCreditsFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

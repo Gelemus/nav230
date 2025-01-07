@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CAddress2">
+          <DataField>CAddress2</DataField>
+        </Field>
+        <Field Name="CCity">
+          <DataField>CCity</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="CEmail">
+          <DataField>CEmail</DataField>
+        </Field>
+        <Field Name="CPhone">
+          <DataField>CPhone</DataField>
+        </Field>
+        <Field Name="CWebsite">
+          <DataField>CWebsite</DataField>
+        </Field>
+        <Field Name="CVision">
+          <DataField>CVision</DataField>
+        </Field>
+        <Field Name="Lno">
+          <DataField>Lno</DataField>
+        </Field>
+        <Field Name="No_HRMedicalScheme">
+          <DataField>No_HRMedicalScheme</DataField>
+        </Field>
+        <Field Name="MedicalSchemeDescription_HRMedicalScheme">
+          <DataField>MedicalSchemeDescription_HRMedicalScheme</DataField>
+        </Field>
+        <Field Name="Provider_HRMedicalScheme">
+          <DataField>Provider_HRMedicalScheme</DataField>
+        </Field>
+        <Field Name="ProviderName_HRMedicalScheme">
+          <DataField>ProviderName_HRMedicalScheme</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="SchemeNo_HRMedicalSchemeMembers">
+          <DataField>SchemeNo_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRMedicalSchemeMembers">
+          <DataField>EmployeeNo_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="EmployeeName_HRMedicalSchemeMembers">
+          <DataField>EmployeeName_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="MedicalSchemeDescription_HRMedicalSchemeMembers">
+          <DataField>MedicalSchemeDescription_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="FamilySize_HRMedicalSchemeMembers">
+          <DataField>FamilySize_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="CoverOption_HRMedicalSchemeMembers">
+          <DataField>CoverOption_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="InPatientBenfit_HRMedicalSchemeMembers">
+          <DataField>InPatientBenfit_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="InPatientBenfit_HRMedicalSchemeMembersFormat">
+          <DataField>InPatientBenfit_HRMedicalSchemeMembersFormat</DataField>
+        </Field>
+        <Field Name="OutpatientBenefit_HRMedicalSchemeMembers">
+          <DataField>OutpatientBenefit_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="OutpatientBenefit_HRMedicalSchemeMembersFormat">
+          <DataField>OutpatientBenefit_HRMedicalSchemeMembersFormat</DataField>
+        </Field>
+        <Field Name="Status_HRMedicalSchemeMembers">
+          <DataField>Status_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="PrincipalNo_HRMedicalSchemeMembers">
+          <DataField>PrincipalNo_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="DependantName_HRMedicalSchemeMembers">
+          <DataField>DependantName_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="DateofBirth_HRMedicalSchemeMembers">
+          <DataField>DateofBirth_HRMedicalSchemeMembers</DataField>
+        </Field>
+        <Field Name="Relation_HRMedicalSchemeMembers">
+          <DataField>Relation_HRMedicalSchemeMembers</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

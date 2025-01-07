@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LN1">
+          <DataField>LN1</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="No_Campaign">
+          <DataField>No_Campaign</DataField>
+        </Field>
+        <Field Name="Description_Campaign">
+          <DataField>Description_Campaign</DataField>
+        </Field>
+        <Field Name="StartingDate_Campaign">
+          <DataField>StartingDate_Campaign</DataField>
+        </Field>
+        <Field Name="EndingDate_Campaign">
+          <DataField>EndingDate_Campaign</DataField>
+        </Field>
+        <Field Name="SalespersonCode_Campaign">
+          <DataField>SalespersonCode_Campaign</DataField>
+        </Field>
+        <Field Name="Comment_Campaign">
+          <DataField>Comment_Campaign</DataField>
+        </Field>
+        <Field Name="Budget_Campaign">
+          <DataField>Budget_Campaign</DataField>
+        </Field>
+        <Field Name="BudgetAmount_Campaign">
+          <DataField>BudgetAmount_Campaign</DataField>
+        </Field>
+        <Field Name="TaskEstimatedAmount_Campaign">
+          <DataField>TaskEstimatedAmount_Campaign</DataField>
+        </Field>
+        <Field Name="Status_Campaign">
+          <DataField>Status_Campaign</DataField>
+        </Field>
+        <Field Name="DocumentDate_Campaign">
+          <DataField>DocumentDate_Campaign</DataField>
+        </Field>
+        <Field Name="UserID_Campaign">
+          <DataField>UserID_Campaign</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_Campaign">
+          <DataField>IncomingDocumentEntryNo_Campaign</DataField>
+        </Field>
+        <Field Name="No_Todo">
+          <DataField>No_Todo</DataField>
+        </Field>
+        <Field Name="TeamCode_Todo">
+          <DataField>TeamCode_Todo</DataField>
+        </Field>
+        <Field Name="SalespersonCode_Todo">
+          <DataField>SalespersonCode_Todo</DataField>
+        </Field>
+        <Field Name="CampaignNo_Todo">
+          <DataField>CampaignNo_Todo</DataField>
+        </Field>
+        <Field Name="ContactNo_Todo">
+          <DataField>ContactNo_Todo</DataField>
+        </Field>
+        <Field Name="OpportunityNo_Todo">
+          <DataField>OpportunityNo_Todo</DataField>
+        </Field>
+        <Field Name="SegmentNo_Todo">
+          <DataField>SegmentNo_Todo</DataField>
+        </Field>
+        <Field Name="Type_Todo">
+          <DataField>Type_Todo</DataField>
+        </Field>
+        <Field Name="Date_Todo">
+          <DataField>Date_Todo</DataField>
+        </Field>
+        <Field Name="Status_Todo">
+          <DataField>Status_Todo</DataField>
+        </Field>
+        <Field Name="Priority_Todo">
+          <DataField>Priority_Todo</DataField>
+        </Field>
+        <Field Name="Description_Todo">
+          <DataField>Description_Todo</DataField>
+        </Field>
+        <Field Name="Closed_Todo">
+          <DataField>Closed_Todo</DataField>
+        </Field>
+        <Field Name="DateClosed_Todo">
+          <DataField>DateClosed_Todo</DataField>
+        </Field>
+        <Field Name="NoSeries_Todo">
+          <DataField>NoSeries_Todo</DataField>
+        </Field>
+        <Field Name="Comment_Todo">
+          <DataField>Comment_Todo</DataField>
+        </Field>
+        <Field Name="Canceled_Todo">
+          <DataField>Canceled_Todo</DataField>
+        </Field>
+        <Field Name="ContactName_Todo">
+          <DataField>ContactName_Todo</DataField>
+        </Field>
+        <Field Name="TeamName_Todo">
+          <DataField>TeamName_Todo</DataField>
+        </Field>
+        <Field Name="SalespersonName_Todo">
+          <DataField>SalespersonName_Todo</DataField>
+        </Field>
+        <Field Name="CampaignDescription_Todo">
+          <DataField>CampaignDescription_Todo</DataField>
+        </Field>
+        <Field Name="ContactCompanyNo_Todo">
+          <DataField>ContactCompanyNo_Todo</DataField>
+        </Field>
+        <Field Name="ContactCompanyName_Todo">
+          <DataField>ContactCompanyName_Todo</DataField>
+        </Field>
+        <Field Name="Recurring_Todo">
+          <DataField>Recurring_Todo</DataField>
+        </Field>
+        <Field Name="RecurringDateInterval_Todo">
+          <DataField>RecurringDateInterval_Todo</DataField>
+        </Field>
+        <Field Name="CalcDueDateFrom_Todo">
+          <DataField>CalcDueDateFrom_Todo</DataField>
+        </Field>
+        <Field Name="OpportunityDescription_Todo">
+          <DataField>OpportunityDescription_Todo</DataField>
+        </Field>
+        <Field Name="StartTime_Todo">
+          <DataField>StartTime_Todo</DataField>
+        </Field>
+        <Field Name="Duration_Todo">
+          <DataField>Duration_Todo</DataField>
+        </Field>
+        <Field Name="OpportunityEntryNo_Todo">
+          <DataField>OpportunityEntryNo_Todo</DataField>
+        </Field>
+        <Field Name="LastDateModified_Todo">
+          <DataField>LastDateModified_Todo</DataField>
+        </Field>
+        <Field Name="LastTimeModified_Todo">
+          <DataField>LastTimeModified_Todo</DataField>
+        </Field>
+        <Field Name="AllDayEvent_Todo">
+          <DataField>AllDayEvent_Todo</DataField>
+        </Field>
+        <Field Name="Location_Todo">
+          <DataField>Location_Todo</DataField>
+        </Field>
+        <Field Name="OrganizerTodoNo_Todo">
+          <DataField>OrganizerTodoNo_Todo</DataField>
+        </Field>
+        <Field Name="InteractionTemplateCode_Todo">
+          <DataField>InteractionTemplateCode_Todo</DataField>
+        </Field>
+        <Field Name="LanguageCode_Todo">
+          <DataField>LanguageCode_Todo</DataField>
+        </Field>
+        <Field Name="AttachmentNo_Todo">
+          <DataField>AttachmentNo_Todo</DataField>
+        </Field>
+        <Field Name="Subject_Todo">
+          <DataField>Subject_Todo</DataField>
+        </Field>
+        <Field Name="UnitCostLCY_Todo">
+          <DataField>UnitCostLCY_Todo</DataField>
+        </Field>
+        <Field Name="UnitCostLCY_TodoFormat">
+          <DataField>UnitCostLCY_TodoFormat</DataField>
+        </Field>
+        <Field Name="UnitDurationMin_Todo">
+          <DataField>UnitDurationMin_Todo</DataField>
+        </Field>
+        <Field Name="UnitDurationMin_TodoFormat">
+          <DataField>UnitDurationMin_TodoFormat</DataField>
+        </Field>
+        <Field Name="NoofAttendees_Todo">
+          <DataField>NoofAttendees_Todo</DataField>
+        </Field>
+        <Field Name="AttendeesAcceptedNo_Todo">
+          <DataField>AttendeesAcceptedNo_Todo</DataField>
+        </Field>
+        <Field Name="SystemTodoType_Todo">
+          <DataField>SystemTodoType_Todo</DataField>
+        </Field>
+        <Field Name="CompletedBy_Todo">
+          <DataField>CompletedBy_Todo</DataField>
+        </Field>
+        <Field Name="EndingDate_Todo">
+          <DataField>EndingDate_Todo</DataField>
+        </Field>
+        <Field Name="EndingTime_Todo">
+          <DataField>EndingTime_Todo</DataField>
+        </Field>
+        <Field Name="WizardStep_Todo">
+          <DataField>WizardStep_Todo</DataField>
+        </Field>
+        <Field Name="TeamTodo_Todo">
+          <DataField>TeamTodo_Todo</DataField>
+        </Field>
+        <Field Name="Sendonfinish_Todo">
+          <DataField>Sendonfinish_Todo</DataField>
+        </Field>
+        <Field Name="SegmentDescription_Todo">
+          <DataField>SegmentDescription_Todo</DataField>
+        </Field>
+        <Field Name="TeamMeetingOrganizer_Todo">
+          <DataField>TeamMeetingOrganizer_Todo</DataField>
+        </Field>
+        <Field Name="ActivityCode_Todo">
+          <DataField>ActivityCode_Todo</DataField>
+        </Field>
+        <Field Name="WizardContactName_Todo">
+          <DataField>WizardContactName_Todo</DataField>
+        </Field>
+        <Field Name="WizardCampaignDescription_Todo">
+          <DataField>WizardCampaignDescription_Todo</DataField>
+        </Field>
+        <Field Name="WizardOpportunityDescription_Todo">
+          <DataField>WizardOpportunityDescription_Todo</DataField>
+        </Field>
+        <Field Name="EstimatedCost_Todo">
+          <DataField>EstimatedCost_Todo</DataField>
+        </Field>
+        <Field Name="DocumentNo_MarketingActivities">
+          <DataField>DocumentNo_MarketingActivities</DataField>
+        </Field>
+        <Field Name="LineNo_MarketingActivities">
+          <DataField>LineNo_MarketingActivities</DataField>
+        </Field>
+        <Field Name="ActivityDate_MarketingActivities">
+          <DataField>ActivityDate_MarketingActivities</DataField>
+        </Field>
+        <Field Name="ActivityDescription_MarketingActivities">
+          <DataField>ActivityDescription_MarketingActivities</DataField>
+        </Field>
+        <Field Name="Type_MarketingActivities">
+          <DataField>Type_MarketingActivities</DataField>
+        </Field>
+        <Field Name="EmployeeID_MarketingActivities">
+          <DataField>EmployeeID_MarketingActivities</DataField>
+        </Field>
+        <Field Name="UserID_MarketingActivities">
+          <DataField>UserID_MarketingActivities</DataField>
+        </Field>
+        <Field Name="DateCreated_MarketingActivities">
+          <DataField>DateCreated_MarketingActivities</DataField>
+        </Field>
+        <Field Name="TimeCreated_MarketingActivities">
+          <DataField>TimeCreated_MarketingActivities</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

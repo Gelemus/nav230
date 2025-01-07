@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="Lno">
+          <DataField>Lno</DataField>
+        </Field>
+        <Field Name="No_HRLeaveApplication">
+          <DataField>No_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DocumentDate_HRLeaveApplication">
+          <DataField>DocumentDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="PostingDate_HRLeaveApplication">
+          <DataField>PostingDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRLeaveApplication">
+          <DataField>EmployeeNo_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EmployeeName_HRLeaveApplication">
+          <DataField>EmployeeName_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveType_HRLeaveApplication">
+          <DataField>LeaveType_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeavePeriod_HRLeaveApplication">
+          <DataField>LeavePeriod_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveBalance_HRLeaveApplication">
+          <DataField>LeaveBalance_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveBalance_HRLeaveApplicationFormat">
+          <DataField>LeaveBalance_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="LeaveStartDate_HRLeaveApplication">
+          <DataField>LeaveStartDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DaysApplied_HRLeaveApplication">
+          <DataField>DaysApplied_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DaysApproved_HRLeaveApplication">
+          <DataField>DaysApproved_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveEndDate_HRLeaveApplication">
+          <DataField>LeaveEndDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveReturnDate_HRLeaveApplication">
+          <DataField>LeaveReturnDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="SubstituteNo_HRLeaveApplication">
+          <DataField>SubstituteNo_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="SubstituteName_HRLeaveApplication">
+          <DataField>SubstituteName_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ReasonforLeave_HRLeaveApplication">
+          <DataField>ReasonforLeave_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_HRLeaveApplication">
+          <DataField>GlobalDimension1Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HRLeaveApplication">
+          <DataField>GlobalDimension2Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_HRLeaveApplication">
+          <DataField>ShortcutDimension3Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_HRLeaveApplication">
+          <DataField>ShortcutDimension4Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_HRLeaveApplication">
+          <DataField>ShortcutDimension5Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_HRLeaveApplication">
+          <DataField>ShortcutDimension6Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_HRLeaveApplication">
+          <DataField>ShortcutDimension7Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_HRLeaveApplication">
+          <DataField>ShortcutDimension8Code_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_HRLeaveApplication">
+          <DataField>ResponsibilityCenter_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="Status_HRLeaveApplication">
+          <DataField>Status_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="Posted_HRLeaveApplication">
+          <DataField>Posted_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="PostedBy_HRLeaveApplication">
+          <DataField>PostedBy_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DatePosted_HRLeaveApplication">
+          <DataField>DatePosted_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="TimePosted_HRLeaveApplication">
+          <DataField>TimePosted_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="UserID_HRLeaveApplication">
+          <DataField>UserID_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="NoSeries_HRLeaveApplication">
+          <DataField>NoSeries_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_HRLeaveApplication">
+          <DataField>IncomingDocumentEntryNo_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EmployeeCategory_HRLeaveApplication">
+          <DataField>EmployeeCategory_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ApprovedByName_HRLeaveApplication">
+          <DataField>ApprovedByName_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="RequestLeaveAllowance_HRLeaveApplication">
+          <DataField>RequestLeaveAllowance_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceAmount_HRLeaveApplication">
+          <DataField>LeaveAllowanceAmount_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceAmount_HRLeaveApplicationFormat">
+          <DataField>LeaveAllowanceAmount_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="DetailsofExamination_HRLeaveApplication">
+          <DataField>DetailsofExamination_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DateofExam_HRLeaveApplication">
+          <DataField>DateofExam_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="SupervisorName_HRLeaveApplication">
+          <DataField>SupervisorName_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EmailAddress_HRLeaveApplication">
+          <DataField>EmailAddress_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="CellPhoneNumber_HRLeaveApplication">
+          <DataField>CellPhoneNumber_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="CummAllocatedLeaveDays_HRLeaveApplication">
+          <DataField>CummAllocatedLeaveDays_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="CummAllocatedLeaveDays_HRLeaveApplicationFormat">
+          <DataField>CummAllocatedLeaveDays_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="AllocatedDays_HRLeaveApplication">
+          <DataField>AllocatedDays_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="AllocatedDays_HRLeaveApplicationFormat">
+          <DataField>AllocatedDays_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="LeaveDaysTaken_HRLeaveApplication">
+          <DataField>LeaveDaysTaken_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveDaysTaken_HRLeaveApplicationFormat">
+          <DataField>LeaveDaysTaken_HRLeaveApplicationFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

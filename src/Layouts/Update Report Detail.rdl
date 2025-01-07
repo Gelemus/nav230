@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Periods_Period_ID">
+          <DataField>Periods_Period_ID</DataField>
+        </Field>
+        <Field Name="Periods_Period_Month">
+          <DataField>Periods_Period_Month</DataField>
+        </Field>
+        <Field Name="Periods_Period_Year">
+          <DataField>Periods_Period_Year</DataField>
+        </Field>
+        <Field Name="Periods_Payroll_Code">
+          <DataField>Periods_Payroll_Code</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Periods_Description">
+          <DataField>Periods_Description</DataField>
+        </Field>
+        <Field Name="ED_Definitions__ED_Code_">
+          <DataField>ED_Definitions__ED_Code_</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="ED_Definitions_Description">
+          <DataField>ED_Definitions_Description</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Update_Report_DetailCaption">
+          <DataField>Update_Report_DetailCaption</DataField>
+        </Field>
+        <Field Name="As_AtCaption">
+          <DataField>As_AtCaption</DataField>
+        </Field>
+        <Field Name="PAYMENTSCaption">
+          <DataField>PAYMENTSCaption</DataField>
+        </Field>
+        <Field Name="CODECaption">
+          <DataField>CODECaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="ED_Definitions2__ED_Code_">
+          <DataField>ED_Definitions2__ED_Code_</DataField>
+        </Field>
+        <Field Name="ED_Definitions2_Description">
+          <DataField>ED_Definitions2_Description</DataField>
+        </Field>
+        <Field Name="Amount_Control1000000022">
+          <DataField>Amount_Control1000000022</DataField>
+        </Field>
+        <Field Name="Amount_Control1000000022Format">
+          <DataField>Amount_Control1000000022Format</DataField>
+        </Field>
+        <Field Name="gvPayments">
+          <DataField>gvPayments</DataField>
+        </Field>
+        <Field Name="gvPaymentsFormat">
+          <DataField>gvPaymentsFormat</DataField>
+        </Field>
+        <Field Name="gvDeductions">
+          <DataField>gvDeductions</DataField>
+        </Field>
+        <Field Name="gvDeductionsFormat">
+          <DataField>gvDeductionsFormat</DataField>
+        </Field>
+        <Field Name="gvPAYE">
+          <DataField>gvPAYE</DataField>
+        </Field>
+        <Field Name="gvPAYEFormat">
+          <DataField>gvPAYEFormat</DataField>
+        </Field>
+        <Field Name="gvPayments____gvDeductions___gvPAYE_">
+          <DataField>gvPayments____gvDeductions___gvPAYE_</DataField>
+        </Field>
+        <Field Name="gvPayments____gvDeductions___gvPAYE_Format">
+          <DataField>gvPayments____gvDeductions___gvPAYE_Format</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption">
+          <DataField>DEDUCTIONSCaption</DataField>
+        </Field>
+        <Field Name="CODECaption_Control1000000026">
+          <DataField>CODECaption_Control1000000026</DataField>
+        </Field>
+        <Field Name="DescriptionCaption_Control1000000027">
+          <DataField>DescriptionCaption_Control1000000027</DataField>
+        </Field>
+        <Field Name="AmountCaption_Control1000000028">
+          <DataField>AmountCaption_Control1000000028</DataField>
+        </Field>
+        <Field Name="Gross_PaymentsCaption">
+          <DataField>Gross_PaymentsCaption</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption">
+          <DataField>Total_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="Total_PAYECaption">
+          <DataField>Total_PAYECaption</DataField>
+        </Field>
+        <Field Name="NettCaption">
+          <DataField>NettCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

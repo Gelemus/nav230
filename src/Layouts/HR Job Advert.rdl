@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_HREmployeeRequisitions">
+          <DataField>No_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobNo_HREmployeeRequisitions">
+          <DataField>JobNo_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobTitle_HREmployeeRequisitions">
+          <DataField>JobTitle_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobDescription_HREmployeeRequisitions">
+          <DataField>JobDescription_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobGrade_HREmployeeRequisitions">
+          <DataField>JobGrade_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="MaximumPositions_HREmployeeRequisitions">
+          <DataField>MaximumPositions_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="OccupiedPositions_HREmployeeRequisitions">
+          <DataField>OccupiedPositions_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="VacantPositions_HREmployeeRequisitions">
+          <DataField>VacantPositions_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="RequestedEmployees_HREmployeeRequisitions">
+          <DataField>RequestedEmployees_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ClosingDate_HREmployeeRequisitions">
+          <DataField>ClosingDate_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="RequisitionType_HREmployeeRequisitions">
+          <DataField>RequisitionType_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ReasonforRequisition_HREmployeeRequisitions">
+          <DataField>ReasonforRequisition_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="InterviewDate_HREmployeeRequisitions">
+          <DataField>InterviewDate_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="InterviewTime_HREmployeeRequisitions">
+          <DataField>InterviewTime_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="InterviewLocation_HREmployeeRequisitions">
+          <DataField>InterviewLocation_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="Description_HREmployeeRequisitions">
+          <DataField>Description_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_HREmployeeRequisitions">
+          <DataField>GlobalDimension1Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HREmployeeRequisitions">
+          <DataField>GlobalDimension2Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_HREmployeeRequisitions">
+          <DataField>ShortcutDimension3Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_HREmployeeRequisitions">
+          <DataField>ShortcutDimension4Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_HREmployeeRequisitions">
+          <DataField>ShortcutDimension5Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_HREmployeeRequisitions">
+          <DataField>ShortcutDimension6Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_HREmployeeRequisitions">
+          <DataField>ShortcutDimension7Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_HREmployeeRequisitions">
+          <DataField>ShortcutDimension8Code_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_HREmployeeRequisitions">
+          <DataField>ResponsibilityCenter_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="Status_HREmployeeRequisitions">
+          <DataField>Status_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="UserID_HREmployeeRequisitions">
+          <DataField>UserID_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="NoSeries_HREmployeeRequisitions">
+          <DataField>NoSeries_HREmployeeRequisitions</DataField>
+        </Field>
+        <Field Name="JobPurpose">
+          <DataField>JobPurpose</DataField>
+        </Field>
+        <Field Name="LN1">
+          <DataField>LN1</DataField>
+        </Field>
+        <Field Name="QualificationCode_HRJobQualifications">
+          <DataField>QualificationCode_HRJobQualifications</DataField>
+        </Field>
+        <Field Name="Description_HRJobQualifications">
+          <DataField>Description_HRJobQualifications</DataField>
+        </Field>
+        <Field Name="Mandatory_HRJobQualifications">
+          <DataField>Mandatory_HRJobQualifications</DataField>
+        </Field>
+        <Field Name="LN2">
+          <DataField>LN2</DataField>
+        </Field>
+        <Field Name="JobNo_HRJobRequirements">
+          <DataField>JobNo_HRJobRequirements</DataField>
+        </Field>
+        <Field Name="RequirementCode_HRJobRequirements">
+          <DataField>RequirementCode_HRJobRequirements</DataField>
+        </Field>
+        <Field Name="Description_HRJobRequirements">
+          <DataField>Description_HRJobRequirements</DataField>
+        </Field>
+        <Field Name="LN3">
+          <DataField>LN3</DataField>
+        </Field>
+        <Field Name="JobNo_HRJobResponsibilities">
+          <DataField>JobNo_HRJobResponsibilities</DataField>
+        </Field>
+        <Field Name="ResponsibilityCode_HRJobResponsibilities">
+          <DataField>ResponsibilityCode_HRJobResponsibilities</DataField>
+        </Field>
+        <Field Name="Description_HRJobResponsibilities">
+          <DataField>Description_HRJobResponsibilities</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="GlobalDimension1Code_PaymentHeaderCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>GlobalDimension1Code_PaymentHeaderCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>GlobalDimension1Code_PaymentHeaderCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_PaymentHeader">
+          <DataField>No_PaymentHeader</DataField>
+        </Field>
+        <Field Name="DocumentType_PaymentHeader">
+          <DataField>DocumentType_PaymentHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_PaymentHeader">
+          <DataField>DocumentDate_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_PaymentHeader">
+          <DataField>PostingDate_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PaymentMode_PaymentHeader">
+          <DataField>PaymentMode_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PaymentType_PaymentHeader">
+          <DataField>PaymentType_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountNo_PaymentHeader">
+          <DataField>BankAccountNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountName_PaymentHeader">
+          <DataField>BankAccountName_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountBalance_PaymentHeader">
+          <DataField>BankAccountBalance_PaymentHeader</DataField>
+        </Field>
+        <Field Name="BankAccountBalance_PaymentHeaderFormat">
+          <DataField>BankAccountBalance_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="ChequeType_PaymentHeader">
+          <DataField>ChequeType_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReferenceNo_PaymentHeader">
+          <DataField>ReferenceNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeType_PaymentHeader">
+          <DataField>PayeeType_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeNo_PaymentHeader">
+          <DataField>PayeeNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeName_PaymentHeader">
+          <DataField>PayeeName_PaymentHeader</DataField>
+        </Field>
+        <Field Name="OnBehalfOf_PaymentHeader">
+          <DataField>OnBehalfOf_PaymentHeader</DataField>
+        </Field>
+        <Field Name="CurrencyCode_PaymentHeader">
+          <DataField>CurrencyCode_PaymentHeader</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_PaymentHeader">
+          <DataField>CurrencyFactor_PaymentHeader</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_PaymentHeaderFormat">
+          <DataField>CurrencyFactor_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalAmount_PaymentHeader">
+          <DataField>TotalAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="TotalAmount_PaymentHeaderFormat">
+          <DataField>TotalAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_PaymentHeader">
+          <DataField>TotalAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_PaymentHeaderFormat">
+          <DataField>TotalAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentHeader">
+          <DataField>VATAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentHeaderFormat">
+          <DataField>VATAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentHeader">
+          <DataField>VATAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentHeaderFormat">
+          <DataField>VATAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="WithHoldingTaxAmount_PaymentHeader">
+          <DataField>WithHoldingTaxAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="WithHoldingTaxAmount_PaymentHeaderFormat">
+          <DataField>WithHoldingTaxAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="WithHoldingTaxAmountLCY_PaymentHeader">
+          <DataField>WithHoldingTaxAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="WithHoldingTaxAmountLCY_PaymentHeaderFormat">
+          <DataField>WithHoldingTaxAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmount_PaymentHeader">
+          <DataField>WithholdingVATAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmount_PaymentHeaderFormat">
+          <DataField>WithholdingVATAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmountLCY_PaymentHeader">
+          <DataField>WithholdingVATAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmountLCY_PaymentHeaderFormat">
+          <DataField>WithholdingVATAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="NetAmount_PaymentHeader">
+          <DataField>NetAmount_PaymentHeader</DataField>
+        </Field>
+        <Field Name="NetAmount_PaymentHeaderFormat">
+          <DataField>NetAmount_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="NetAmountLCY_PaymentHeader">
+          <DataField>NetAmountLCY_PaymentHeader</DataField>
+        </Field>
+        <Field Name="NetAmountLCY_PaymentHeaderFormat">
+          <DataField>NetAmountLCY_PaymentHeaderFormat</DataField>
+        </Field>
+        <Field Name="Description_PaymentHeader">
+          <DataField>Description_PaymentHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_PaymentHeader">
+          <DataField>GlobalDimension1Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_PaymentHeader">
+          <DataField>GlobalDimension2Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_PaymentHeader">
+          <DataField>ShortcutDimension3Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_PaymentHeader">
+          <DataField>ShortcutDimension4Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_PaymentHeader">
+          <DataField>ShortcutDimension5Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_PaymentHeader">
+          <DataField>ShortcutDimension6Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_PaymentHeader">
+          <DataField>ShortcutDimension7Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_PaymentHeader">
+          <DataField>ShortcutDimension8Code_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_PaymentHeader">
+          <DataField>ResponsibilityCenter_PaymentHeader</DataField>
+        </Field>
+        <Field Name="Status_PaymentHeader">
+          <DataField>Status_PaymentHeader</DataField>
+        </Field>
+        <Field Name="Posted_PaymentHeader">
+          <DataField>Posted_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PostedBy_PaymentHeader">
+          <DataField>PostedBy_PaymentHeader</DataField>
+        </Field>
+        <Field Name="DatePosted_PaymentHeader">
+          <DataField>DatePosted_PaymentHeader</DataField>
+        </Field>
+        <Field Name="TimePosted_PaymentHeader">
+          <DataField>TimePosted_PaymentHeader</DataField>
+        </Field>
+        <Field Name="Reversed_PaymentHeader">
+          <DataField>Reversed_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReversedBy_PaymentHeader">
+          <DataField>ReversedBy_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReversalDate_PaymentHeader">
+          <DataField>ReversalDate_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReversalTime_PaymentHeader">
+          <DataField>ReversalTime_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ReversalPostingDate_PaymentHeader">
+          <DataField>ReversalPostingDate_PaymentHeader</DataField>
+        </Field>
+        <Field Name="ChequeNo_PaymentHeader">
+          <DataField>ChequeNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="UserID_PaymentHeader">
+          <DataField>UserID_PaymentHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_PaymentHeader">
+          <DataField>NoSeries_PaymentHeader</DataField>
+        </Field>
+        <Field Name="NoPrinted_PaymentHeader">
+          <DataField>NoPrinted_PaymentHeader</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_PaymentHeader">
+          <DataField>IncomingDocumentEntryNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeBankAccountName_PaymentHeader">
+          <DataField>PayeeBankAccountName_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeBankAccountNo_PaymentHeader">
+          <DataField>PayeeBankAccountNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="MPESAPaybillAccountNo_PaymentHeader">
+          <DataField>MPESAPaybillAccountNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeBankCode_PaymentHeader">
+          <DataField>PayeeBankCode_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PayeeBankName_PaymentHeader">
+          <DataField>PayeeBankName_PaymentHeader</DataField>
+        </Field>
+        <Field Name="LoanDisbursementType_PaymentHeader">
+          <DataField>LoanDisbursementType_PaymentHeader</DataField>
+        </Field>
+        <Field Name="PVCNo_PaymentHeader">
+          <DataField>PVCNo_PaymentHeader</DataField>
+        </Field>
+        <Field Name="LineNo_PaymentLine">
+          <DataField>LineNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_PaymentLine">
+          <DataField>DocumentNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="DocumentType_PaymentLine">
+          <DataField>DocumentType_PaymentLine</DataField>
+        </Field>
+        <Field Name="PaymentCode_PaymentLine">
+          <DataField>PaymentCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="PaymentCodeDescription_PaymentLine">
+          <DataField>PaymentCodeDescription_PaymentLine</DataField>
+        </Field>
+        <Field Name="AccountType_PaymentLine">
+          <DataField>AccountType_PaymentLine</DataField>
+        </Field>
+        <Field Name="AccountNo_PaymentLine">
+          <DataField>AccountNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="AccountName_PaymentLine">
+          <DataField>AccountName_PaymentLine</DataField>
+        </Field>
+        <Field Name="PostingGroup_PaymentLine">
+          <DataField>PostingGroup_PaymentLine</DataField>
+        </Field>
+        <Field Name="Description_PaymentLine">
+          <DataField>Description_PaymentLine</DataField>
+        </Field>
+        <Field Name="ReferenceNo_PaymentLine">
+          <DataField>ReferenceNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="PostingDate_PaymentLine">
+          <DataField>PostingDate_PaymentLine</DataField>
+        </Field>
+        <Field Name="CurrencyCode_PaymentLine">
+          <DataField>CurrencyCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_PaymentLine">
+          <DataField>CurrencyFactor_PaymentLine</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_PaymentLineFormat">
+          <DataField>CurrencyFactor_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="TotalAmount_PaymentLine">
+          <DataField>TotalAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="TotalAmount_PaymentLineFormat">
+          <DataField>TotalAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_PaymentLine">
+          <DataField>TotalAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_PaymentLineFormat">
+          <DataField>TotalAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="VATCode_PaymentLine">
+          <DataField>VATCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentLine">
+          <DataField>VATAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="VATAmount_PaymentLineFormat">
+          <DataField>VATAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentLine">
+          <DataField>VATAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PaymentLineFormat">
+          <DataField>VATAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingTaxCode_PaymentLine">
+          <DataField>WithholdingTaxCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmount_PaymentLine">
+          <DataField>WithholdingTaxAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmount_PaymentLineFormat">
+          <DataField>WithholdingTaxAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmountLCY_PaymentLine">
+          <DataField>WithholdingTaxAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingTaxAmountLCY_PaymentLineFormat">
+          <DataField>WithholdingTaxAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingVATCode_PaymentLine">
+          <DataField>WithholdingVATCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmount_PaymentLine">
+          <DataField>WithholdingVATAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmount_PaymentLineFormat">
+          <DataField>WithholdingVATAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmountLCY_PaymentLine">
+          <DataField>WithholdingVATAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="WithholdingVATAmountLCY_PaymentLineFormat">
+          <DataField>WithholdingVATAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="NetAmount_PaymentLine">
+          <DataField>NetAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="NetAmount_PaymentLineFormat">
+          <DataField>NetAmount_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="NetAmountLCY_PaymentLine">
+          <DataField>NetAmountLCY_PaymentLine</DataField>
+        </Field>
+        <Field Name="NetAmountLCY_PaymentLineFormat">
+          <DataField>NetAmountLCY_PaymentLineFormat</DataField>
+        </Field>
+        <Field Name="AppliestoDocType_PaymentLine">
+          <DataField>AppliestoDocType_PaymentLine</DataField>
+        </Field>
+        <Field Name="AppliestoDocNo_PaymentLine">
+          <DataField>AppliestoDocNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="AppliestoID_PaymentLine">
+          <DataField>AppliestoID_PaymentLine</DataField>
+        </Field>
+        <Field Name="Committed_PaymentLine">
+          <DataField>Committed_PaymentLine</DataField>
+        </Field>
+        <Field Name="BudgetCode_PaymentLine">
+          <DataField>BudgetCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeType_PaymentLine">
+          <DataField>PayeeType_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeNo_PaymentLine">
+          <DataField>PayeeNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_PaymentLine">
+          <DataField>GlobalDimension1Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_PaymentLine">
+          <DataField>GlobalDimension2Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_PaymentLine">
+          <DataField>ShortcutDimension3Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_PaymentLine">
+          <DataField>ShortcutDimension4Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_PaymentLine">
+          <DataField>ShortcutDimension5Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_PaymentLine">
+          <DataField>ShortcutDimension6Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_PaymentLine">
+          <DataField>ShortcutDimension7Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_PaymentLine">
+          <DataField>ShortcutDimension8Code_PaymentLine</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_PaymentLine">
+          <DataField>ResponsibilityCenter_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeBankCode_PaymentLine">
+          <DataField>PayeeBankCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeBankName_PaymentLine">
+          <DataField>PayeeBankName_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeBankBranchCode_PaymentLine">
+          <DataField>PayeeBankBranchCode_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeBankBranchName_PaymentLine">
+          <DataField>PayeeBankBranchName_PaymentLine</DataField>
+        </Field>
+        <Field Name="PayeeBankAccountNo_PaymentLine">
+          <DataField>PayeeBankAccountNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="MobilePaymentAccountNo_PaymentLine">
+          <DataField>MobilePaymentAccountNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="PaymentType_PaymentLine">
+          <DataField>PaymentType_PaymentLine</DataField>
+        </Field>
+        <Field Name="Status_PaymentLine">
+          <DataField>Status_PaymentLine</DataField>
+        </Field>
+        <Field Name="Posted_PaymentLine">
+          <DataField>Posted_PaymentLine</DataField>
+        </Field>
+        <Field Name="PostedBy_PaymentLine">
+          <DataField>PostedBy_PaymentLine</DataField>
+        </Field>
+        <Field Name="DatePosted_PaymentLine">
+          <DataField>DatePosted_PaymentLine</DataField>
+        </Field>
+        <Field Name="TimePosted_PaymentLine">
+          <DataField>TimePosted_PaymentLine</DataField>
+        </Field>
+        <Field Name="Reversed_PaymentLine">
+          <DataField>Reversed_PaymentLine</DataField>
+        </Field>
+        <Field Name="ReversedBy_PaymentLine">
+          <DataField>ReversedBy_PaymentLine</DataField>
+        </Field>
+        <Field Name="ReversalDate_PaymentLine">
+          <DataField>ReversalDate_PaymentLine</DataField>
+        </Field>
+        <Field Name="ReversalTime_PaymentLine">
+          <DataField>ReversalTime_PaymentLine</DataField>
+        </Field>
+        <Field Name="JobNo_PaymentLine">
+          <DataField>JobNo_PaymentLine</DataField>
+        </Field>
+        <Field Name="EmployeeTransactionType_PaymentLine">
+          <DataField>EmployeeTransactionType_PaymentLine</DataField>
+        </Field>
+        <Field Name="RetentionAmount_PaymentLine">
+          <DataField>RetentionAmount_PaymentLine</DataField>
+        </Field>
+        <Field Name="RetentionAmount_PaymentLineFormat">
+          <DataField>RetentionAmount_PaymentLineFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

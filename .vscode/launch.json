@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SPA",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "http://localhost:8080/BC230/",
+            "port":7049,
+            "serverInstance": "BC230",
+            "authentication": "Windows",
+            "startupObjectId":22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "default",
+            "usePublicURLFromServer": true,
+            "schemaUpdateMode": "ForceSync"
+        },
+        {
+            "name": "AL: Generated Download Symbols request",
+            "request": "launch",
+            "type": "al",
+            "server": "http://WIN-2A24T7MIQMB",
+            "serverInstance": "BC230",
+            "authentication": "Windows",
+            "port": 7049,
+            "tenant": "default"
+        }
+    ]
+}

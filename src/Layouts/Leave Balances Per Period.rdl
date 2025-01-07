@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="EmployeeName">
+          <DataField>EmployeeName</DataField>
+        </Field>
+        <Field Name="Firstname">
+          <DataField>Firstname</DataField>
+        </Field>
+        <Field Name="Middlename">
+          <DataField>Middlename</DataField>
+        </Field>
+        <Field Name="Lastname">
+          <DataField>Lastname</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+        </Field>
+        <Field Name="CompanyHomePage">
+          <DataField>CompanyHomePage</DataField>
+        </Field>
+        <Field Name="PeriodDate">
+          <DataField>PeriodDate</DataField>
+        </Field>
+        <Field Name="LeaveCalendar">
+          <DataField>LeaveCalendar</DataField>
+        </Field>
+        <Field Name="DocumentNo_HRLeaveLedgerEntries">
+          <DataField>DocumentNo_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="PostingDate_HRLeaveLedgerEntries">
+          <DataField>PostingDate_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="EntryType_HRLeaveLedgerEntries">
+          <DataField>EntryType_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRLeaveLedgerEntries">
+          <DataField>EmployeeNo_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="LeaveType_HRLeaveLedgerEntries">
+          <DataField>LeaveType_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="LeavePeriod_HRLeaveLedgerEntries">
+          <DataField>LeavePeriod_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="Days_HRLeaveLedgerEntries">
+          <DataField>Days_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="Days_HRLeaveLedgerEntriesFormat">
+          <DataField>Days_HRLeaveLedgerEntriesFormat</DataField>
+        </Field>
+        <Field Name="LeaveStartDate_HRLeaveLedgerEntries">
+          <DataField>LeaveStartDate_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="LeaveEndDate_HRLeaveLedgerEntries">
+          <DataField>LeaveEndDate_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="Description_HRLeaveLedgerEntries">
+          <DataField>Description_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="UserID_HRLeaveLedgerEntries">
+          <DataField>UserID_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="LeaveYear_HRLeaveLedgerEntries">
+          <DataField>LeaveYear_HRLeaveLedgerEntries</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="EmployeeNo_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmployeeNo_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmployeeNo_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DaysApplied_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DaysApplied_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DaysApplied_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApplicationCode_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApplicationCode_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApplicationCode_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RequestLeaveAllowance_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RequestLeaveAllowance_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RequestLeaveAllowance_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LeaveAllowanceAmount_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LeaveAllowanceAmount_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LeaveAllowanceAmount_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="NumberofPreviousAttempts_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>NumberofPreviousAttempts_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>NumberofPreviousAttempts_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DetailsofExamination_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DetailsofExamination_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DetailsofExamination_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateofExam_HRLeavseApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DateofExam_HRLeavseApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DateofExam_HRLeavseApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Reliever_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Reliever_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Reliever_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RelieverName_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RelieverName_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RelieverName_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StartDate_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>StartDate_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>StartDate_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReturnDate_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReturnDate_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReturnDate_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LeaveType_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LeaveType_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LeaveType_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="JobTittle_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>JobTittle_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>JobTittle_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApplicationDate_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApplicationDate_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApplicationDate_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EmailAddress_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>EmailAddress_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>EmailAddress_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CellPhoneNumber_HRLeaveApplicationCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CellPhoneNumber_HRLeaveApplicationCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CellPhoneNumber_HRLeaveApplicationCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApprovedDays_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApprovedDays_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApprovedDays_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApprovedStartDate_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApprovedStartDate_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApprovedStartDate_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ApprovedReturnDate_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ApprovedReturnDate_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ApprovedReturnDate_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Reason_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Reason_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Reason_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LeaveAllowanceGranted_ApprovalCommentLineCaption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LeaveAllowanceGranted_ApprovalCommentLineCaption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LeaveAllowanceGranted_ApprovalCommentLineCaption</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="EmployeeNo_HRLeaveApplication">
+          <DataField>EmployeeNo_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ApprovedBy">
+          <DataField>ApprovedBy</DataField>
+        </Field>
+        <Field Name="EmpName">
+          <DataField>EmpName</DataField>
+        </Field>
+        <Field Name="DaysApplied_HRLeaveApplication">
+          <DataField>DaysApplied_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ApplicationCode_HRLeaveApplication">
+          <DataField>ApplicationCode_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="RequestLeaveAllowance_HRLeaveApplication">
+          <DataField>RequestLeaveAllowance_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceAmount_HRLeaveApplication">
+          <DataField>LeaveAllowanceAmount_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceAmount_HRLeaveApplicationFormat">
+          <DataField>LeaveAllowanceAmount_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="NumberofPreviousAttempts_HRLeaveApplication">
+          <DataField>NumberofPreviousAttempts_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DetailsofExamination_HRLeaveApplication">
+          <DataField>DetailsofExamination_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="DateofExam_HRLeavseApplication">
+          <DataField>DateofExam_HRLeavseApplication</DataField>
+        </Field>
+        <Field Name="Reliever_HRLeaveApplication">
+          <DataField>Reliever_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="RelieverName_HRLeaveApplication">
+          <DataField>RelieverName_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="Supervisor">
+          <DataField>Supervisor</DataField>
+        </Field>
+        <Field Name="StartDate_HRLeaveApplication">
+          <DataField>StartDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+        </Field>
+        <Field Name="ReturnDate_HRLeaveApplication">
+          <DataField>ReturnDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveType_HRLeaveApplication">
+          <DataField>LeaveType_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeavPeriod">
+          <DataField>LeavPeriod</DataField>
+        </Field>
+        <Field Name="JobTittle_HRLeaveApplication">
+          <DataField>JobTittle_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="ApplicationDate_HRLeaveApplication">
+          <DataField>ApplicationDate_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="EmailAddress_HRLeaveApplication">
+          <DataField>EmailAddress_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="CellPhoneNumber_HRLeaveApplication">
+          <DataField>CellPhoneNumber_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="Approveddays_HRLeaveApplication">
+          <DataField>Approveddays_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="CummLDays">
+          <DataField>CummLDays</DataField>
+        </Field>
+        <Field Name="CummLDaysFormat">
+          <DataField>CummLDaysFormat</DataField>
+        </Field>
+        <Field Name="AllocatedDays">
+          <DataField>AllocatedDays</DataField>
+        </Field>
+        <Field Name="AllocatedDaysFormat">
+          <DataField>AllocatedDaysFormat</DataField>
+        </Field>
+        <Field Name="LDaysTaken">
+          <DataField>LDaysTaken</DataField>
+        </Field>
+        <Field Name="LDaysTakenFormat">
+          <DataField>LDaysTakenFormat</DataField>
+        </Field>
+        <Field Name="Remainingdays">
+          <DataField>Remainingdays</DataField>
+        </Field>
+        <Field Name="RemainingdaysFormat">
+          <DataField>RemainingdaysFormat</DataField>
+        </Field>
+        <Field Name="LeaveDaysCarriedfwd">
+          <DataField>LeaveDaysCarriedfwd</DataField>
+        </Field>
+        <Field Name="LeaveCarryOver_HRLeaveApplication">
+          <DataField>LeaveCarryOver_HRLeaveApplication</DataField>
+        </Field>
+        <Field Name="LeaveCarryOver_HRLeaveApplicationFormat">
+          <DataField>LeaveCarryOver_HRLeaveApplicationFormat</DataField>
+        </Field>
+        <Field Name="EmpNo">
+          <DataField>EmpNo</DataField>
+        </Field>
+        <Field Name="LeaveTaken">
+          <DataField>LeaveTaken</DataField>
+        </Field>
+        <Field Name="LeaveTakenFormat">
+          <DataField>LeaveTakenFormat</DataField>
+        </Field>
+        <Field Name="LeaveDaysRema">
+          <DataField>LeaveDaysRema</DataField>
+        </Field>
+        <Field Name="LeaveDaysRemaFormat">
+          <DataField>LeaveDaysRemaFormat</DataField>
+        </Field>
+        <Field Name="AllocLeavDays">
+          <DataField>AllocLeavDays</DataField>
+        </Field>
+        <Field Name="JobTitle_Employee">
+          <DataField>JobTitle_Employee</DataField>
+        </Field>
+        <Field Name="EMail_Employee">
+          <DataField>EMail_Employee</DataField>
+        </Field>
+        <Field Name="MobilePhoneNo_Employee">
+          <DataField>MobilePhoneNo_Employee</DataField>
+        </Field>
+        <Field Name="EmployementCategory_Employee">
+          <DataField>EmployementCategory_Employee</DataField>
+        </Field>
+        <Field Name="AllocatedLeaveDays_Employee">
+          <DataField>AllocatedLeaveDays_Employee</DataField>
+        </Field>
+        <Field Name="LeaveBalance_Employee">
+          <DataField>LeaveBalance_Employee</DataField>
+        </Field>
+        <Field Name="LeaveBalance_EmployeeFormat">
+          <DataField>LeaveBalance_EmployeeFormat</DataField>
+        </Field>
+        <Field Name="ApprovedDays_ApprovalCommentLine">
+          <DataField>ApprovedDays_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="ApprovedDays_ApprovalCommentLineFormat">
+          <DataField>ApprovedDays_ApprovalCommentLineFormat</DataField>
+        </Field>
+        <Field Name="ApprovedStartDate_ApprovalCommentLine">
+          <DataField>ApprovedStartDate_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="ApprovedReturnDate_ApprovalCommentLine">
+          <DataField>ApprovedReturnDate_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="Reason_ApprovalCommentLine">
+          <DataField>Reason_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="LeaveAllowanceGranted_ApprovalCommentLine">
+          <DataField>LeaveAllowanceGranted_ApprovalCommentLine</DataField>
+        </Field>
+        <Field Name="SequenceNo">
+          <DataField>SequenceNo</DataField>
+        </Field>
+        <Field Name="LastDateTimeModified">
+          <DataField>LastDateTimeModified</DataField>
+        </Field>
+        <Field Name="ApproverID">
+          <DataField>ApproverID</DataField>
+        </Field>
+        <Field Name="ApproverID_ApprovalEntry">
+          <DataField>ApproverID_ApprovalEntry</DataField>
+        </Field>
+        <Field Name="SenderID">
+          <DataField>SenderID</DataField>
+        </Field>
+        <Field Name="ShowPreparedBy_">
+          <DataField>ShowPreparedBy_</DataField>
+        </Field>
+        <Field Name="ApprovedByCaption_">
+          <DataField>ApprovedByCaption_</DataField>
+        </Field>
+        <Field Name="PreparedByCaption_">
+          <DataField>PreparedByCaption_</DataField>
+        </Field>
+        <Field Name="PreparedDate">
+          <DataField>PreparedDate</DataField>
+        </Field>
+        <Field Name="UserSetupRec_SignatureI_">
+          <DataField>UserSetupRec_SignatureI_</DataField>
+        </Field>
+        <Field Name="UserSetupRec_Signature_">
+          <DataField>UserSetupRec_Signature_</DataField>
+        </Field>
+        <Field Name="FirstName_Employee">
+          <DataField>FirstName_Employee</DataField>
+        </Field>
+        <Field Name="MiddleName_Employee">
+          <DataField>MiddleName_Employee</DataField>
+        </Field>
+        <Field Name="LastName_Employee">
+          <DataField>LastName_Employee</DataField>
+        </Field>
+        <Field Name="EmployeeSignature">
+          <DataField>EmployeeSignature</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

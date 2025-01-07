@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LN1">
+          <DataField>LN1</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="No_Complaints">
+          <DataField>No_Complaints</DataField>
+        </Field>
+        <Field Name="DocumentDate_Complaints">
+          <DataField>DocumentDate_Complaints</DataField>
+        </Field>
+        <Field Name="Description_Complaints">
+          <DataField>Description_Complaints</DataField>
+        </Field>
+        <Field Name="ActionTaken_Complaints">
+          <DataField>ActionTaken_Complaints</DataField>
+        </Field>
+        <Field Name="Names_Complaints">
+          <DataField>Names_Complaints</DataField>
+        </Field>
+        <Field Name="EmailAddress_Complaints">
+          <DataField>EmailAddress_Complaints</DataField>
+        </Field>
+        <Field Name="ClosingRemarks_Complaints">
+          <DataField>ClosingRemarks_Complaints</DataField>
+        </Field>
+        <Field Name="ClosedBy_Complaints">
+          <DataField>ClosedBy_Complaints</DataField>
+        </Field>
+        <Field Name="DateClosed_Complaints">
+          <DataField>DateClosed_Complaints</DataField>
+        </Field>
+        <Field Name="DateClosed_ComplaintsFormat">
+          <DataField>DateClosed_ComplaintsFormat</DataField>
+        </Field>
+        <Field Name="TimeClosed_Complaints">
+          <DataField>TimeClosed_Complaints</DataField>
+        </Field>
+        <Field Name="TimeClosed_ComplaintsFormat">
+          <DataField>TimeClosed_ComplaintsFormat</DataField>
+        </Field>
+        <Field Name="ComplaintsEmailBody_Complaints">
+          <DataField>ComplaintsEmailBody_Complaints</DataField>
+        </Field>
+        <Field Name="UserID_Complaints">
+          <DataField>UserID_Complaints</DataField>
+        </Field>
+        <Field Name="Status_Complaints">
+          <DataField>Status_Complaints</DataField>
+        </Field>
+        <Field Name="ComplaintChannel_Complaints">
+          <DataField>ComplaintChannel_Complaints</DataField>
+        </Field>
+        <Field Name="RootCause_Complaints">
+          <DataField>RootCause_Complaints</DataField>
+        </Field>
+        <Field Name="CorrectiveAction_Complaints">
+          <DataField>CorrectiveAction_Complaints</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

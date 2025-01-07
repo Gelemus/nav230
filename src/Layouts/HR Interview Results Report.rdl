@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="JobApplicantNo_HRJobApplicantResults">
+          <DataField>JobApplicantNo_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="Surname_HRJobApplicantResults">
+          <DataField>Surname_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="Firstname_HRJobApplicantResults">
+          <DataField>Firstname_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="Middlename_HRJobApplicantResults">
+          <DataField>Middlename_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="JobNo_HRJobApplicantResults">
+          <DataField>JobNo_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="JobRequistionNo_HRJobApplicantResults">
+          <DataField>JobRequistionNo_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="Closed_HRJobApplicantResults">
+          <DataField>Closed_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV1_HRJobApplicantResults">
+          <DataField>EV1_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV1_HRJobApplicantResultsFormat">
+          <DataField>EV1_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV2_HRJobApplicantResults">
+          <DataField>EV2_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV2_HRJobApplicantResultsFormat">
+          <DataField>EV2_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV3_HRJobApplicantResults">
+          <DataField>EV3_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV3_HRJobApplicantResultsFormat">
+          <DataField>EV3_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV4_HRJobApplicantResults">
+          <DataField>EV4_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV4_HRJobApplicantResultsFormat">
+          <DataField>EV4_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV5_HRJobApplicantResults">
+          <DataField>EV5_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV5_HRJobApplicantResultsFormat">
+          <DataField>EV5_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV6_HRJobApplicantResults">
+          <DataField>EV6_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV6_HRJobApplicantResultsFormat">
+          <DataField>EV6_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV7_HRJobApplicantResults">
+          <DataField>EV7_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV7_HRJobApplicantResultsFormat">
+          <DataField>EV7_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV8_HRJobApplicantResults">
+          <DataField>EV8_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV8_HRJobApplicantResultsFormat">
+          <DataField>EV8_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV9_HRJobApplicantResults">
+          <DataField>EV9_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV9_HRJobApplicantResultsFormat">
+          <DataField>EV9_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="EV10_HRJobApplicantResults">
+          <DataField>EV10_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="EV10_HRJobApplicantResultsFormat">
+          <DataField>EV10_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="Total_HRJobApplicantResults">
+          <DataField>Total_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="Total_HRJobApplicantResultsFormat">
+          <DataField>Total_HRJobApplicantResultsFormat</DataField>
+        </Field>
+        <Field Name="Position_HRJobApplicantResults">
+          <DataField>Position_HRJobApplicantResults</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LN1">
+          <DataField>LN1</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="No_Contact">
+          <DataField>No_Contact</DataField>
+        </Field>
+        <Field Name="Name_Contact">
+          <DataField>Name_Contact</DataField>
+        </Field>
+        <Field Name="SearchName_Contact">
+          <DataField>SearchName_Contact</DataField>
+        </Field>
+        <Field Name="Name2_Contact">
+          <DataField>Name2_Contact</DataField>
+        </Field>
+        <Field Name="Address_Contact">
+          <DataField>Address_Contact</DataField>
+        </Field>
+        <Field Name="Address2_Contact">
+          <DataField>Address2_Contact</DataField>
+        </Field>
+        <Field Name="City_Contact">
+          <DataField>City_Contact</DataField>
+        </Field>
+        <Field Name="PhoneNo_Contact">
+          <DataField>PhoneNo_Contact</DataField>
+        </Field>
+        <Field Name="TelexNo_Contact">
+          <DataField>TelexNo_Contact</DataField>
+        </Field>
+        <Field Name="TerritoryCode_Contact">
+          <DataField>TerritoryCode_Contact</DataField>
+        </Field>
+        <Field Name="CurrencyCode_Contact">
+          <DataField>CurrencyCode_Contact</DataField>
+        </Field>
+        <Field Name="LanguageCode_Contact">
+          <DataField>LanguageCode_Contact</DataField>
+        </Field>
+        <Field Name="SalespersonCode_Contact">
+          <DataField>SalespersonCode_Contact</DataField>
+        </Field>
+        <Field Name="CountryRegionCode_Contact">
+          <DataField>CountryRegionCode_Contact</DataField>
+        </Field>
+        <Field Name="Comment_Contact">
+          <DataField>Comment_Contact</DataField>
+        </Field>
+        <Field Name="LastDateModified_Contact">
+          <DataField>LastDateModified_Contact</DataField>
+        </Field>
+        <Field Name="FaxNo_Contact">
+          <DataField>FaxNo_Contact</DataField>
+        </Field>
+        <Field Name="TelexAnswerBack_Contact">
+          <DataField>TelexAnswerBack_Contact</DataField>
+        </Field>
+        <Field Name="VATRegistrationNo_Contact">
+          <DataField>VATRegistrationNo_Contact</DataField>
+        </Field>
+        <Field Name="PostCode_Contact">
+          <DataField>PostCode_Contact</DataField>
+        </Field>
+        <Field Name="County_Contact">
+          <DataField>County_Contact</DataField>
+        </Field>
+        <Field Name="EMail_Contact">
+          <DataField>EMail_Contact</DataField>
+        </Field>
+        <Field Name="HomePage_Contact">
+          <DataField>HomePage_Contact</DataField>
+        </Field>
+        <Field Name="NoSeries_Contact">
+          <DataField>NoSeries_Contact</DataField>
+        </Field>
+        <Field Name="Image_Contact">
+          <DataField>Image_Contact</DataField>
+        </Field>
+        <Field Name="PrivacyBlocked_Contact">
+          <DataField>PrivacyBlocked_Contact</DataField>
+        </Field>
+        <Field Name="Minor_Contact">
+          <DataField>Minor_Contact</DataField>
+        </Field>
+        <Field Name="ParentalConsentReceived_Contact">
+          <DataField>ParentalConsentReceived_Contact</DataField>
+        </Field>
+        <Field Name="Type_Contact">
+          <DataField>Type_Contact</DataField>
+        </Field>
+        <Field Name="CompanyNo_Contact">
+          <DataField>CompanyNo_Contact</DataField>
+        </Field>
+        <Field Name="CompanyName_Contact">
+          <DataField>CompanyName_Contact</DataField>
+        </Field>
+        <Field Name="LookupContactNo_Contact">
+          <DataField>LookupContactNo_Contact</DataField>
+        </Field>
+        <Field Name="FirstName_Contact">
+          <DataField>FirstName_Contact</DataField>
+        </Field>
+        <Field Name="MiddleName_Contact">
+          <DataField>MiddleName_Contact</DataField>
+        </Field>
+        <Field Name="Surname_Contact">
+          <DataField>Surname_Contact</DataField>
+        </Field>
+        <Field Name="JobTitle_Contact">
+          <DataField>JobTitle_Contact</DataField>
+        </Field>
+        <Field Name="Initials_Contact">
+          <DataField>Initials_Contact</DataField>
+        </Field>
+        <Field Name="ExtensionNo_Contact">
+          <DataField>ExtensionNo_Contact</DataField>
+        </Field>
+        <Field Name="MobilePhoneNo_Contact">
+          <DataField>MobilePhoneNo_Contact</DataField>
+        </Field>
+        <Field Name="Pager_Contact">
+          <DataField>Pager_Contact</DataField>
+        </Field>
+        <Field Name="OrganizationalLevelCode_Contact">
+          <DataField>OrganizationalLevelCode_Contact</DataField>
+        </Field>
+        <Field Name="ExcludefromSegment_Contact">
+          <DataField>ExcludefromSegment_Contact</DataField>
+        </Field>
+        <Field Name="DateFilter_Contact">
+          <DataField>DateFilter_Contact</DataField>
+        </Field>
+        <Field Name="NextTaskDate_Contact">
+          <DataField>NextTaskDate_Contact</DataField>
+        </Field>
+        <Field Name="LastDateAttempted_Contact">
+          <DataField>LastDateAttempted_Contact</DataField>
+        </Field>
+        <Field Name="DateofLastInteraction_Contact">
+          <DataField>DateofLastInteraction_Contact</DataField>
+        </Field>
+        <Field Name="NoofJobResponsibilities_Contact">
+          <DataField>NoofJobResponsibilities_Contact</DataField>
+        </Field>
+        <Field Name="NoofIndustryGroups_Contact">
+          <DataField>NoofIndustryGroups_Contact</DataField>
+        </Field>
+        <Field Name="NoofBusinessRelations_Contact">
+          <DataField>NoofBusinessRelations_Contact</DataField>
+        </Field>
+        <Field Name="NoofMailingGroups_Contact">
+          <DataField>NoofMailingGroups_Contact</DataField>
+        </Field>
+        <Field Name="ExternalID_Contact">
+          <DataField>ExternalID_Contact</DataField>
+        </Field>
+        <Field Name="NoofInteractions_Contact">
+          <DataField>NoofInteractions_Contact</DataField>
+        </Field>
+        <Field Name="CostLCY_Contact">
+          <DataField>CostLCY_Contact</DataField>
+        </Field>
+        <Field Name="CostLCY_ContactFormat">
+          <DataField>CostLCY_ContactFormat</DataField>
+        </Field>
+        <Field Name="DurationMin_Contact">
+          <DataField>DurationMin_Contact</DataField>
+        </Field>
+        <Field Name="DurationMin_ContactFormat">
+          <DataField>DurationMin_ContactFormat</DataField>
+        </Field>
+        <Field Name="NoofOpportunities_Contact">
+          <DataField>NoofOpportunities_Contact</DataField>
+        </Field>
+        <Field Name="EstimatedValueLCY_Contact">
+          <DataField>EstimatedValueLCY_Contact</DataField>
+        </Field>
+        <Field Name="EstimatedValueLCY_ContactFormat">
+          <DataField>EstimatedValueLCY_ContactFormat</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueLCY_Contact">
+          <DataField>CalcdCurrentValueLCY_Contact</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueLCY_ContactFormat">
+          <DataField>CalcdCurrentValueLCY_ContactFormat</DataField>
+        </Field>
+        <Field Name="OpportunityEntryExists_Contact">
+          <DataField>OpportunityEntryExists_Contact</DataField>
+        </Field>
+        <Field Name="TaskEntryExists_Contact">
+          <DataField>TaskEntryExists_Contact</DataField>
+        </Field>
+        <Field Name="SalespersonFilter_Contact">
+          <DataField>SalespersonFilter_Contact</DataField>
+        </Field>
+        <Field Name="CampaignFilter_Contact">
+          <DataField>CampaignFilter_Contact</DataField>
+        </Field>
+        <Field Name="ActionTakenFilter_Contact">
+          <DataField>ActionTakenFilter_Contact</DataField>
+        </Field>
+        <Field Name="SalesCycleFilter_Contact">
+          <DataField>SalesCycleFilter_Contact</DataField>
+        </Field>
+        <Field Name="SalesCycleStageFilter_Contact">
+          <DataField>SalesCycleStageFilter_Contact</DataField>
+        </Field>
+        <Field Name="ProbabilityFilter_Contact">
+          <DataField>ProbabilityFilter_Contact</DataField>
+        </Field>
+        <Field Name="ProbabilityFilter_ContactFormat">
+          <DataField>ProbabilityFilter_ContactFormat</DataField>
+        </Field>
+        <Field Name="CompletedFilter_Contact">
+          <DataField>CompletedFilter_Contact</DataField>
+        </Field>
+        <Field Name="CompletedFilter_ContactFormat">
+          <DataField>CompletedFilter_ContactFormat</DataField>
+        </Field>
+        <Field Name="EstimatedValueFilter_Contact">
+          <DataField>EstimatedValueFilter_Contact</DataField>
+        </Field>
+        <Field Name="EstimatedValueFilter_ContactFormat">
+          <DataField>EstimatedValueFilter_ContactFormat</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueFilter_Contact">
+          <DataField>CalcdCurrentValueFilter_Contact</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueFilter_ContactFormat">
+          <DataField>CalcdCurrentValueFilter_ContactFormat</DataField>
+        </Field>
+        <Field Name="ChancesofSuccessFilter_Contact">
+          <DataField>ChancesofSuccessFilter_Contact</DataField>
+        </Field>
+        <Field Name="ChancesofSuccessFilter_ContactFormat">
+          <DataField>ChancesofSuccessFilter_ContactFormat</DataField>
+        </Field>
+        <Field Name="TaskStatusFilter_Contact">
+          <DataField>TaskStatusFilter_Contact</DataField>
+        </Field>
+        <Field Name="TaskClosedFilter_Contact">
+          <DataField>TaskClosedFilter_Contact</DataField>
+        </Field>
+        <Field Name="PriorityFilter_Contact">
+          <DataField>PriorityFilter_Contact</DataField>
+        </Field>
+        <Field Name="TeamFilter_Contact">
+          <DataField>TeamFilter_Contact</DataField>
+        </Field>
+        <Field Name="CloseOpportunityFilter_Contact">
+          <DataField>CloseOpportunityFilter_Contact</DataField>
+        </Field>
+        <Field Name="CorrespondenceType_Contact">
+          <DataField>CorrespondenceType_Contact</DataField>
+        </Field>
+        <Field Name="SalutationCode_Contact">
+          <DataField>SalutationCode_Contact</DataField>
+        </Field>
+        <Field Name="SearchEMail_Contact">
+          <DataField>SearchEMail_Contact</DataField>
+        </Field>
+        <Field Name="LastTimeModified_Contact">
+          <DataField>LastTimeModified_Contact</DataField>
+        </Field>
+        <Field Name="EMail2_Contact">
+          <DataField>EMail2_Contact</DataField>
+        </Field>
+        <Field Name="XrmId_Contact">
+          <DataField>XrmId_Contact</DataField>
+        </Field>
+        <Field Name="KRAPINNo_Contact">
+          <DataField>KRAPINNo_Contact</DataField>
+        </Field>
+        <Field Name="IDNumber_Contact">
+          <DataField>IDNumber_Contact</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

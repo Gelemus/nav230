@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="DeprBookText">
+          <DataField>DeprBookText</DataField>
+        </Field>
+        <Field Name="Fixed_Asset__TABLECAPTION__________FAFilter">
+          <DataField>Fixed_Asset__TABLECAPTION__________FAFilter</DataField>
+        </Field>
+        <Field Name="FAFilter">
+          <DataField>FAFilter</DataField>
+        </Field>
+        <Field Name="PrintOnlyOnePerPage">
+          <DataField>PrintOnlyOnePerPage</DataField>
+        </Field>
+        <Field Name="Fixed_Asset__No__">
+          <DataField>Fixed_Asset__No__</DataField>
+        </Field>
+        <Field Name="Fixed_Asset_Description">
+          <DataField>Fixed_Asset_Description</DataField>
+        </Field>
+        <Field Name="Fixed_Asset___DetailsCaption">
+          <DataField>Fixed_Asset___DetailsCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__FA_Posting_Date_Caption">
+          <DataField>FA_Ledger_Entry__FA_Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Document_Type_Caption">
+          <DataField>FA_Ledger_Entry__Document_Type_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Document_No__Caption">
+          <DataField>FA_Ledger_Entry__Document_No__Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry_DescriptionCaption">
+          <DataField>FA_Ledger_Entry_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry_AmountCaption">
+          <DataField>FA_Ledger_Entry_AmountCaption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Entry_No__Caption">
+          <DataField>FA_Ledger_Entry__Entry_No__Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__FA_Posting_Type_Caption">
+          <DataField>FA_Ledger_Entry__FA_Posting_Type_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__No__of_Depreciation_Days_Caption">
+          <DataField>FA_Ledger_Entry__No__of_Depreciation_Days_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__User_ID_Caption">
+          <DataField>FA_Ledger_Entry__User_ID_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Posting_Date_Caption">
+          <DataField>FA_Ledger_Entry__Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__G_L_Entry_No__Caption">
+          <DataField>FA_Ledger_Entry__G_L_Entry_No__Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__FA_Posting_Category_Caption">
+          <DataField>FA_Ledger_Entry__FA_Posting_Category_Caption</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__FA_Posting_Date_">
+          <DataField>FA_Ledger_Entry__FA_Posting_Date_</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Document_Type_">
+          <DataField>FA_Ledger_Entry__Document_Type_</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Document_No__">
+          <DataField>FA_Ledger_Entry__Document_No__</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry_Description">
+          <DataField>FA_Ledger_Entry_Description</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry_Amount">
+          <DataField>FA_Ledger_Entry_Amount</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry_AmountFormat">
+          <DataField>FA_Ledger_Entry_AmountFormat</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Entry_No__">
+          <DataField>FA_Ledger_Entry__Entry_No__</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__FA_Posting_Type_">
+          <DataField>FA_Ledger_Entry__FA_Posting_Type_</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__No__of_Depreciation_Days_">
+          <DataField>FA_Ledger_Entry__No__of_Depreciation_Days_</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__User_ID_">
+          <DataField>FA_Ledger_Entry__User_ID_</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__Posting_Date_">
+          <DataField>FA_Ledger_Entry__Posting_Date_</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__G_L_Entry_No__">
+          <DataField>FA_Ledger_Entry__G_L_Entry_No__</DataField>
+        </Field>
+        <Field Name="FA_Ledger_Entry__FA_Posting_Category_">
+          <DataField>FA_Ledger_Entry__FA_Posting_Category_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
