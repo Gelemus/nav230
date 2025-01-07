@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ApplicationNo_TenantApplication">
+          <DataField>ApplicationNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="Name_TenantApplication">
+          <DataField>Name_TenantApplication</DataField>
+        </Field>
+        <Field Name="SearchName_TenantApplication">
+          <DataField>SearchName_TenantApplication</DataField>
+        </Field>
+        <Field Name="Name2_TenantApplication">
+          <DataField>Name2_TenantApplication</DataField>
+        </Field>
+        <Field Name="Address_TenantApplication">
+          <DataField>Address_TenantApplication</DataField>
+        </Field>
+        <Field Name="Address2_TenantApplication">
+          <DataField>Address2_TenantApplication</DataField>
+        </Field>
+        <Field Name="City_TenantApplication">
+          <DataField>City_TenantApplication</DataField>
+        </Field>
+        <Field Name="Contact_TenantApplication">
+          <DataField>Contact_TenantApplication</DataField>
+        </Field>
+        <Field Name="PhoneNo_TenantApplication">
+          <DataField>PhoneNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="TelexNo_TenantApplication">
+          <DataField>TelexNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="TenantAccountNo_TenantApplication">
+          <DataField>TenantAccountNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_TenantApplication">
+          <DataField>GlobalDimension1Code_TenantApplication</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_TenantApplication">
+          <DataField>GlobalDimension2Code_TenantApplication</DataField>
+        </Field>
+        <Field Name="CustomerPostingGroup_TenantApplication">
+          <DataField>CustomerPostingGroup_TenantApplication</DataField>
+        </Field>
+        <Field Name="CurrencyCode_TenantApplication">
+          <DataField>CurrencyCode_TenantApplication</DataField>
+        </Field>
+        <Field Name="Amount_TenantApplication">
+          <DataField>Amount_TenantApplication</DataField>
+        </Field>
+        <Field Name="Comment_TenantApplication">
+          <DataField>Comment_TenantApplication</DataField>
+        </Field>
+        <Field Name="Blocked_TenantApplication">
+          <DataField>Blocked_TenantApplication</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_TenantApplication">
+          <DataField>BilltoCustomerNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="LastModifiedDateTime_TenantApplication">
+          <DataField>LastModifiedDateTime_TenantApplication</DataField>
+        </Field>
+        <Field Name="LastDateModified_TenantApplication">
+          <DataField>LastDateModified_TenantApplication</DataField>
+        </Field>
+        <Field Name="DateFilter_TenantApplication">
+          <DataField>DateFilter_TenantApplication</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Filter_TenantApplication">
+          <DataField>GlobalDimension1Filter_TenantApplication</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Filter_TenantApplication">
+          <DataField>GlobalDimension2Filter_TenantApplication</DataField>
+        </Field>
+        <Field Name="GenBusPostingGroup_TenantApplication">
+          <DataField>GenBusPostingGroup_TenantApplication</DataField>
+        </Field>
+        <Field Name="Picture_TenantApplication">
+          <DataField>Picture_TenantApplication</DataField>
+        </Field>
+        <Field Name="EMail_TenantApplication">
+          <DataField>EMail_TenantApplication</DataField>
+        </Field>
+        <Field Name="HomePage_TenantApplication">
+          <DataField>HomePage_TenantApplication</DataField>
+        </Field>
+        <Field Name="NoSeries_TenantApplication">
+          <DataField>NoSeries_TenantApplication</DataField>
+        </Field>
+        <Field Name="VATBusPostingGroup_TenantApplication">
+          <DataField>VATBusPostingGroup_TenantApplication</DataField>
+        </Field>
+        <Field Name="KRAPINNo_TenantApplication">
+          <DataField>KRAPINNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="VATAccountNo_TenantApplication">
+          <DataField>VATAccountNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="UserID_TenantApplication">
+          <DataField>UserID_TenantApplication</DataField>
+        </Field>
+        <Field Name="DocumentDate_TenantApplication">
+          <DataField>DocumentDate_TenantApplication</DataField>
+        </Field>
+        <Field Name="DocumentTime_TenantApplication">
+          <DataField>DocumentTime_TenantApplication</DataField>
+        </Field>
+        <Field Name="HrsofBusiness_TenantApplication">
+          <DataField>HrsofBusiness_TenantApplication</DataField>
+        </Field>
+        <Field Name="Status_TenantApplication">
+          <DataField>Status_TenantApplication</DataField>
+        </Field>
+        <Field Name="Property_TenantApplication">
+          <DataField>Property_TenantApplication</DataField>
+        </Field>
+        <Field Name="PropertyDescription_TenantApplication">
+          <DataField>PropertyDescription_TenantApplication</DataField>
+        </Field>
+        <Field Name="FloorNo_TenantApplication">
+          <DataField>FloorNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="BlockNo_TenantApplication">
+          <DataField>BlockNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="UnitNo_TenantApplication">
+          <DataField>UnitNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="AreaRequiredSqFeet_TenantApplication">
+          <DataField>AreaRequiredSqFeet_TenantApplication</DataField>
+        </Field>
+        <Field Name="PurposeofSpace_TenantApplication">
+          <DataField>PurposeofSpace_TenantApplication</DataField>
+        </Field>
+        <Field Name="ProductsServicesOffered_TenantApplication">
+          <DataField>ProductsServicesOffered_TenantApplication</DataField>
+        </Field>
+        <Field Name="NumberofPersonell_TenantApplication">
+          <DataField>NumberofPersonell_TenantApplication</DataField>
+        </Field>
+        <Field Name="AnySpecialRequirements_TenantApplication">
+          <DataField>AnySpecialRequirements_TenantApplication</DataField>
+        </Field>
+        <Field Name="BankCode_TenantApplication">
+          <DataField>BankCode_TenantApplication</DataField>
+        </Field>
+        <Field Name="BankName_TenantApplication">
+          <DataField>BankName_TenantApplication</DataField>
+        </Field>
+        <Field Name="BankBranchCode_TenantApplication">
+          <DataField>BankBranchCode_TenantApplication</DataField>
+        </Field>
+        <Field Name="BankBranchName_TenantApplication">
+          <DataField>BankBranchName_TenantApplication</DataField>
+        </Field>
+        <Field Name="BankAccountName_TenantApplication">
+          <DataField>BankAccountName_TenantApplication</DataField>
+        </Field>
+        <Field Name="BankAccountNo_TenantApplication">
+          <DataField>BankAccountNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="TypeofCompany_TenantApplication">
+          <DataField>TypeofCompany_TenantApplication</DataField>
+        </Field>
+        <Field Name="RegistrationIncoporationDate_TenantApplication">
+          <DataField>RegistrationIncoporationDate_TenantApplication</DataField>
+        </Field>
+        <Field Name="CompanyRegistrationNo_TenantApplication">
+          <DataField>CompanyRegistrationNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="HudumaNo_TenantApplication">
+          <DataField>HudumaNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_TenantApplication">
+          <DataField>IncomingDocumentEntryNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="TenantCreated_TenantApplication">
+          <DataField>TenantCreated_TenantApplication</DataField>
+        </Field>
+        <Field Name="DateCreated_TenantApplication">
+          <DataField>DateCreated_TenantApplication</DataField>
+        </Field>
+        <Field Name="PasswordResetToken_TenantApplication">
+          <DataField>PasswordResetToken_TenantApplication</DataField>
+        </Field>
+        <Field Name="PasswordResetTokenExpiry_TenantApplication">
+          <DataField>PasswordResetTokenExpiry_TenantApplication</DataField>
+        </Field>
+        <Field Name="PortalPassword_TenantApplication">
+          <DataField>PortalPassword_TenantApplication</DataField>
+        </Field>
+        <Field Name="DefaultPortalPassword_TenantApplication">
+          <DataField>DefaultPortalPassword_TenantApplication</DataField>
+        </Field>
+        <Field Name="SubmittedPortal_TenantApplication">
+          <DataField>SubmittedPortal_TenantApplication</DataField>
+        </Field>
+        <Field Name="Approver_TenantApplication">
+          <DataField>Approver_TenantApplication</DataField>
+        </Field>
+        <Field Name="Receipted_TenantApplication">
+          <DataField>Receipted_TenantApplication</DataField>
+        </Field>
+        <Field Name="ReceiptDate_TenantApplication">
+          <DataField>ReceiptDate_TenantApplication</DataField>
+        </Field>
+        <Field Name="UnitType_TenantApplication">
+          <DataField>UnitType_TenantApplication</DataField>
+        </Field>
+        <Field Name="CommenceDate_TenantApplication">
+          <DataField>CommenceDate_TenantApplication</DataField>
+        </Field>
+        <Field Name="ExpiryDate_TenantApplication">
+          <DataField>ExpiryDate_TenantApplication</DataField>
+        </Field>
+        <Field Name="LeaseCategory_TenantApplication">
+          <DataField>LeaseCategory_TenantApplication</DataField>
+        </Field>
+        <Field Name="Comments_TenantApplication">
+          <DataField>Comments_TenantApplication</DataField>
+        </Field>
+        <Field Name="OldAccountNo_TenantApplication">
+          <DataField>OldAccountNo_TenantApplication</DataField>
+        </Field>
+        <Field Name="TotalAmountExclVAT_TenantApplication">
+          <DataField>TotalAmountExclVAT_TenantApplication</DataField>
+        </Field>
+        <Field Name="TotalVATAmount_TenantApplication">
+          <DataField>TotalVATAmount_TenantApplication</DataField>
+        </Field>
+        <Field Name="TotalAmountIncVAT_TenantApplication">
+          <DataField>TotalAmountIncVAT_TenantApplication</DataField>
+        </Field>
+        <Field Name="TotalRentAmount_TenantApplication">
+          <DataField>TotalRentAmount_TenantApplication</DataField>
+        </Field>
+        <Field Name="TotalDepositAmount_TenantApplication">
+          <DataField>TotalDepositAmount_TenantApplication</DataField>
+        </Field>
+        <Field Name="TotalServiceCharge_TenantApplication">
+          <DataField>TotalServiceCharge_TenantApplication</DataField>
+        </Field>
+        <Field Name="StoreSpaceSqFeet_TenantApplication">
+          <DataField>StoreSpaceSqFeet_TenantApplication</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

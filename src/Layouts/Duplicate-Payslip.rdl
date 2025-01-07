@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="EmployerName">
+          <DataField>EmployerName</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Employee1">
+          <DataField>Duplicate_Payslip_Employee1</DataField>
+        </Field>
+        <Field Name="EmpFullNameArray_1_">
+          <DataField>EmpFullNameArray_1_</DataField>
+        </Field>
+        <Field Name="Payslip_for____Period_Name1_">
+          <DataField>Payslip_for____Period_Name1_</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Employee2">
+          <DataField>Duplicate_Payslip_Employee2</DataField>
+        </Field>
+        <Field Name="EmpFullNameArray_2_">
+          <DataField>EmpFullNameArray_2_</DataField>
+        </Field>
+        <Field Name="gvPayrollCode">
+          <DataField>gvPayrollCode</DataField>
+        </Field>
+        <Field Name="gvPayrollCode2">
+          <DataField>gvPayrollCode2</DataField>
+        </Field>
+        <Field Name="Dept1">
+          <DataField>Dept1</DataField>
+        </Field>
+        <Field Name="Dept2">
+          <DataField>Dept2</DataField>
+        </Field>
+        <Field Name="Payslip_for____Period_Name1__Control1102754001">
+          <DataField>Payslip_for____Period_Name1__Control1102754001</DataField>
+        </Field>
+        <Field Name="EmployerName_Control1102754002">
+          <DataField>EmployerName_Control1102754002</DataField>
+        </Field>
+        <Field Name="gvbirthdate_1_">
+          <DataField>gvbirthdate_1_</DataField>
+        </Field>
+        <Field Name="gvAgeText_1_">
+          <DataField>gvAgeText_1_</DataField>
+        </Field>
+        <Field Name="gvbirthdate_2_">
+          <DataField>gvbirthdate_2_</DataField>
+        </Field>
+        <Field Name="gvAgeText_2_">
+          <DataField>gvAgeText_2_</DataField>
+        </Field>
+        <Field Name="gvNSSF_1_">
+          <DataField>gvNSSF_1_</DataField>
+        </Field>
+        <Field Name="gvNHIF_1_">
+          <DataField>gvNHIF_1_</DataField>
+        </Field>
+        <Field Name="GVPin">
+          <DataField>GVPin</DataField>
+        </Field>
+        <Field Name="GDID">
+          <DataField>GDID</DataField>
+        </Field>
+        <Field Name="GVPin2">
+          <DataField>GVPin2</DataField>
+        </Field>
+        <Field Name="GDID2">
+          <DataField>GDID2</DataField>
+        </Field>
+        <Field Name="gvNHIF_2_">
+          <DataField>gvNHIF_2_</DataField>
+        </Field>
+        <Field Name="gvNSSF_2_">
+          <DataField>gvNSSF_2_</DataField>
+        </Field>
+        <Field Name="gvSalaryScale_1_">
+          <DataField>gvSalaryScale_1_</DataField>
+        </Field>
+        <Field Name="gvSalaryScale_2_">
+          <DataField>gvSalaryScale_2_</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Description1">
+          <DataField>Duplicate_Payslip_Description1</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Amount1">
+          <DataField>Duplicate_Payslip_Amount1</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Amount1Format">
+          <DataField>Duplicate_Payslip_Amount1Format</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Amount2">
+          <DataField>Duplicate_Payslip_Amount2</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Amount2Format">
+          <DataField>Duplicate_Payslip_Amount2Format</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Description2">
+          <DataField>Duplicate_Payslip_Description2</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Cumm1">
+          <DataField>Duplicate_Payslip_Cumm1</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Cumm1Format">
+          <DataField>Duplicate_Payslip_Cumm1Format</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Cumm2">
+          <DataField>Duplicate_Payslip_Cumm2</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Cumm2Format">
+          <DataField>Duplicate_Payslip_Cumm2Format</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Bank1">
+          <DataField>Duplicate_Payslip_Bank1</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Branch1">
+          <DataField>Duplicate_Payslip_Branch1</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Account1">
+          <DataField>Duplicate_Payslip_Account1</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Account2">
+          <DataField>Duplicate_Payslip_Account2</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Branch2">
+          <DataField>Duplicate_Payslip_Branch2</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Bank2">
+          <DataField>Duplicate_Payslip_Bank2</DataField>
+        </Field>
+        <Field Name="gvModeOfPayment_1_">
+          <DataField>gvModeOfPayment_1_</DataField>
+        </Field>
+        <Field Name="gvModeOfPayment_2_">
+          <DataField>gvModeOfPayment_2_</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Employee1Caption">
+          <DataField>Duplicate_Payslip_Employee1Caption</DataField>
+        </Field>
+        <Field Name="AMOUNTCaption">
+          <DataField>AMOUNTCaption</DataField>
+        </Field>
+        <Field Name="BalanceCaption">
+          <DataField>BalanceCaption</DataField>
+        </Field>
+        <Field Name="BalanceCaption_Control1000000023">
+          <DataField>BalanceCaption_Control1000000023</DataField>
+        </Field>
+        <Field Name="AMOUNTCaption_Control1000000024">
+          <DataField>AMOUNTCaption_Control1000000024</DataField>
+        </Field>
+        <Field Name="Payroll_CodeCaption">
+          <DataField>Payroll_CodeCaption</DataField>
+        </Field>
+        <Field Name="NSSFCaption">
+          <DataField>NSSFCaption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption">
+          <DataField>EmptyStringCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754025">
+          <DataField>EmptyStringCaption_Control1102754025</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754027">
+          <DataField>EmptyStringCaption_Control1102754027</DataField>
+        </Field>
+        <Field Name="AgeCaption">
+          <DataField>AgeCaption</DataField>
+        </Field>
+        <Field Name="Dept_CodeCaption">
+          <DataField>Dept_CodeCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754042">
+          <DataField>EmptyStringCaption_Control1102754042</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754043">
+          <DataField>EmptyStringCaption_Control1102754043</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754044">
+          <DataField>EmptyStringCaption_Control1102754044</DataField>
+        </Field>
+        <Field Name="NHIFCaption">
+          <DataField>NHIFCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754046">
+          <DataField>EmptyStringCaption_Control1102754046</DataField>
+        </Field>
+        <Field Name="NHIFCaption_Control1102754047">
+          <DataField>NHIFCaption_Control1102754047</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754048">
+          <DataField>EmptyStringCaption_Control1102754048</DataField>
+        </Field>
+        <Field Name="NSSFCaption_Control1102754049">
+          <DataField>NSSFCaption_Control1102754049</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754050">
+          <DataField>EmptyStringCaption_Control1102754050</DataField>
+        </Field>
+        <Field Name="Payroll_CodeCaption_Control1102754051">
+          <DataField>Payroll_CodeCaption_Control1102754051</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754052">
+          <DataField>EmptyStringCaption_Control1102754052</DataField>
+        </Field>
+        <Field Name="Dept_CodeCaption_Control1102754053">
+          <DataField>Dept_CodeCaption_Control1102754053</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754054">
+          <DataField>EmptyStringCaption_Control1102754054</DataField>
+        </Field>
+        <Field Name="AgeCaption_Control1102754055">
+          <DataField>AgeCaption_Control1102754055</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754056">
+          <DataField>EmptyStringCaption_Control1102754056</DataField>
+        </Field>
+        <Field Name="NameCaption_Control1102754057">
+          <DataField>NameCaption_Control1102754057</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754058">
+          <DataField>EmptyStringCaption_Control1102754058</DataField>
+        </Field>
+        <Field Name="EmployeeCaption">
+          <DataField>EmployeeCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754060">
+          <DataField>EmptyStringCaption_Control1102754060</DataField>
+        </Field>
+        <Field Name="Job_Title_Job_GroupCaption">
+          <DataField>Job_Title_Job_GroupCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754063">
+          <DataField>EmptyStringCaption_Control1102754063</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754067">
+          <DataField>EmptyStringCaption_Control1102754067</DataField>
+        </Field>
+        <Field Name="Job_Title_Job_GroupCaption_Control1102754065">
+          <DataField>Job_Title_Job_GroupCaption_Control1102754065</DataField>
+        </Field>
+        <Field Name="Mode_Of_PaymentCaption">
+          <DataField>Mode_Of_PaymentCaption</DataField>
+        </Field>
+        <Field Name="BranchCaption">
+          <DataField>BranchCaption</DataField>
+        </Field>
+        <Field Name="BankCaption">
+          <DataField>BankCaption</DataField>
+        </Field>
+        <Field Name="Bank_A_C__Caption">
+          <DataField>Bank_A_C__Caption</DataField>
+        </Field>
+        <Field Name="Bank_A_C__Caption_Control1102754009">
+          <DataField>Bank_A_C__Caption_Control1102754009</DataField>
+        </Field>
+        <Field Name="BranchCaption_Control1102754019">
+          <DataField>BranchCaption_Control1102754019</DataField>
+        </Field>
+        <Field Name="BankCaption_Control1102754020">
+          <DataField>BankCaption_Control1102754020</DataField>
+        </Field>
+        <Field Name="Mode_Of_PaymentCaption_Control1102754023">
+          <DataField>Mode_Of_PaymentCaption_Control1102754023</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754032">
+          <DataField>EmptyStringCaption_Control1102754032</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754033">
+          <DataField>EmptyStringCaption_Control1102754033</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754034">
+          <DataField>EmptyStringCaption_Control1102754034</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754035">
+          <DataField>EmptyStringCaption_Control1102754035</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754036">
+          <DataField>EmptyStringCaption_Control1102754036</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754037">
+          <DataField>EmptyStringCaption_Control1102754037</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754038">
+          <DataField>EmptyStringCaption_Control1102754038</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption_Control1102754039">
+          <DataField>EmptyStringCaption_Control1102754039</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Payslip_Set">
+          <DataField>Duplicate_Payslip_Payslip_Set</DataField>
+        </Field>
+        <Field Name="Duplicate_Payslip_Line_No">
+          <DataField>Duplicate_Payslip_Line_No</DataField>
+        </Field>
+        <Field Name="CompInfoPic">
+          <DataField>CompInfoPic</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

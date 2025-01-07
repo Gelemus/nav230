@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="BankAccountNo_BankAccountStatement">
+          <DataField>BankAccountNo_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="StatementNo_BankAccountStatement">
+          <DataField>StatementNo_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="StatementEndingBalance_BankAccountStatement">
+          <DataField>StatementEndingBalance_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="StatementEndingBalance_BankAccountStatementFormat">
+          <DataField>StatementEndingBalance_BankAccountStatementFormat</DataField>
+        </Field>
+        <Field Name="StatementDate_BankAccountStatement">
+          <DataField>StatementDate_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="BalanceLastStatement_BankAccountStatement">
+          <DataField>BalanceLastStatement_BankAccountStatement</DataField>
+        </Field>
+        <Field Name="BalanceLastStatement_BankAccountStatementFormat">
+          <DataField>BalanceLastStatement_BankAccountStatementFormat</DataField>
+        </Field>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+        </Field>
+        <Field Name="BankAccNo">
+          <DataField>BankAccNo</DataField>
+        </Field>
+        <Field Name="BalanceBF">
+          <DataField>BalanceBF</DataField>
+        </Field>
+        <Field Name="BalanceBFFormat">
+          <DataField>BalanceBFFormat</DataField>
+        </Field>
+        <Field Name="BalanceCF">
+          <DataField>BalanceCF</DataField>
+        </Field>
+        <Field Name="BalanceCFFormat">
+          <DataField>BalanceCFFormat</DataField>
+        </Field>
+        <Field Name="StartDate2">
+          <DataField>StartDate2</DataField>
+        </Field>
+        <Field Name="Receipts">
+          <DataField>Receipts</DataField>
+        </Field>
+        <Field Name="ReceiptsFormat">
+          <DataField>ReceiptsFormat</DataField>
+        </Field>
+        <Field Name="CompanyPic">
+          <DataField>CompanyPic</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="Payments">
+          <DataField>Payments</DataField>
+        </Field>
+        <Field Name="PaymentsFormat">
+          <DataField>PaymentsFormat</DataField>
+        </Field>
+        <Field Name="Unpresented">
+          <DataField>Unpresented</DataField>
+        </Field>
+        <Field Name="UnpresentedFormat">
+          <DataField>UnpresentedFormat</DataField>
+        </Field>
+        <Field Name="Uncredited">
+          <DataField>Uncredited</DataField>
+        </Field>
+        <Field Name="UncreditedFormat">
+          <DataField>UncreditedFormat</DataField>
+        </Field>
+        <Field Name="CurrencyCode">
+          <DataField>CurrencyCode</DataField>
+        </Field>
+        <Field Name="TodayFormatted">
+          <DataField>TodayFormatted</DataField>
+        </Field>
+        <Field Name="CompanyName1">
+          <DataField>CompanyName1</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Bnkpostingdate">
+          <DataField>Bnkpostingdate</DataField>
+        </Field>
+        <Field Name="BnkDocumentno">
+          <DataField>BnkDocumentno</DataField>
+        </Field>
+        <Field Name="BnkDesc">
+          <DataField>BnkDesc</DataField>
+        </Field>
+        <Field Name="BnkCheck">
+          <DataField>BnkCheck</DataField>
+        </Field>
+        <Field Name="Credit">
+          <DataField>Credit</DataField>
+        </Field>
+        <Field Name="CreditFormat">
+          <DataField>CreditFormat</DataField>
+        </Field>
+        <Field Name="Amount_BankAccountLedgerEntry">
+          <DataField>Amount_BankAccountLedgerEntry</DataField>
+        </Field>
+        <Field Name="Amount_BankAccountLedgerEntryFormat">
+          <DataField>Amount_BankAccountLedgerEntryFormat</DataField>
+        </Field>
+        <Field Name="Bnkpostingdate2">
+          <DataField>Bnkpostingdate2</DataField>
+        </Field>
+        <Field Name="BnkDocumentno2">
+          <DataField>BnkDocumentno2</DataField>
+        </Field>
+        <Field Name="BnkDesc2">
+          <DataField>BnkDesc2</DataField>
+        </Field>
+        <Field Name="AmountBankAccountLedgerEntry2">
+          <DataField>AmountBankAccountLedgerEntry2</DataField>
+        </Field>
+        <Field Name="AmountBankAccountLedgerEntry2Format">
+          <DataField>AmountBankAccountLedgerEntry2Format</DataField>
+        </Field>
+        <Field Name="BnkCheck2">
+          <DataField>BnkCheck2</DataField>
+        </Field>
+        <Field Name="Debit">
+          <DataField>Debit</DataField>
+        </Field>
+        <Field Name="DebitFormat">
+          <DataField>DebitFormat</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="DocNo">
+          <DataField>DocNo</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="TotalAmount">
+          <DataField>TotalAmount</DataField>
+        </Field>
+        <Field Name="TotalAmountFormat">
+          <DataField>TotalAmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

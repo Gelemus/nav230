@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="Lno">
+          <DataField>Lno</DataField>
+        </Field>
+        <Field Name="No_HRJob">
+          <DataField>No_HRJob</DataField>
+        </Field>
+        <Field Name="JobTitle_HRJob">
+          <DataField>JobTitle_HRJob</DataField>
+        </Field>
+        <Field Name="JobGrade_HRJob">
+          <DataField>JobGrade_HRJob</DataField>
+        </Field>
+        <Field Name="MaximumPositions_HRJob">
+          <DataField>MaximumPositions_HRJob</DataField>
+        </Field>
+        <Field Name="OccupiedPositions_HRJob">
+          <DataField>OccupiedPositions_HRJob</DataField>
+        </Field>
+        <Field Name="VacantPositions_HRJob">
+          <DataField>VacantPositions_HRJob</DataField>
+        </Field>
+        <Field Name="Vacant">
+          <DataField>Vacant</DataField>
+        </Field>
+        <Field Name="Levels">
+          <DataField>Levels</DataField>
+        </Field>
+        <Field Name="SupervisorJobNo_HRJob">
+          <DataField>SupervisorJobNo_HRJob</DataField>
+        </Field>
+        <Field Name="SupervisorJobTitle_HRJob">
+          <DataField>SupervisorJobTitle_HRJob</DataField>
+        </Field>
+        <Field Name="Description_HRJob">
+          <DataField>Description_HRJob</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_HRJob">
+          <DataField>GlobalDimension1Code_HRJob</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_HRJob">
+          <DataField>GlobalDimension2Code_HRJob</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_HRJob">
+          <DataField>ShortcutDimension3Code_HRJob</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_HRJob">
+          <DataField>ShortcutDimension4Code_HRJob</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_HRJob">
+          <DataField>ShortcutDimension5Code_HRJob</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_HRJob">
+          <DataField>ShortcutDimension6Code_HRJob</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_HRJob">
+          <DataField>ShortcutDimension7Code_HRJob</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_HRJob">
+          <DataField>ShortcutDimension8Code_HRJob</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_HRJob">
+          <DataField>ResponsibilityCenter_HRJob</DataField>
+        </Field>
+        <Field Name="Status_HRJob">
+          <DataField>Status_HRJob</DataField>
+        </Field>
+        <Field Name="UserID_HRJob">
+          <DataField>UserID_HRJob</DataField>
+        </Field>
+        <Field Name="NoSeries_HRJob">
+          <DataField>NoSeries_HRJob</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_HRJob">
+          <DataField>IncomingDocumentEntryNo_HRJob</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

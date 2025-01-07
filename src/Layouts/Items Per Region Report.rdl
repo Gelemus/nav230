@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AsofStatusDate">
+          <DataField>AsofStatusDate</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+        </Field>
+        <Field Name="CompanyHomePage">
+          <DataField>CompanyHomePage</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoPhone">
+          <DataField>CompanyInfoPhone</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="CompanyWebPage">
+          <DataField>CompanyWebPage</DataField>
+        </Field>
+        <Field Name="No_StoreRequisitionHeader">
+          <DataField>No_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="DocumentDate_StoreRequisitionHeader">
+          <DataField>DocumentDate_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_StoreRequisitionHeader">
+          <DataField>PostingDate_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="RequesterID_StoreRequisitionHeader">
+          <DataField>RequesterID_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="Description_StoreRequisitionHeader">
+          <DataField>Description_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_StoreRequisitionHeader">
+          <DataField>GlobalDimension1Code_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_StoreRequisitionHeader">
+          <DataField>GlobalDimension2Code_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="UserID_StoreRequisitionHeader">
+          <DataField>UserID_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PointOfUse_StoreRequisitionHeader">
+          <DataField>PointOfUse_StoreRequisitionHeader</DataField>
+        </Field>
+        <Field Name="PointOfUse_StoreRequisitionLine">
+          <DataField>PointOfUse_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="LineNo_StoreRequisitionLine">
+          <DataField>LineNo_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_StoreRequisitionLine">
+          <DataField>DocumentNo_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Type_StoreRequisitionLine">
+          <DataField>Type_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ItemNo_StoreRequisitionLine">
+          <DataField>ItemNo_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="LocationCode_StoreRequisitionLine">
+          <DataField>LocationCode_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Inventory_StoreRequisitionLine">
+          <DataField>Inventory_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Inventory_StoreRequisitionLineFormat">
+          <DataField>Inventory_StoreRequisitionLineFormat</DataField>
+        </Field>
+        <Field Name="Quantity_StoreRequisitionLine">
+          <DataField>Quantity_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Quantity_StoreRequisitionLineFormat">
+          <DataField>Quantity_StoreRequisitionLineFormat</DataField>
+        </Field>
+        <Field Name="UnitofMeasureCode_StoreRequisitionLine">
+          <DataField>UnitofMeasureCode_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="UnitCost_StoreRequisitionLine">
+          <DataField>UnitCost_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="UnitCost_StoreRequisitionLineFormat">
+          <DataField>UnitCost_StoreRequisitionLineFormat</DataField>
+        </Field>
+        <Field Name="LineAmount_StoreRequisitionLine">
+          <DataField>LineAmount_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="LineAmount_StoreRequisitionLineFormat">
+          <DataField>LineAmount_StoreRequisitionLineFormat</DataField>
+        </Field>
+        <Field Name="Committed_StoreRequisitionLine">
+          <DataField>Committed_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="GenBusPostingGroup_StoreRequisitionLine">
+          <DataField>GenBusPostingGroup_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="GenProdPostingGroup_StoreRequisitionLine">
+          <DataField>GenProdPostingGroup_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Description_StoreRequisitionLine">
+          <DataField>Description_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_StoreRequisitionLine">
+          <DataField>GlobalDimension1Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_StoreRequisitionLine">
+          <DataField>GlobalDimension2Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_StoreRequisitionLine">
+          <DataField>ShortcutDimension3Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_StoreRequisitionLine">
+          <DataField>ShortcutDimension4Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_StoreRequisitionLine">
+          <DataField>ShortcutDimension5Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_StoreRequisitionLine">
+          <DataField>ShortcutDimension6Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_StoreRequisitionLine">
+          <DataField>ShortcutDimension7Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_StoreRequisitionLine">
+          <DataField>ShortcutDimension8Code_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_StoreRequisitionLine">
+          <DataField>ResponsibilityCenter_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Status_StoreRequisitionLine">
+          <DataField>Status_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Posted_StoreRequisitionLine">
+          <DataField>Posted_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="PostedBy_StoreRequisitionLine">
+          <DataField>PostedBy_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="DatePosted_StoreRequisitionLine">
+          <DataField>DatePosted_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="TimePosted_StoreRequisitionLine">
+          <DataField>TimePosted_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ItemDescription_StoreRequisitionLine">
+          <DataField>ItemDescription_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Select_StoreRequisitionLine">
+          <DataField>Select_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="StoreRequisitionNo_StoreRequisitionLine">
+          <DataField>StoreRequisitionNo_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="ReturnRequisitionNo_StoreRequisitionLine">
+          <DataField>ReturnRequisitionNo_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Returned_StoreRequisitionLine">
+          <DataField>Returned_StoreRequisitionLine</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress">
+          <DataField>CompanyInfoAddress</DataField>
+        </Field>
+        <Field Name="CompanyInfoAddress2">
+          <DataField>CompanyInfoAddress2</DataField>
+        </Field>
+        <Field Name="CompanyInfoPic">
+          <DataField>CompanyInfoPic</DataField>
+        </Field>
+        <Field Name="FillingNo_VehicleFilling">
+          <DataField>FillingNo_VehicleFilling</DataField>
+        </Field>
+        <Field Name="No_VehicleFilling">
+          <DataField>No_VehicleFilling</DataField>
+        </Field>
+        <Field Name="FillingDate_VehicleFilling">
+          <DataField>FillingDate_VehicleFilling</DataField>
+        </Field>
+        <Field Name="OilDrawnLitres_VehicleFilling">
+          <DataField>OilDrawnLitres_VehicleFilling</DataField>
+        </Field>
+        <Field Name="OilDrawnLitres_VehicleFillingFormat">
+          <DataField>OilDrawnLitres_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="FuelFilled_VehicleFilling">
+          <DataField>FuelFilled_VehicleFilling</DataField>
+        </Field>
+        <Field Name="FuelFilled_VehicleFillingFormat">
+          <DataField>FuelFilled_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="VoucherNo_VehicleFilling">
+          <DataField>VoucherNo_VehicleFilling</DataField>
+        </Field>
+        <Field Name="CurrentMileageReading_VehicleFilling">
+          <DataField>CurrentMileageReading_VehicleFilling</DataField>
+        </Field>
+        <Field Name="CurrentMileageReading_VehicleFillingFormat">
+          <DataField>CurrentMileageReading_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="KmsCovered_VehicleFilling">
+          <DataField>KmsCovered_VehicleFilling</DataField>
+        </Field>
+        <Field Name="KmsCovered_VehicleFillingFormat">
+          <DataField>KmsCovered_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="NoSeries_VehicleFilling">
+          <DataField>NoSeries_VehicleFilling</DataField>
+        </Field>
+        <Field Name="DriverNo_VehicleFilling">
+          <DataField>DriverNo_VehicleFilling</DataField>
+        </Field>
+        <Field Name="DriverName_VehicleFilling">
+          <DataField>DriverName_VehicleFilling</DataField>
+        </Field>
+        <Field Name="Description_VehicleFilling">
+          <DataField>Description_VehicleFilling</DataField>
+        </Field>
+        <Field Name="RegistrationNo_VehicleFilling">
+          <DataField>RegistrationNo_VehicleFilling</DataField>
+        </Field>
+        <Field Name="CostperLitre_VehicleFilling">
+          <DataField>CostperLitre_VehicleFilling</DataField>
+        </Field>
+        <Field Name="CostperLitre_VehicleFillingFormat">
+          <DataField>CostperLitre_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="Amount_VehicleFilling">
+          <DataField>Amount_VehicleFilling</DataField>
+        </Field>
+        <Field Name="Amount_VehicleFillingFormat">
+          <DataField>Amount_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="LastMileageReading_VehicleFilling">
+          <DataField>LastMileageReading_VehicleFilling</DataField>
+        </Field>
+        <Field Name="LastMileageReading_VehicleFillingFormat">
+          <DataField>LastMileageReading_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="LastFuelFilled_VehicleFilling">
+          <DataField>LastFuelFilled_VehicleFilling</DataField>
+        </Field>
+        <Field Name="LastFuelFilled_VehicleFillingFormat">
+          <DataField>LastFuelFilled_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="EstimatedLitresPerKm_VehicleFilling">
+          <DataField>EstimatedLitresPerKm_VehicleFilling</DataField>
+        </Field>
+        <Field Name="EstimatedLitresPerKm_VehicleFillingFormat">
+          <DataField>EstimatedLitresPerKm_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="JourneryDate_VehicleFilling">
+          <DataField>JourneryDate_VehicleFilling</DataField>
+        </Field>
+        <Field Name="JourneyDetails_VehicleFilling">
+          <DataField>JourneyDetails_VehicleFilling</DataField>
+        </Field>
+        <Field Name="LastReadingDate_VehicleFilling">
+          <DataField>LastReadingDate_VehicleFilling</DataField>
+        </Field>
+        <Field Name="SuperLitres_VehicleFilling">
+          <DataField>SuperLitres_VehicleFilling</DataField>
+        </Field>
+        <Field Name="SuperLitres_VehicleFillingFormat">
+          <DataField>SuperLitres_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="DieselLitres_VehicleFilling">
+          <DataField>DieselLitres_VehicleFilling</DataField>
+        </Field>
+        <Field Name="DieselLitres_VehicleFillingFormat">
+          <DataField>DieselLitres_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="OtherLitres_VehicleFilling">
+          <DataField>OtherLitres_VehicleFilling</DataField>
+        </Field>
+        <Field Name="OtherLitres_VehicleFillingFormat">
+          <DataField>OtherLitres_VehicleFillingFormat</DataField>
+        </Field>
+        <Field Name="StartTime_VehicleFilling">
+          <DataField>StartTime_VehicleFilling</DataField>
+        </Field>
+        <Field Name="ReturnTIme_VehicleFilling">
+          <DataField>ReturnTIme_VehicleFilling</DataField>
+        </Field>
+        <Field Name="InspectionRemarks_VehicleFilling">
+          <DataField>InspectionRemarks_VehicleFilling</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

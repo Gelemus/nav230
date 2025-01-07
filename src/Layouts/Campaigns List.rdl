@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LN1">
+          <DataField>LN1</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="No_Campaign">
+          <DataField>No_Campaign</DataField>
+        </Field>
+        <Field Name="Description_Campaign">
+          <DataField>Description_Campaign</DataField>
+        </Field>
+        <Field Name="StartingDate_Campaign">
+          <DataField>StartingDate_Campaign</DataField>
+        </Field>
+        <Field Name="EndingDate_Campaign">
+          <DataField>EndingDate_Campaign</DataField>
+        </Field>
+        <Field Name="SalespersonCode_Campaign">
+          <DataField>SalespersonCode_Campaign</DataField>
+        </Field>
+        <Field Name="Comment_Campaign">
+          <DataField>Comment_Campaign</DataField>
+        </Field>
+        <Field Name="LastDateModified_Campaign">
+          <DataField>LastDateModified_Campaign</DataField>
+        </Field>
+        <Field Name="NoSeries_Campaign">
+          <DataField>NoSeries_Campaign</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_Campaign">
+          <DataField>GlobalDimension1Code_Campaign</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_Campaign">
+          <DataField>GlobalDimension2Code_Campaign</DataField>
+        </Field>
+        <Field Name="StatusCode_Campaign">
+          <DataField>StatusCode_Campaign</DataField>
+        </Field>
+        <Field Name="TargetContactsContacted_Campaign">
+          <DataField>TargetContactsContacted_Campaign</DataField>
+        </Field>
+        <Field Name="ContactsResponded_Campaign">
+          <DataField>ContactsResponded_Campaign</DataField>
+        </Field>
+        <Field Name="DurationMin_Campaign">
+          <DataField>DurationMin_Campaign</DataField>
+        </Field>
+        <Field Name="DurationMin_CampaignFormat">
+          <DataField>DurationMin_CampaignFormat</DataField>
+        </Field>
+        <Field Name="CostLCY_Campaign">
+          <DataField>CostLCY_Campaign</DataField>
+        </Field>
+        <Field Name="CostLCY_CampaignFormat">
+          <DataField>CostLCY_CampaignFormat</DataField>
+        </Field>
+        <Field Name="NoofOpportunities_Campaign">
+          <DataField>NoofOpportunities_Campaign</DataField>
+        </Field>
+        <Field Name="EstimatedValueLCY_Campaign">
+          <DataField>EstimatedValueLCY_Campaign</DataField>
+        </Field>
+        <Field Name="EstimatedValueLCY_CampaignFormat">
+          <DataField>EstimatedValueLCY_CampaignFormat</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueLCY_Campaign">
+          <DataField>CalcdCurrentValueLCY_Campaign</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueLCY_CampaignFormat">
+          <DataField>CalcdCurrentValueLCY_CampaignFormat</DataField>
+        </Field>
+        <Field Name="DateFilter_Campaign">
+          <DataField>DateFilter_Campaign</DataField>
+        </Field>
+        <Field Name="ActionTakenFilter_Campaign">
+          <DataField>ActionTakenFilter_Campaign</DataField>
+        </Field>
+        <Field Name="SalesCycleFilter_Campaign">
+          <DataField>SalesCycleFilter_Campaign</DataField>
+        </Field>
+        <Field Name="SalesCycleStageFilter_Campaign">
+          <DataField>SalesCycleStageFilter_Campaign</DataField>
+        </Field>
+        <Field Name="ProbabilityFilter_Campaign">
+          <DataField>ProbabilityFilter_Campaign</DataField>
+        </Field>
+        <Field Name="ProbabilityFilter_CampaignFormat">
+          <DataField>ProbabilityFilter_CampaignFormat</DataField>
+        </Field>
+        <Field Name="CompletedFilter_Campaign">
+          <DataField>CompletedFilter_Campaign</DataField>
+        </Field>
+        <Field Name="CompletedFilter_CampaignFormat">
+          <DataField>CompletedFilter_CampaignFormat</DataField>
+        </Field>
+        <Field Name="ContactFilter_Campaign">
+          <DataField>ContactFilter_Campaign</DataField>
+        </Field>
+        <Field Name="ContactCompanyFilter_Campaign">
+          <DataField>ContactCompanyFilter_Campaign</DataField>
+        </Field>
+        <Field Name="EstimatedValueFilter_Campaign">
+          <DataField>EstimatedValueFilter_Campaign</DataField>
+        </Field>
+        <Field Name="EstimatedValueFilter_CampaignFormat">
+          <DataField>EstimatedValueFilter_CampaignFormat</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueFilter_Campaign">
+          <DataField>CalcdCurrentValueFilter_Campaign</DataField>
+        </Field>
+        <Field Name="CalcdCurrentValueFilter_CampaignFormat">
+          <DataField>CalcdCurrentValueFilter_CampaignFormat</DataField>
+        </Field>
+        <Field Name="ChancesofSuccessFilter_Campaign">
+          <DataField>ChancesofSuccessFilter_Campaign</DataField>
+        </Field>
+        <Field Name="ChancesofSuccessFilter_CampaignFormat">
+          <DataField>ChancesofSuccessFilter_CampaignFormat</DataField>
+        </Field>
+        <Field Name="TaskStatusFilter_Campaign">
+          <DataField>TaskStatusFilter_Campaign</DataField>
+        </Field>
+        <Field Name="TaskClosedFilter_Campaign">
+          <DataField>TaskClosedFilter_Campaign</DataField>
+        </Field>
+        <Field Name="PriorityFilter_Campaign">
+          <DataField>PriorityFilter_Campaign</DataField>
+        </Field>
+        <Field Name="TeamFilter_Campaign">
+          <DataField>TeamFilter_Campaign</DataField>
+        </Field>
+        <Field Name="SalespersonFilter_Campaign">
+          <DataField>SalespersonFilter_Campaign</DataField>
+        </Field>
+        <Field Name="OpportunityEntryExists_Campaign">
+          <DataField>OpportunityEntryExists_Campaign</DataField>
+        </Field>
+        <Field Name="TaskEntryExists_Campaign">
+          <DataField>TaskEntryExists_Campaign</DataField>
+        </Field>
+        <Field Name="CloseOpportunityFilter_Campaign">
+          <DataField>CloseOpportunityFilter_Campaign</DataField>
+        </Field>
+        <Field Name="Activated_Campaign">
+          <DataField>Activated_Campaign</DataField>
+        </Field>
+        <Field Name="Budget_Campaign">
+          <DataField>Budget_Campaign</DataField>
+        </Field>
+        <Field Name="BudgetAmount_Campaign">
+          <DataField>BudgetAmount_Campaign</DataField>
+        </Field>
+        <Field Name="TaskEstimatedAmount_Campaign">
+          <DataField>TaskEstimatedAmount_Campaign</DataField>
+        </Field>
+        <Field Name="Status_Campaign">
+          <DataField>Status_Campaign</DataField>
+        </Field>
+        <Field Name="DocumentDate_Campaign">
+          <DataField>DocumentDate_Campaign</DataField>
+        </Field>
+        <Field Name="UserID_Campaign">
+          <DataField>UserID_Campaign</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_Campaign">
+          <DataField>IncomingDocumentEntryNo_Campaign</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

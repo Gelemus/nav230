@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AppraisalObjective_HREmployeeAppraisalLines">
+          <DataField>AppraisalObjective_HREmployeeAppraisalLines</DataField>
+        </Field>
+        <Field Name="OrganizationObjectiveWeight_IndividualAppraisalLines">
+          <DataField>OrganizationObjectiveWeight_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="OrganizationObjectiveWeight_IndividualAppraisalLinesFormat">
+          <DataField>OrganizationObjectiveWeight_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="ActivityCode_IndividualAppraisalLines">
+          <DataField>ActivityCode_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ActivityDescription_IndividualAppraisalLines">
+          <DataField>ActivityDescription_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ActivityWeight_IndividualAppraisalLines">
+          <DataField>ActivityWeight_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ActivityWeight_IndividualAppraisalLinesFormat">
+          <DataField>ActivityWeight_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="TargetValue_IndividualAppraisalLines">
+          <DataField>TargetValue_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="TargetValue_IndividualAppraisalLinesFormat">
+          <DataField>TargetValue_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="ActualOutputDescription_IndividualAppraisalLines">
+          <DataField>ActualOutputDescription_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ActualValue_IndividualAppraisalLines">
+          <DataField>ActualValue_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ActualValue_IndividualAppraisalLinesFormat">
+          <DataField>ActualValue_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="SelfAssessmentRating_IndividualAppraisalLines">
+          <DataField>SelfAssessmentRating_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="SelfAssessmentRating_IndividualAppraisalLinesFormat">
+          <DataField>SelfAssessmentRating_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="SelfAssessmentWeightedRat_IndividualAppraisalLines">
+          <DataField>SelfAssessmentWeightedRat_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="SelfAssessmentWeightedRat_IndividualAppraisalLinesFormat">
+          <DataField>SelfAssessmentWeightedRat_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="ActualagreedValue_IndividualAppraisalLines">
+          <DataField>ActualagreedValue_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ActualagreedValue_IndividualAppraisalLinesFormat">
+          <DataField>ActualagreedValue_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="AgreedRatingwithSupervisor_IndividualAppraisalLines">
+          <DataField>AgreedRatingwithSupervisor_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="AgreedRatingwithSupervisor_IndividualAppraisalLinesFormat">
+          <DataField>AgreedRatingwithSupervisor_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="WeightedRatWithSupervisor_IndividualAppraisalLines">
+          <DataField>WeightedRatWithSupervisor_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="WeightedRatWithSupervisor_IndividualAppraisalLinesFormat">
+          <DataField>WeightedRatWithSupervisor_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="ModeratedValue_IndividualAppraisalLines">
+          <DataField>ModeratedValue_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ModeratedValue_IndividualAppraisalLinesFormat">
+          <DataField>ModeratedValue_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="ModeratedAssessmentRating_IndividualAppraisalLines">
+          <DataField>ModeratedAssessmentRating_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="ModeratedAssessmentRating_IndividualAppraisalLinesFormat">
+          <DataField>ModeratedAssessmentRating_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+        <Field Name="WeightedRatModeratedValue_IndividualAppraisalLines">
+          <DataField>WeightedRatModeratedValue_IndividualAppraisalLines</DataField>
+        </Field>
+        <Field Name="WeightedRatModeratedValue_IndividualAppraisalLinesFormat">
+          <DataField>WeightedRatModeratedValue_IndividualAppraisalLinesFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

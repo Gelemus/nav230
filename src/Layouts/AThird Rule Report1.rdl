@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="PayrollID">
+          <DataField>PayrollID</DataField>
+        </Field>
+        <Field Name="EmployeeNo">
+          <DataField>EmployeeNo</DataField>
+        </Field>
+        <Field Name="BasicPay">
+          <DataField>BasicPay</DataField>
+        </Field>
+        <Field Name="BasicPayFormat">
+          <DataField>BasicPayFormat</DataField>
+        </Field>
+        <Field Name="TotalDeduction">
+          <DataField>TotalDeduction</DataField>
+        </Field>
+        <Field Name="TotalDeductionFormat">
+          <DataField>TotalDeductionFormat</DataField>
+        </Field>
+        <Field Name="GrossAmount">
+          <DataField>GrossAmount</DataField>
+        </Field>
+        <Field Name="GrossAmountFormat">
+          <DataField>GrossAmountFormat</DataField>
+        </Field>
+        <Field Name="HouseAllowance">
+          <DataField>HouseAllowance</DataField>
+        </Field>
+        <Field Name="HouseAllowanceFormat">
+          <DataField>HouseAllowanceFormat</DataField>
+        </Field>
+        <Field Name="PermanentEarnings">
+          <DataField>PermanentEarnings</DataField>
+        </Field>
+        <Field Name="PermanentEarningsFormat">
+          <DataField>PermanentEarningsFormat</DataField>
+        </Field>
+        <Field Name="NetPay">
+          <DataField>NetPay</DataField>
+        </Field>
+        <Field Name="NetPayFormat">
+          <DataField>NetPayFormat</DataField>
+        </Field>
+        <Field Name="CommutorAllownce">
+          <DataField>CommutorAllownce</DataField>
+        </Field>
+        <Field Name="CommutorAllownceFormat">
+          <DataField>CommutorAllownceFormat</DataField>
+        </Field>
+        <Field Name="AthirdOfEarning">
+          <DataField>AthirdOfEarning</DataField>
+        </Field>
+        <Field Name="AthirdOfEarningFormat">
+          <DataField>AthirdOfEarningFormat</DataField>
+        </Field>
+        <Field Name="AthirdRuleAmount">
+          <DataField>AthirdRuleAmount</DataField>
+        </Field>
+        <Field Name="AthirdRuleAmountFormat">
+          <DataField>AthirdRuleAmountFormat</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Title">
+          <DataField>Title</DataField>
+        </Field>
+        <Field Name="CompanyInfoName">
+          <DataField>CompanyInfoName</DataField>
+        </Field>
+        <Field Name="NhifReliefAmt_">
+          <DataField>NhifReliefAmt_</DataField>
+        </Field>
+        <Field Name="NhifReliefAmt_Format">
+          <DataField>NhifReliefAmt_Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

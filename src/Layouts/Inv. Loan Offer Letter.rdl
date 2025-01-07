@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="DocumentDate">
+          <DataField>DocumentDate</DataField>
+        </Field>
+        <Field Name="CustomerRegistrationN">
+          <DataField>CustomerRegistrationN</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="CustomerNo">
+          <DataField>CustomerNo</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="CompanyRegistrationNo">
+          <DataField>CompanyRegistrationNo</DataField>
+        </Field>
+        <Field Name="PinNo">
+          <DataField>PinNo</DataField>
+        </Field>
+        <Field Name="VATRegistration">
+          <DataField>VATRegistration</DataField>
+        </Field>
+        <Field Name="PostalCode">
+          <DataField>PostalCode</DataField>
+        </Field>
+        <Field Name="Addres">
+          <DataField>Addres</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="PhysicalAddres">
+          <DataField>PhysicalAddres</DataField>
+        </Field>
+        <Field Name="PhoneNo">
+          <DataField>PhoneNo</DataField>
+        </Field>
+        <Field Name="PhoneNo2">
+          <DataField>PhoneNo2</DataField>
+        </Field>
+        <Field Name="EmailAddress_InvestmentApplications">
+          <DataField>EmailAddress_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AlternativeEmailAddress_InvestmentApplications">
+          <DataField>AlternativeEmailAddress_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="HomePage_InvestmentApplications">
+          <DataField>HomePage_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ContactPersonName_InvestmentApplications">
+          <DataField>ContactPersonName_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ContactPersonPhoneNo_InvestmentApplications">
+          <DataField>ContactPersonPhoneNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ContactPersonEMail_InvestmentApplications">
+          <DataField>ContactPersonEMail_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="CountyCode_InvestmentApplications">
+          <DataField>CountyCode_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="SubCountyCode_InvestmentApplications">
+          <DataField>SubCountyCode_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ApplicationType_InvestmentApplications">
+          <DataField>ApplicationType_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ProductCategory_InvestmentApplications">
+          <DataField>ProductCategory_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ProductCode_InvestmentApplications">
+          <DataField>ProductCode_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="CurrencyCode_InvestmentApplications">
+          <DataField>CurrencyCode_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppliedAmount_InvestmentApplications">
+          <DataField>AppliedAmount_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppliedAmountLCY_InvestmentApplications">
+          <DataField>AppliedAmountLCY_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="IndicativeAmount_InvestmentApplications">
+          <DataField>IndicativeAmount_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="IndicativeAmountLCY_InvestmentApplications">
+          <DataField>IndicativeAmountLCY_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ApprovedAmount">
+          <DataField>ApprovedAmount</DataField>
+        </Field>
+        <Field Name="ApprovedAmountLCY_InvestmentApplications">
+          <DataField>ApprovedAmountLCY_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="VettingScore_InvestmentApplications">
+          <DataField>VettingScore_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ScreeningScore_InvestmentApplications">
+          <DataField>ScreeningScore_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppraisalFeeAccountNo_InvestmentApplications">
+          <DataField>AppraisalFeeAccountNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppraisalFeeReceived_InvestmentApplications">
+          <DataField>AppraisalFeeReceived_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppraisalCompleted_InvestmentApplications">
+          <DataField>AppraisalCompleted_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_InvestmentApplications">
+          <DataField>GlobalDimension1Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_InvestmentApplications">
+          <DataField>GlobalDimension2Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_InvestmentApplications">
+          <DataField>ShortcutDimension3Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_InvestmentApplications">
+          <DataField>ShortcutDimension4Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_InvestmentApplications">
+          <DataField>ShortcutDimension5Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_InvestmentApplications">
+          <DataField>ShortcutDimension6Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_InvestmentApplications">
+          <DataField>ShortcutDimension7Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_InvestmentApplications">
+          <DataField>ShortcutDimension8Code_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_InvestmentApplications">
+          <DataField>ResponsibilityCenter_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="Description_InvestmentApplications">
+          <DataField>Description_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="CreatedBy_InvestmentApplications">
+          <DataField>CreatedBy_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="DateCreated_InvestmentApplications">
+          <DataField>DateCreated_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="TimeCreated_InvestmentApplications">
+          <DataField>TimeCreated_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="Status_InvestmentApplications">
+          <DataField>Status_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppraisalFeesPayable_InvestmentApplications">
+          <DataField>AppraisalFeesPayable_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AppraisalFeesPayableLCY_InvestmentApplications">
+          <DataField>AppraisalFeesPayableLCY_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="Rejected_InvestmentApplications">
+          <DataField>Rejected_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="RejectedBy_InvestmentApplications">
+          <DataField>RejectedBy_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="DateRejected_InvestmentApplications">
+          <DataField>DateRejected_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="TimeRejected_InvestmentApplications">
+          <DataField>TimeRejected_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="RejectionComments_InvestmentApplications">
+          <DataField>RejectionComments_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="ApplicationUserID_InvestmentApplications">
+          <DataField>ApplicationUserID_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="UserID_InvestmentApplications">
+          <DataField>UserID_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="NoSeries_InvestmentApplications">
+          <DataField>NoSeries_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_InvestmentApplications">
+          <DataField>IncomingDocumentEntryNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="RepaymentFrequency">
+          <DataField>RepaymentFrequency</DataField>
+        </Field>
+        <Field Name="RepaymentPeriod">
+          <DataField>RepaymentPeriod</DataField>
+        </Field>
+        <Field Name="NoofInstallments">
+          <DataField>NoofInstallments</DataField>
+        </Field>
+        <Field Name="PrincipalMoratoriumPeriod">
+          <DataField>PrincipalMoratoriumPeriod</DataField>
+        </Field>
+        <Field Name="InterestMoratoriumPeriod">
+          <DataField>InterestMoratoriumPeriod</DataField>
+        </Field>
+        <Field Name="RepaymentStartDate">
+          <DataField>RepaymentStartDate</DataField>
+        </Field>
+        <Field Name="RepaymentEndDate">
+          <DataField>RepaymentEndDate</DataField>
+        </Field>
+        <Field Name="RepaymentAmount">
+          <DataField>RepaymentAmount</DataField>
+        </Field>
+        <Field Name="AnnualBaseInterestRate">
+          <DataField>AnnualBaseInterestRate</DataField>
+        </Field>
+        <Field Name="AnnualInterestMarginRate">
+          <DataField>AnnualInterestMarginRate</DataField>
+        </Field>
+        <Field Name="ApplicationStatus">
+          <DataField>ApplicationStatus</DataField>
+        </Field>
+        <Field Name="Submitted_InvestmentApplications">
+          <DataField>Submitted_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingHeadNo_InvestmentApplications">
+          <DataField>MarketingHeadNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingHeadName_InvestmentApplications">
+          <DataField>MarketingHeadName_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingHeadUserID_InvestmentApplications">
+          <DataField>MarketingHeadUserID_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingHeadRemarks_InvestmentApplications">
+          <DataField>MarketingHeadRemarks_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingOfficerNo_InvestmentApplications">
+          <DataField>MarketingOfficerNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingOfficerName_InvestmentApplications">
+          <DataField>MarketingOfficerName_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingOfficerUserID_InvestmentApplications">
+          <DataField>MarketingOfficerUserID_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingOfficerRemarks_InvestmentApplications">
+          <DataField>MarketingOfficerRemarks_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="MarketingLevel_InvestmentApplications">
+          <DataField>MarketingLevel_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentHeadNo_InvestmentApplications">
+          <DataField>InvestmentHeadNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentHeadName_InvestmentApplications">
+          <DataField>InvestmentHeadName_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentHeadUserID_InvestmentApplications">
+          <DataField>InvestmentHeadUserID_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentHeadRemarks_InvestmentApplications">
+          <DataField>InvestmentHeadRemarks_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentOfficerNo_InvestmentApplications">
+          <DataField>InvestmentOfficerNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentOfficerName_InvestmentApplications">
+          <DataField>InvestmentOfficerName_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentOfficerUserID_InvestmentApplications">
+          <DataField>InvestmentOfficerUserID_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentOfficerRemarks_InvestmentApplications">
+          <DataField>InvestmentOfficerRemarks_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="InvestmentLevel_InvestmentApplications">
+          <DataField>InvestmentLevel_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="CompanyNoofShares_InvestmentApplications">
+          <DataField>CompanyNoofShares_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="AuthorisedShareCapital_InvestmentApplications">
+          <DataField>AuthorisedShareCapital_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="Valueofthecompany_InvestmentApplications">
+          <DataField>Valueofthecompany_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="PaidupShareCapital_InvestmentApplications">
+          <DataField>PaidupShareCapital_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="PreferenceShares_InvestmentApplications">
+          <DataField>PreferenceShares_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="PreferenceSharesPrice_InvestmentApplications">
+          <DataField>PreferenceSharesPrice_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="OfferPricePreferenceShare_InvestmentApplications">
+          <DataField>OfferPricePreferenceShare_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="OrdinaryShares_InvestmentApplications">
+          <DataField>OrdinaryShares_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="OrdinarySharesPrice_InvestmentApplications">
+          <DataField>OrdinarySharesPrice_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="OfferPriceOrdinaryShare_InvestmentApplications">
+          <DataField>OfferPriceOrdinaryShare_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="EnquiryNo_InvestmentApplications">
+          <DataField>EnquiryNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="LoanAccountNo_InvestmentApplications">
+          <DataField>LoanAccountNo_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="IndustryCode_InvestmentApplications">
+          <DataField>IndustryCode_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="SectorCode_InvestmentApplications">
+          <DataField>SectorCode_InvestmentApplications</DataField>
+        </Field>
+        <Field Name="NumberText">
+          <DataField>NumberText</DataField>
+        </Field>
+        <Field Name="AccountNo_AccountInterestRates">
+          <DataField>AccountNo_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="StartDate_AccountInterestRates">
+          <DataField>StartDate_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="EndDate_AccountInterestRates">
+          <DataField>EndDate_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="Current_AccountInterestRates">
+          <DataField>Current_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="AnnualBaseInterestRate_AccountInterestRates">
+          <DataField>AnnualBaseInterestRate_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="AnnualInterestMarginRate_AccountInterestRates">
+          <DataField>AnnualInterestMarginRate_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="ProductCode_AccountInterestRates">
+          <DataField>ProductCode_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="CreatedBy_AccountInterestRates">
+          <DataField>CreatedBy_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="DateCreated_AccountInterestRates">
+          <DataField>DateCreated_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="TimeCreated_AccountInterestRates">
+          <DataField>TimeCreated_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="Status_AccountInterestRates">
+          <DataField>Status_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="ApprovalRemarks_AccountInterestRates">
+          <DataField>ApprovalRemarks_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="ApprovedBy_AccountInterestRates">
+          <DataField>ApprovedBy_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="DateApproved_AccountInterestRates">
+          <DataField>DateApproved_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="TimeApproved_AccountInterestRates">
+          <DataField>TimeApproved_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="IncomingDocumentEntryNo_AccountInterestRates">
+          <DataField>IncomingDocumentEntryNo_AccountInterestRates</DataField>
+        </Field>
+        <Field Name="TermDescription">
+          <DataField>TermDescription</DataField>
+        </Field>
+        <Field Name="Purpose">
+          <DataField>Purpose</DataField>
+        </Field>
+        <Field Name="Conditions">
+          <DataField>Conditions</DataField>
+        </Field>
+        <Field Name="Disbursements">
+          <DataField>Disbursements</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="Address2">
+          <DataField>Address2</DataField>
+        </Field>
+        <Field Name="PostalCode">
+          <DataField>PostalCode</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+        </Field>
+        <Field Name="HomePage">
+          <DataField>HomePage</DataField>
+        </Field>
+        <Field Name="Make_TransportRequest">
+          <DataField>Make_TransportRequest</DataField>
+        </Field>
+        <Field Name="VehicleDescription_TransportRequest">
+          <DataField>VehicleDescription_TransportRequest</DataField>
+        </Field>
+        <Field Name="EngineOil_TransportRequest">
+          <DataField>EngineOil_TransportRequest</DataField>
+        </Field>
+        <Field Name="WNO_TransportRequest">
+          <DataField>WNO_TransportRequest</DataField>
+        </Field>
+        <Field Name="Mileage_TransportRequest">
+          <DataField>Mileage_TransportRequest</DataField>
+        </Field>
+        <Field Name="Mileage_TransportRequestFormat">
+          <DataField>Mileage_TransportRequestFormat</DataField>
+        </Field>
+        <Field Name="LastFuelingLts_TransportRequest">
+          <DataField>LastFuelingLts_TransportRequest</DataField>
+        </Field>
+        <Field Name="LastFuelingLts_TransportRequestFormat">
+          <DataField>LastFuelingLts_TransportRequestFormat</DataField>
+        </Field>
+        <Field Name="IssueVoucher_TransportRequest">
+          <DataField>IssueVoucher_TransportRequest</DataField>
+        </Field>
+        <Field Name="LastServiceKMS_TransportRequest">
+          <DataField>LastServiceKMS_TransportRequest</DataField>
+        </Field>
+        <Field Name="LastServiceKMS_TransportRequestFormat">
+          <DataField>LastServiceKMS_TransportRequestFormat</DataField>
+        </Field>
+        <Field Name="NextServiceat_TransportRequest">
+          <DataField>NextServiceat_TransportRequest</DataField>
+        </Field>
+        <Field Name="NextServiceat_TransportRequestFormat">
+          <DataField>NextServiceat_TransportRequestFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_TransportRequest">
+          <DataField>GlobalDimension1Code_TransportRequest</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_TransportRequest">
+          <DataField>GlobalDimension2Code_TransportRequest</DataField>
+        </Field>
+        <Field Name="Battery_TransportRequest">
+          <DataField>Battery_TransportRequest</DataField>
+        </Field>
+        <Field Name="BatteryComment_TransportRequest">
+          <DataField>BatteryComment_TransportRequest</DataField>
+        </Field>
+        <Field Name="Jack_TransportRequest">
+          <DataField>Jack_TransportRequest</DataField>
+        </Field>
+        <Field Name="JackComments_TransportRequest">
+          <DataField>JackComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="WheelSpanner_TransportRequest">
+          <DataField>WheelSpanner_TransportRequest</DataField>
+        </Field>
+        <Field Name="WheelSpannerComments_TransportRequest">
+          <DataField>WheelSpannerComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="FireExtinguisher_TransportRequest">
+          <DataField>FireExtinguisher_TransportRequest</DataField>
+        </Field>
+        <Field Name="FireExtinguisherComments_TransportRequest">
+          <DataField>FireExtinguisherComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="FirstAidKit_TransportRequest">
+          <DataField>FirstAidKit_TransportRequest</DataField>
+        </Field>
+        <Field Name="FirstAidKitCooments_TransportRequest">
+          <DataField>FirstAidKitCooments_TransportRequest</DataField>
+        </Field>
+        <Field Name="RadioCassette_TransportRequest">
+          <DataField>RadioCassette_TransportRequest</DataField>
+        </Field>
+        <Field Name="RadioCassetteComments_TransportRequest">
+          <DataField>RadioCassetteComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="FuelGauge_TransportRequest">
+          <DataField>FuelGauge_TransportRequest</DataField>
+        </Field>
+        <Field Name="FuelGaugeComments_TransportRequest">
+          <DataField>FuelGaugeComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="SpeedoMeterCable_TransportRequest">
+          <DataField>SpeedoMeterCable_TransportRequest</DataField>
+        </Field>
+        <Field Name="SpeedoMeterCableComments_TransportRequest">
+          <DataField>SpeedoMeterCableComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="Headlights_TransportRequest">
+          <DataField>Headlights_TransportRequest</DataField>
+        </Field>
+        <Field Name="HeadlightsComments_TransportRequest">
+          <DataField>HeadlightsComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="Indicator_TransportRequest">
+          <DataField>Indicator_TransportRequest</DataField>
+        </Field>
+        <Field Name="IndicatorComments_TransportRequest">
+          <DataField>IndicatorComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="HazardLights_TransportRequest">
+          <DataField>HazardLights_TransportRequest</DataField>
+        </Field>
+        <Field Name="HazardLightsComments_TransportRequest">
+          <DataField>HazardLightsComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandBreak_TransportRequest">
+          <DataField>HandBreak_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandBreakComments_TransportRequest">
+          <DataField>HandBreakComments_TransportRequest</DataField>
+        </Field>
+        <Field Name="TyresType_TransportRequest">
+          <DataField>TyresType_TransportRequest</DataField>
+        </Field>
+        <Field Name="FrontLight_TransportRequest">
+          <DataField>FrontLight_TransportRequest</DataField>
+        </Field>
+        <Field Name="FrontLeft_TransportRequest">
+          <DataField>FrontLeft_TransportRequest</DataField>
+        </Field>
+        <Field Name="RearLight_TransportRequest">
+          <DataField>RearLight_TransportRequest</DataField>
+        </Field>
+        <Field Name="RearLeft_TransportRequest">
+          <DataField>RearLeft_TransportRequest</DataField>
+        </Field>
+        <Field Name="SpareWheelNos_TransportRequest">
+          <DataField>SpareWheelNos_TransportRequest</DataField>
+        </Field>
+        <Field Name="MechanicalProblem_TransportRequest">
+          <DataField>MechanicalProblem_TransportRequest</DataField>
+        </Field>
+        <Field Name="Dents_TransportRequest">
+          <DataField>Dents_TransportRequest</DataField>
+        </Field>
+        <Field Name="DrivingMirrors_TransportRequest">
+          <DataField>DrivingMirrors_TransportRequest</DataField>
+        </Field>
+        <Field Name="Scratches_TransportRequest">
+          <DataField>Scratches_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandingOverByNo_TransportRequest">
+          <DataField>HandingOverByNo_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandingOverBy_TransportRequest">
+          <DataField>HandingOverBy_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandingOverDesignation_TransportRequest">
+          <DataField>HandingOverDesignation_TransportRequest</DataField>
+        </Field>
+        <Field Name="TakingOverByNo_TransportRequest">
+          <DataField>TakingOverByNo_TransportRequest</DataField>
+        </Field>
+        <Field Name="TakingOverBy_TransportRequest">
+          <DataField>TakingOverBy_TransportRequest</DataField>
+        </Field>
+        <Field Name="TakingOverDesignation_TransportRequest">
+          <DataField>TakingOverDesignation_TransportRequest</DataField>
+        </Field>
+        <Field Name="WitnessedBy_TransportRequest">
+          <DataField>WitnessedBy_TransportRequest</DataField>
+        </Field>
+        <Field Name="WitnessedByName_TransportRequest">
+          <DataField>WitnessedByName_TransportRequest</DataField>
+        </Field>
+        <Field Name="DateWitnessed_TransportRequest">
+          <DataField>DateWitnessed_TransportRequest</DataField>
+        </Field>
+        <Field Name="TimeWitnessed_TransportRequest">
+          <DataField>TimeWitnessed_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandingoverDate_TransportRequest">
+          <DataField>HandingoverDate_TransportRequest</DataField>
+        </Field>
+        <Field Name="HandingoverTime_TransportRequest">
+          <DataField>HandingoverTime_TransportRequest</DataField>
+        </Field>
+        <Field Name="TakingOverDate_TransportRequest">
+          <DataField>TakingOverDate_TransportRequest</DataField>
+        </Field>
+        <Field Name="TakingOverTime_TransportRequest">
+          <DataField>TakingOverTime_TransportRequest</DataField>
+        </Field>
+        <Field Name="RequestNo_TransportRequest">
+          <DataField>RequestNo_TransportRequest</DataField>
+        </Field>
+        <Field Name="RequestDate_TransportRequest">
+          <DataField>RequestDate_TransportRequest</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

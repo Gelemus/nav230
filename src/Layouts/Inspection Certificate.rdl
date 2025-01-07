@@ -1,0 +1,2374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+  <am:AuthoringMetadata>
+    <am:CreatedBy>
+      <am:Name>MSRB</am:Name>
+      <am:Version>15.0.20283.0</am:Version>
+    </am:CreatedBy>
+    <am:UpdatedBy>
+      <am:Name>MSRB</am:Name>
+      <am:Version>15.0.20283.0</am:Version>
+    </am:UpdatedBy>
+    <am:LastModifiedTimestamp>2024-10-17T07:54:43.1698205Z</am:LastModifiedTimestamp>
+  </am:AuthoringMetadata>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>44303f27-d6de-4f69-8b53-6d5e2a132d85</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Supplier/Contractor</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.97462cm</Top>
+            <Left>0.4736cm</Left>
+            <Height>0.635cm</Height>
+            <Width>3.97972cm</Width>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Inspection_Header1__Supplier_Name_.Value)</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.97463cm</Top>
+            <Left>5.29117cm</Left>
+            <Height>0.63499cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Order_No_Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Contract No:</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.49362cm</Top>
+            <Left>0.18646in</Left>
+            <Height>0.59939cm</Height>
+            <Width>4.28307cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Order_No_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Inspection_Header1__Order_No_.Value)</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.49362cm</Top>
+            <Left>5.29117cm</Left>
+            <Height>0.59939cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Contract Title</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.78806cm</Top>
+            <Left>0.4736cm</Left>
+            <Height>0.52917cm</Height>
+            <Width>4.78229cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!ContractTitle_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox5</rd:DefaultName>
+            <Top>1.75278cm</Top>
+            <Left>5.29117cm</Left>
+            <Height>0.56445cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Value of the Contract</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.78601cm</Top>
+            <Left>0.50887cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>4.74702cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!Valueofcontract_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>n2</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.78601cm</Top>
+            <Left>5.32644cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox18">
+            <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>We the undersigned, being members of the IAC appointed by the Accounting Officer through letter Ref: : </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!RefNoFromAppointmentLetter_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <Format>n2</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> dated </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!DateofAppointmentLetter_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>, confirm that we have performed the assignment diligently and issued this acceptance certificate for the procurement object indicated below:</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox14</rd:DefaultName>
+            <Top>0cm</Top>
+            <Left>0.4736cm</Left>
+            <Height>1.68956cm</Height>
+            <Width>17.8533cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption4">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Date of Contract</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.23412cm</Top>
+            <Left>0.4736cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>4.74702cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_4">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!DateofContract_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.23412cm</Top>
+            <Left>5.29117cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption3">
+            <CanGrow>true</CanGrow>
+            <CanShrink>true</CanShrink>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Particulars of the Invoice</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.52651cm</Top>
+            <Left>0.50887cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>4.74702cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_3">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!PatricularsoftheInvoice_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>n2</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.52651cm</Top>
+            <Left>5.32644cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption5">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Delivery No</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.19645cm</Top>
+            <Left>0.50887cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>4.74702cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_5">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!DeliveryNo_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.19645cm</Top>
+            <Left>5.32644cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption6">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Actual Date of Delivery</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.93695cm</Top>
+            <Left>0.50887cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>4.74702cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_6">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!ActualDeliveryDate_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.93695cm</Top>
+            <Left>5.32644cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>9.54535cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_Caption7">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Procuring Department</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>7.85698cm</Top>
+            <Left>0.50887cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>4.74702cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border />
+              <VerticalAlign>Bottom</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Inspection_Header1__Supplier_Name_7">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!ProcuringDepartment_InspectionHeader.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!Dept.Value, "DataSet_Result")</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>7.85698cm</Top>
+            <Left>5.397cm</Left>
+            <Height>0.56411cm</Height>
+            <Width>9.47479cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>1.5pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Dotted</Style>
+              </BottomBorder>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Tablix Name="Table1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.06939cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.9457cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>5.33832cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.13237cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.83237cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.6cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>ITEM</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>CODE No.</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ITEM_DESCRIPTIONCaption.Value</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Unit of Measure</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <TopBorder>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox4">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>QTY ACCEPTED</Value>
+                                  <Style>
+                                    <FontSize>9pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
+                          <Style>
+                            <Border />
+                            <TopBorder>
+                              <Style>Solid</Style>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Style>Solid</Style>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Style>None</Style>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Style>Solid</Style>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.846cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ItemNo">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ItemNo.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ItemNo</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ItemNo_InspectionLines">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ItemNo_InspectionLines.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ItemNo_InspectionLines</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Inspection_Lines1_Description">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Inspection_Lines1_Description.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Inspection_Lines1__Unit_of_Measure_">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Inspection_Lines1__Unit_of_Measure_.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </BottomBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Inspection_Lines1__Quantity_Ordered_">
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!QuantityAccepted_InspectionLines.Value</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                    <Format>=Fields!Inspection_Lines1__Quantity_Ordered_Format.Value</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.075cm</PaddingLeft>
+                            <PaddingRight>0.075cm</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>2.58437cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Tablix Name="Tablix1">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>3.04105cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>6.42299cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>3.81306cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>3.04105cm</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>0.86146cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox21">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Inspection Committee Members</Value>
+                                                <Style>
+                                                  <FontSize>12pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox21</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                      <ColSpan>4</ColSpan>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell />
+                                  <TablixCell />
+                                  <TablixCell />
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>0.86146cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox25">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Employee No.</Value>
+                                                <Style>
+                                                  <FontSize>12pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox25</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox27">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Employee Name</Value>
+                                                <Style>
+                                                  <FontSize>12pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox27</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox29">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Signature</Value>
+                                                <Style>
+                                                  <FontSize>12pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox29</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox12">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>Date</Value>
+                                                <Style>
+                                                  <FontSize>12pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox12</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>0.86146cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="EmployeeNo_CommiteeMembers">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!EmployeeNo_CommiteeMembers.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Segoe UI</FontFamily>
+                                                  <FontSize>12pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>EmployeeNo_CommiteeMembers</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Name_CommiteeMembers">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!Name_CommiteeMembers.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Segoe UI</FontFamily>
+                                                  <FontSize>12pt</FontSize>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Name_CommiteeMembers</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox6">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style />
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox6</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox20">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value xml:space="preserve"> </Value>
+                                                <Style>
+                                                  <FontFamily>Segoe UI</FontFamily>
+                                                  <FontSize>12pt</FontSize>
+                                                  <Format>d</Format>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox20</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <TopBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </TopBorder>
+                                          <BottomBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </BottomBorder>
+                                          <LeftBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </LeftBorder>
+                                          <RightBorder>
+                                            <Color>Black</Color>
+                                            <Style>Solid</Style>
+                                            <Width>1pt</Width>
+                                          </RightBorder>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <KeepWithGroup>After</KeepWithGroup>
+                              </TablixMember>
+                              <TablixMember>
+                                <KeepWithGroup>After</KeepWithGroup>
+                              </TablixMember>
+                              <TablixMember>
+                                <Group Name="Details">
+                                  <Filters>
+                                    <Filter>
+                                      <FilterExpression>=Fields!EmployeeNo_CommiteeMembers.Value</FilterExpression>
+                                      <Operator>GreaterThan</Operator>
+                                      <FilterValues>
+                                        <FilterValue>' '</FilterValue>
+                                      </FilterValues>
+                                    </Filter>
+                                  </Filters>
+                                </Group>
+                                <TablixMembers>
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <DataSetName>DataSet_Result</DataSetName>
+                          <Filters>
+                            <Filter>
+                              <FilterExpression>=Fields!AppointmentNo_CommiteeMembers.Value</FilterExpression>
+                              <Operator>GreaterThan</Operator>
+                              <FilterValues>
+                                <FilterValue>0</FilterValue>
+                              </FilterValues>
+                            </Filter>
+                          </Filters>
+                          <ZIndex>17</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Tablix>
+                        <ColSpan>5</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Table1_Details_Group">
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!ItemNo_InspectionLines.Value</FilterExpression>
+                        <Operator>GreaterThan</Operator>
+                        <FilterValues>
+                          <FilterValue>' '</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
+                    <DataElementName>Detail</DataElementName>
+                  </Group>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                  <DataElementName>Detail_Collection</DataElementName>
+                  <DataElementOutput>Output</DataElementOutput>
+                  <KeepTogether>true</KeepTogether>
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet_Result</DataSetName>
+            <Top>8.70044cm</Top>
+            <Left>0.23866in</Left>
+            <Height>4.03037cm</Height>
+            <Width>16.31815cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>5.05555in</Height>
+        <Style />
+      </Body>
+      <Width>7.40178in</Width>
+      <Page>
+        <PageHeader>
+          <Height>2.9138in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="Image1">
+              <Source>Database</Source>
+              <Value>=First(Fields!CompInfo_Picture.Value, "DataSet_Result")</Value>
+              <MIMEType>image/jpeg</MIMEType>
+              <Sizing>FitProportional</Sizing>
+              <Top>1.58495cm</Top>
+              <Left>7.8814cm</Left>
+              <Height>2.11689cm</Height>
+              <Width>3.93417cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Textbox Name="Textbox7">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=First(Fields!CompInfo_Name.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox7</rd:DefaultName>
+              <Top>0cm</Top>
+              <Left>0cm</Left>
+              <Height>1.0498cm</Height>
+              <Width>18.80051cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <VerticalAlign>Bottom</VerticalAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox14">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>To: MANAGING DIRECTOR</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <Top>4.08614cm</Top>
+              <Left>0cm</Left>
+              <Height>0.6985cm</Height>
+              <Width>6.51644cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox15">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>From: INSPECTION AND ACCEPTANCE COMMITTEE (IAC)</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <Top>5.19234cm</Top>
+              <Left>0cm</Left>
+              <Height>1.00096cm</Height>
+              <Width>9.43425cm</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox16">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Ref: NWSC/IAC/CERT/11/</Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value>=First(Fields!Inspection_Header1__Inspection_Header1___Inspection_No_.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <Top>4.08614cm</Top>
+              <Left>10.31813cm</Left>
+              <Height>0.6985cm</Height>
+              <Width>7.53517cm</Width>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox17">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Date: </Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value>=First(Fields!InspectionDate_InspectionHeader.Value, "DataSet_Result")</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>12pt</FontSize>
+                        <Format>D</Format>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <Top>5.19234cm</Top>
+              <Left>10.31813cm</Left>
+              <Height>0.6985cm</Height>
+              <Width>7.53517cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="INSPECTION_AND_ACCEPTANCE_COMMITTEE__IAC__REPORTCaption">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>PROCUREMENT INSPECTION AND ACCEPTANCE CERTIFICATE</Value>
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <TextDecoration>Underline</TextDecoration>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>6.36969cm</Top>
+              <Left>0cm</Left>
+              <Height>0.85498cm</Height>
+              <Width>18.80051cm</Width>
+              <ZIndex>6</ZIndex>
+              <Style>
+                <Border />
+                <VerticalAlign>Bottom</VerticalAlign>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="TenderNo_InspectionHeader">
+          <DataField>TenderNo_InspectionHeader</DataField>
+        </Field>
+        <Field Name="TenderName_InspectionHeader">
+          <DataField>TenderName_InspectionHeader</DataField>
+        </Field>
+        <Field Name="OrderNo_InspectionHeader">
+          <DataField>OrderNo_InspectionHeader</DataField>
+        </Field>
+        <Field Name="Conclusion_InspectionHeader">
+          <DataField>Conclusion_InspectionHeader</DataField>
+        </Field>
+        <Field Name="Preparedby_InspectionHeader">
+          <DataField>Preparedby_InspectionHeader</DataField>
+        </Field>
+        <Field Name="ContractDeliveryDueDate_InspectionHeader">
+          <DataField>ContractDeliveryDueDate_InspectionHeader</DataField>
+        </Field>
+        <Field Name="ContractTitle_InspectionHeader">
+          <DataField>ContractTitle_InspectionHeader</DataField>
+        </Field>
+        <Field Name="Valueofcontract_InspectionHeader">
+          <DataField>Valueofcontract_InspectionHeader</DataField>
+        </Field>
+        <Field Name="Valueofcontract_InspectionHeaderFormat">
+          <DataField>Valueofcontract_InspectionHeaderFormat</DataField>
+        </Field>
+        <Field Name="ProcuringDepartment_InspectionHeader">
+          <DataField>ProcuringDepartment_InspectionHeader</DataField>
+        </Field>
+        <Field Name="RequisitionedBy_InspectionHeader">
+          <DataField>RequisitionedBy_InspectionHeader</DataField>
+        </Field>
+        <Field Name="RequisitionedByName_InspectionHeader">
+          <DataField>RequisitionedByName_InspectionHeader</DataField>
+        </Field>
+        <Field Name="RefNo_InspectionHeader">
+          <DataField>RefNo_InspectionHeader</DataField>
+        </Field>
+        <Field Name="RefNoFromAppointmentLetter_InspectionHeader">
+          <DataField>RefNoFromAppointmentLetter_InspectionHeader</DataField>
+        </Field>
+        <Field Name="DateofAppointmentLetter_InspectionHeader">
+          <DataField>DateofAppointmentLetter_InspectionHeader</DataField>
+        </Field>
+        <Field Name="DateofContract_InspectionHeader">
+          <DataField>DateofContract_InspectionHeader</DataField>
+        </Field>
+        <Field Name="ActualDeliveryDate_InspectionHeader">
+          <DataField>ActualDeliveryDate_InspectionHeader</DataField>
+        </Field>
+        <Field Name="PatricularsoftheInvoice_InspectionHeader">
+          <DataField>PatricularsoftheInvoice_InspectionHeader</DataField>
+        </Field>
+        <Field Name="RequisitionNo_InspectionHeader">
+          <DataField>RequisitionNo_InspectionHeader</DataField>
+        </Field>
+        <Field Name="CompInfo_Picture">
+          <DataField>CompInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompInfo_Name">
+          <DataField>CompInfo_Name</DataField>
+        </Field>
+        <Field Name="Address2">
+          <DataField>Address2</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="Email">
+          <DataField>Email</DataField>
+        </Field>
+        <Field Name="Phone">
+          <DataField>Phone</DataField>
+        </Field>
+        <Field Name="Fax">
+          <DataField>Fax</DataField>
+        </Field>
+        <Field Name="Accepted_InspectionHeader1">
+          <DataField>Accepted_InspectionHeader1</DataField>
+        </Field>
+        <Field Name="Rejected_InspectionHeader1">
+          <DataField>Rejected_InspectionHeader1</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Inspection_Header1___Inspection_No_">
+          <DataField>Inspection_Header1__Inspection_Header1___Inspection_No_</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Order_No_">
+          <DataField>Inspection_Header1__Order_No_</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Supplier_Name_">
+          <DataField>Inspection_Header1__Supplier_Name_</DataField>
+        </Field>
+        <Field Name="InspectionDate_InspectionHeader">
+          <DataField>InspectionDate_InspectionHeader</DataField>
+        </Field>
+        <Field Name="Dept">
+          <DataField>Dept</DataField>
+        </Field>
+        <Field Name="InvoiceNo">
+          <DataField>InvoiceNo</DataField>
+        </Field>
+        <Field Name="V1stapprover_">
+          <DataField>V1stapprover_</DataField>
+        </Field>
+        <Field Name="UserRecApp1_Picture">
+          <DataField>UserRecApp1_Picture</DataField>
+        </Field>
+        <Field Name="UserRecApp2_Picture">
+          <DataField>UserRecApp2_Picture</DataField>
+        </Field>
+        <Field Name="V2ndapprover_">
+          <DataField>V2ndapprover_</DataField>
+        </Field>
+        <Field Name="UserRecApp3_Picture">
+          <DataField>UserRecApp3_Picture</DataField>
+        </Field>
+        <Field Name="V3rdapprover_">
+          <DataField>V3rdapprover_</DataField>
+        </Field>
+        <Field Name="V2ndapproverdate_">
+          <DataField>V2ndapproverdate_</DataField>
+        </Field>
+        <Field Name="V1stapproverdate_">
+          <DataField>V1stapproverdate_</DataField>
+        </Field>
+        <Field Name="V3rdapproverdate_">
+          <DataField>V3rdapproverdate_</DataField>
+        </Field>
+        <Field Name="UserRecApp4_Picture">
+          <DataField>UserRecApp4_Picture</DataField>
+        </Field>
+        <Field Name="V4thapprover_">
+          <DataField>V4thapprover_</DataField>
+        </Field>
+        <Field Name="V4thapproverdate_">
+          <DataField>V4thapproverdate_</DataField>
+        </Field>
+        <Field Name="UserRecApp5_Picture">
+          <DataField>UserRecApp5_Picture</DataField>
+        </Field>
+        <Field Name="V5thapprover_">
+          <DataField>V5thapprover_</DataField>
+        </Field>
+        <Field Name="V5thapproverdate_">
+          <DataField>V5thapproverdate_</DataField>
+        </Field>
+        <Field Name="INSPECTION_AND_ACCEPTANCE_COMMITTEE__IAC__REPORTCaption">
+          <DataField>INSPECTION_AND_ACCEPTANCE_COMMITTEE__IAC__REPORTCaption</DataField>
+        </Field>
+        <Field Name="INSPECTION_NOCaption">
+          <DataField>INSPECTION_NOCaption</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Order_No_Caption">
+          <DataField>Inspection_Header1__Order_No_Caption</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Supplier_Name_Caption">
+          <DataField>Inspection_Header1__Supplier_Name_Caption</DataField>
+        </Field>
+        <Field Name="DepartmentCaption">
+          <DataField>DepartmentCaption</DataField>
+        </Field>
+        <Field Name="Invoice_NoCaption">
+          <DataField>Invoice_NoCaption</DataField>
+        </Field>
+        <Field Name="Officer_In_Charge_of_stores_Name_and_Signature_Caption">
+          <DataField>Officer_In_Charge_of_stores_Name_and_Signature_Caption</DataField>
+        </Field>
+        <Field Name="User_Department__Name___Signature_Caption">
+          <DataField>User_Department__Name___Signature_Caption</DataField>
+        </Field>
+        <Field Name="Committee_Member__Name___Signature_Caption">
+          <DataField>Committee_Member__Name___Signature_Caption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000061">
+          <DataField>DateCaption_Control1000000061</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000062">
+          <DataField>DateCaption_Control1000000062</DataField>
+        </Field>
+        <Field Name="Committee_Member__Name___Signature_Caption_Control1000000067">
+          <DataField>Committee_Member__Name___Signature_Caption_Control1000000067</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Chairman__Name___Signature_Caption">
+          <DataField>Chairman__Name___Signature_Caption</DataField>
+        </Field>
+        <Field Name="CertificationCaption">
+          <DataField>CertificationCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Date_Caption_Control1000000013">
+          <DataField>Date_Caption_Control1000000013</DataField>
+        </Field>
+        <Field Name="DeliveryNo_InspectionHeader">
+          <DataField>DeliveryNo_InspectionHeader</DataField>
+        </Field>
+        <Field Name="RejectionReason_InspectionHeader">
+          <DataField>RejectionReason_InspectionHeader</DataField>
+        </Field>
+        <Field Name="DeliveryNoteCaption">
+          <DataField>DeliveryNoteCaption</DataField>
+        </Field>
+        <Field Name="PostedByName">
+          <DataField>PostedByName</DataField>
+        </Field>
+        <Field Name="SpecificationinBrief_InspectionLine">
+          <DataField>SpecificationinBrief_InspectionLine</DataField>
+        </Field>
+        <Field Name="Score_InspectionLine">
+          <DataField>Score_InspectionLine</DataField>
+        </Field>
+        <Field Name="Score_InspectionLineFormat">
+          <DataField>Score_InspectionLineFormat</DataField>
+        </Field>
+        <Field Name="Remarks_InspectionLine">
+          <DataField>Remarks_InspectionLine</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1_Description">
+          <DataField>Inspection_Lines1_Description</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Unit_of_Measure_">
+          <DataField>Inspection_Lines1__Unit_of_Measure_</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Quantity_Ordered_">
+          <DataField>Inspection_Lines1__Quantity_Ordered_</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Quantity_Ordered_Format">
+          <DataField>Inspection_Lines1__Quantity_Ordered_Format</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Inspection_Decision_">
+          <DataField>Inspection_Lines1__Inspection_Decision_</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Inspection_Lines1___Reasons_for_Rejection_">
+          <DataField>Inspection_Lines1__Inspection_Lines1___Reasons_for_Rejection_</DataField>
+        </Field>
+        <Field Name="QTYCaption">
+          <DataField>QTYCaption</DataField>
+        </Field>
+        <Field Name="STATUSCaption">
+          <DataField>STATUSCaption</DataField>
+        </Field>
+        <Field Name="UNITCaption">
+          <DataField>UNITCaption</DataField>
+        </Field>
+        <Field Name="ITEM_DESCRIPTIONCaption">
+          <DataField>ITEM_DESCRIPTIONCaption</DataField>
+        </Field>
+        <Field Name="NOCaption">
+          <DataField>NOCaption</DataField>
+        </Field>
+        <Field Name="REASONSCaption">
+          <DataField>REASONSCaption</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1_Inspection_No">
+          <DataField>Inspection_Lines1_Inspection_No</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1_Line_No">
+          <DataField>Inspection_Lines1_Line_No</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="QuantityReceived_InspectionLines">
+          <DataField>QuantityReceived_InspectionLines</DataField>
+        </Field>
+        <Field Name="QuantityReceived_InspectionLinesFormat">
+          <DataField>QuantityReceived_InspectionLinesFormat</DataField>
+        </Field>
+        <Field Name="QuantityRejected_InspectionLines">
+          <DataField>QuantityRejected_InspectionLines</DataField>
+        </Field>
+        <Field Name="QuantityRejected_InspectionLinesFormat">
+          <DataField>QuantityRejected_InspectionLinesFormat</DataField>
+        </Field>
+        <Field Name="QuantityAccepted_InspectionLines">
+          <DataField>QuantityAccepted_InspectionLines</DataField>
+        </Field>
+        <Field Name="QuantityAccepted_InspectionLinesFormat">
+          <DataField>QuantityAccepted_InspectionLinesFormat</DataField>
+        </Field>
+        <Field Name="ItemNo_InspectionLines">
+          <DataField>ItemNo_InspectionLines</DataField>
+        </Field>
+        <Field Name="Commitee_CommiteeMembers">
+          <DataField>Commitee_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="EmployeeNo_CommiteeMembers">
+          <DataField>EmployeeNo_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="Name_CommiteeMembers">
+          <DataField>Name_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="AppointmentNo_CommiteeMembers">
+          <DataField>AppointmentNo_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="Chair_CommiteeMembers">
+          <DataField>Chair_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="Secretary_CommiteeMembers">
+          <DataField>Secretary_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="Comments_CommiteeMembers">
+          <DataField>Comments_CommiteeMembers</DataField>
+        </Field>
+        <Field Name="ApproverBySignature">
+          <DataField>ApproverBySignature</DataField>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

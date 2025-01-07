@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+        </Field>
+        <Field Name="Description_TransportRequest">
+          <DataField>Description_TransportRequest</DataField>
+        </Field>
+        <Field Name="ProjectFinancierClient_TransportRequest">
+          <DataField>ProjectFinancierClient_TransportRequest</DataField>
+        </Field>
+        <Field Name="Contractor_TransportRequest">
+          <DataField>Contractor_TransportRequest</DataField>
+        </Field>
+        <Field Name="ReportingPeriodStart_TransportRequest">
+          <DataField>ReportingPeriodStart_TransportRequest</DataField>
+        </Field>
+        <Field Name="ReportingPeriodEnd_TransportRequest">
+          <DataField>ReportingPeriodEnd_TransportRequest</DataField>
+        </Field>
+        <Field Name="ConstructionStartdate_TransportRequest">
+          <DataField>ConstructionStartdate_TransportRequest</DataField>
+        </Field>
+        <Field Name="ConstructionCompletiondate_TransportRequest">
+          <DataField>ConstructionCompletiondate_TransportRequest</DataField>
+        </Field>
+        <Field Name="ProjectStatus_TransportRequest">
+          <DataField>ProjectStatus_TransportRequest</DataField>
+        </Field>
+        <Field Name="RequestNo_TransportRequest">
+          <DataField>RequestNo_TransportRequest</DataField>
+        </Field>
+        <Field Name="EmployeeNo_TransportRequest">
+          <DataField>EmployeeNo_TransportRequest</DataField>
+        </Field>
+        <Field Name="EmployeeName_TransportRequest">
+          <DataField>EmployeeName_TransportRequest</DataField>
+        </Field>
+        <Field Name="JobID_BillItem">
+          <DataField>JobID_BillItem</DataField>
+        </Field>
+        <Field Name="LineNo_BillItem">
+          <DataField>LineNo_BillItem</DataField>
+        </Field>
+        <Field Name="BillItemNo_BillItem">
+          <DataField>BillItemNo_BillItem</DataField>
+        </Field>
+        <Field Name="Description_BillItem">
+          <DataField>Description_BillItem</DataField>
+        </Field>
+        <Field Name="BillItemType_BillItem">
+          <DataField>BillItemType_BillItem</DataField>
+        </Field>
+        <Field Name="WIPTotal_BillItem">
+          <DataField>WIPTotal_BillItem</DataField>
+        </Field>
+        <Field Name="StartDate_BillItem">
+          <DataField>StartDate_BillItem</DataField>
+        </Field>
+        <Field Name="EndDate_BillItem">
+          <DataField>EndDate_BillItem</DataField>
+        </Field>
+        <Field Name="Indentation_BillItem">
+          <DataField>Indentation_BillItem</DataField>
+        </Field>
+        <Field Name="Remarks_BillItem">
+          <DataField>Remarks_BillItem</DataField>
+        </Field>
+        <Field Name="Components_BillItem">
+          <DataField>Components_BillItem</DataField>
+        </Field>
+        <Field Name="ofworksdoneperbillitem_BillItem">
+          <DataField>ofworksdoneperbillitem_BillItem</DataField>
+        </Field>
+        <Field Name="ofworksdoneperbillitem_BillItemFormat">
+          <DataField>ofworksdoneperbillitem_BillItemFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CAddress2">
+          <DataField>CAddress2</DataField>
+        </Field>
+        <Field Name="CCity">
+          <DataField>CCity</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="CEmail">
+          <DataField>CEmail</DataField>
+        </Field>
+        <Field Name="CPhone">
+          <DataField>CPhone</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Visions">
+          <DataField>CI_Visions</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="No_ApprovedTrainingNeedsHeader">
+          <DataField>No_ApprovedTrainingNeedsHeader</DataField>
+        </Field>
+        <Field Name="Description_ApprovedTrainingNeedsHeader">
+          <DataField>Description_ApprovedTrainingNeedsHeader</DataField>
+        </Field>
+        <Field Name="CalendarYear_ApprovedTrainingNeedsHeader">
+          <DataField>CalendarYear_ApprovedTrainingNeedsHeader</DataField>
+        </Field>
+        <Field Name="EmployeeNo_ApprovedTrainingNeedsLine">
+          <DataField>EmployeeNo_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="EmployeeName_ApprovedTrainingNeedsLine">
+          <DataField>EmployeeName_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="OfficialMail_ApprovedTrainingNeedsLine">
+          <DataField>OfficialMail_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="DevelopmentNeeds_ApprovedTrainingNeedsLine">
+          <DataField>DevelopmentNeeds_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="InterventionRequired_ApprovedTrainingNeedsLine">
+          <DataField>InterventionRequired_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="Objectives_ApprovedTrainingNeedsLine">
+          <DataField>Objectives_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="Description_ApprovedTrainingNeedsLine">
+          <DataField>Description_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="ProposedTrainingProvider_ApprovedTrainingNeedsLine">
+          <DataField>ProposedTrainingProvider_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="ProposedPeriod_ApprovedTrainingNeedsLine">
+          <DataField>ProposedPeriod_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="ApprovedByManagement_ApprovedTrainingNeedsLine">
+          <DataField>ApprovedByManagement_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="CalendarYear_ApprovedTrainingNeedsLine">
+          <DataField>CalendarYear_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="TrainingLocationVenue_ApprovedTrainingNeedsLine">
+          <DataField>TrainingLocationVenue_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="TrainingScheduledDate_ApprovedTrainingNeedsLine">
+          <DataField>TrainingScheduledDate_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="TrainingScheduledDateTo_ApprovedTrainingNeedsLine">
+          <DataField>TrainingScheduledDateTo_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="EstimatedCost_ApprovedTrainingNeedsLine">
+          <DataField>EstimatedCost_ApprovedTrainingNeedsLine</DataField>
+        </Field>
+        <Field Name="EstimatedCost_ApprovedTrainingNeedsLineFormat">
+          <DataField>EstimatedCost_ApprovedTrainingNeedsLineFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CI_Picture">
+          <DataField>CI_Picture</DataField>
+        </Field>
+        <Field Name="CI_Address">
+          <DataField>CI_Address</DataField>
+        </Field>
+        <Field Name="CI__Address">
+          <DataField>CI__Address</DataField>
+        </Field>
+        <Field Name="CI_City">
+          <DataField>CI_City</DataField>
+        </Field>
+        <Field Name="Country">
+          <DataField>Country</DataField>
+        </Field>
+        <Field Name="CI_PhoneNo">
+          <DataField>CI_PhoneNo</DataField>
+        </Field>
+        <Field Name="CI_TelephoneNo">
+          <DataField>CI_TelephoneNo</DataField>
+        </Field>
+        <Field Name="CI_Email">
+          <DataField>CI_Email</DataField>
+        </Field>
+        <Field Name="CI_Website">
+          <DataField>CI_Website</DataField>
+        </Field>
+        <Field Name="CI_Vision">
+          <DataField>CI_Vision</DataField>
+        </Field>
+        <Field Name="Lno">
+          <DataField>Lno</DataField>
+        </Field>
+        <Field Name="No_HRJobApplications">
+          <DataField>No_HRJobApplications</DataField>
+        </Field>
+        <Field Name="EmployeeRequisitionNo_HRJobApplications">
+          <DataField>EmployeeRequisitionNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobNo_HRJobApplications">
+          <DataField>JobNo_HRJobApplications</DataField>
+        </Field>
+        <Field Name="JobTitle_HRJobApplications">
+          <DataField>JobTitle_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Surname_HRJobApplications">
+          <DataField>Surname_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Firstname_HRJobApplications">
+          <DataField>Firstname_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Middlename_HRJobApplications">
+          <DataField>Middlename_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Gender_HRJobApplications">
+          <DataField>Gender_HRJobApplications</DataField>
+        </Field>
+        <Field Name="Age_HRJobApplications">
+          <DataField>Age_HRJobApplications</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

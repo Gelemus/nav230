@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_PropertyLeaseHeader">
+          <DataField>No_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="Description_PropertyLeaseHeader">
+          <DataField>Description_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="PropertyNo_PropertyLeaseHeader">
+          <DataField>PropertyNo_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="PropertyName_PropertyLeaseHeader">
+          <DataField>PropertyName_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LandLordNo_PropertyLeaseHeader">
+          <DataField>LandLordNo_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LandLordName_PropertyLeaseHeader">
+          <DataField>LandLordName_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="FloorNo_PropertyLeaseHeader">
+          <DataField>FloorNo_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="UnitNo_PropertyLeaseHeader">
+          <DataField>UnitNo_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="TenantNo_PropertyLeaseHeader">
+          <DataField>TenantNo_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="TenantName_PropertyLeaseHeader">
+          <DataField>TenantName_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="NoSeries_PropertyLeaseHeader">
+          <DataField>NoSeries_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="Blocked_PropertyLeaseHeader">
+          <DataField>Blocked_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="Commenced_PropertyLeaseHeader">
+          <DataField>Commenced_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="InvoiceFrequency_PropertyLeaseHeader">
+          <DataField>InvoiceFrequency_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="CommenceDate_PropertyLeaseHeader">
+          <DataField>CommenceDate_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="ExpiryDate_PropertyLeaseHeader">
+          <DataField>ExpiryDate_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="Status_PropertyLeaseHeader">
+          <DataField>Status_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LastInvoicingDate_PropertyLeaseHeader">
+          <DataField>LastInvoicingDate_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="NextInvoicingDate_PropertyLeaseHeader">
+          <DataField>NextInvoicingDate_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="CurrencyCode_PropertyLeaseHeader">
+          <DataField>CurrencyCode_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_PropertyLeaseHeader">
+          <DataField>CurrencyFactor_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="UserID_PropertyLeaseHeader">
+          <DataField>UserID_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="DateCreated_PropertyLeaseHeader">
+          <DataField>DateCreated_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="TimeCreated_PropertyLeaseHeader">
+          <DataField>TimeCreated_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="TenantApplicationNo_PropertyLeaseHeader">
+          <DataField>TenantApplicationNo_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="TenantApplicationName_PropertyLeaseHeader">
+          <DataField>TenantApplicationName_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="AmountExclVAT_PropertyLeaseHeader">
+          <DataField>AmountExclVAT_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="AmountExclVATLCY_PropertyLeaseHeader">
+          <DataField>AmountExclVATLCY_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="VATAmount_PropertyLeaseHeader">
+          <DataField>VATAmount_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="VATAmountLCY_PropertyLeaseHeader">
+          <DataField>VATAmountLCY_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="AmountInclVAT_PropertyLeaseHeader">
+          <DataField>AmountInclVAT_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="AmountInclVATLCY_PropertyLeaseHeader">
+          <DataField>AmountInclVATLCY_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="Expired_PropertyLeaseHeader">
+          <DataField>Expired_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="InActive_PropertyLeaseHeader">
+          <DataField>InActive_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LastReviewDate_PropertyLeaseHeader">
+          <DataField>LastReviewDate_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="NextReviewDate_PropertyLeaseHeader">
+          <DataField>NextReviewDate_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LeaseReviewFrequency_PropertyLeaseHeader">
+          <DataField>LeaseReviewFrequency_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="TotalAreaSqFtUnit_PropertyLeaseHeader">
+          <DataField>TotalAreaSqFtUnit_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="RatePerAreaSqFtUnit_PropertyLeaseHeader">
+          <DataField>RatePerAreaSqFtUnit_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LeaseClass_PropertyLeaseHeader">
+          <DataField>LeaseClass_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="LeaseCategory_PropertyLeaseHeader">
+          <DataField>LeaseCategory_PropertyLeaseHeader</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="LineNo_PropertyCostAllocationLines">
+          <DataField>LineNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="DocumentNo_PropertyCostAllocationLines">
+          <DataField>DocumentNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="PropertyNo_PropertyCostAllocationLines">
+          <DataField>PropertyNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="BlockCode_PropertyCostAllocationLines">
+          <DataField>BlockCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="FloorCode_PropertyCostAllocationLines">
+          <DataField>FloorCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="UnitCode_PropertyCostAllocationLines">
+          <DataField>UnitCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="UnitAreaSqFtUnit_PropertyCostAllocationLines">
+          <DataField>UnitAreaSqFtUnit_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AccountType_PropertyCostAllocationLines">
+          <DataField>AccountType_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AccountNo_PropertyCostAllocationLines">
+          <DataField>AccountNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AccountName_PropertyCostAllocationLines">
+          <DataField>AccountName_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Description_PropertyCostAllocationLines">
+          <DataField>Description_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Amount_PropertyCostAllocationLines">
+          <DataField>Amount_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AllocatedAmount_PropertyCostAllocationLines">
+          <DataField>AllocatedAmount_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Allocation_PropertyCostAllocationLines">
+          <DataField>Allocation_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="TenantNo_PropertyCostAllocationLines">
+          <DataField>TenantNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="TenantName_PropertyCostAllocationLines">
+          <DataField>TenantName_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="LeaseNo_PropertyCostAllocationLines">
+          <DataField>LeaseNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AssignedtoInvoice_PropertyCostAllocationLines">
+          <DataField>AssignedtoInvoice_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="ChargeCode_PropertyCostAllocationLines">
+          <DataField>ChargeCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="ChargeName_PropertyCostAllocationLines">
+          <DataField>ChargeName_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="FloorAreaSqFtUnit_PropertyCostAllocationLines">
+          <DataField>FloorAreaSqFtUnit_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="FromDate_PropertyCostAllocationLines">
+          <DataField>FromDate_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="ToDate_PropertyCostAllocationLines">
+          <DataField>ToDate_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Proportion">
+          <DataField>Proportion</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

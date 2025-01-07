@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompInfo_Picture">
+          <DataField>CompInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompInfo_Name">
+          <DataField>CompInfo_Name</DataField>
+        </Field>
+        <Field Name="Accepted_InspectionHeader1">
+          <DataField>Accepted_InspectionHeader1</DataField>
+        </Field>
+        <Field Name="Rejected_InspectionHeader1">
+          <DataField>Rejected_InspectionHeader1</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Inspection_Header1___Inspection_No_">
+          <DataField>Inspection_Header1__Inspection_Header1___Inspection_No_</DataField>
+        </Field>
+        <Field Name="RejectionReason_InspectionHeader1">
+          <DataField>RejectionReason_InspectionHeader1</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Order_No_">
+          <DataField>Inspection_Header1__Order_No_</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Supplier_Name_">
+          <DataField>Inspection_Header1__Supplier_Name_</DataField>
+        </Field>
+        <Field Name="Dept">
+          <DataField>Dept</DataField>
+        </Field>
+        <Field Name="InvoiceNo">
+          <DataField>InvoiceNo</DataField>
+        </Field>
+        <Field Name="V1stapprover_">
+          <DataField>V1stapprover_</DataField>
+        </Field>
+        <Field Name="UserRecApp1_Picture">
+          <DataField>UserRecApp1_Picture</DataField>
+        </Field>
+        <Field Name="UserRecApp2_Picture">
+          <DataField>UserRecApp2_Picture</DataField>
+        </Field>
+        <Field Name="V2ndapprover_">
+          <DataField>V2ndapprover_</DataField>
+        </Field>
+        <Field Name="UserRecApp3_Picture">
+          <DataField>UserRecApp3_Picture</DataField>
+        </Field>
+        <Field Name="V3rdapprover_">
+          <DataField>V3rdapprover_</DataField>
+        </Field>
+        <Field Name="V2ndapproverdate_">
+          <DataField>V2ndapproverdate_</DataField>
+        </Field>
+        <Field Name="V1stapproverdate_">
+          <DataField>V1stapproverdate_</DataField>
+        </Field>
+        <Field Name="V3rdapproverdate_">
+          <DataField>V3rdapproverdate_</DataField>
+        </Field>
+        <Field Name="UserRecApp4_Picture">
+          <DataField>UserRecApp4_Picture</DataField>
+        </Field>
+        <Field Name="V4thapprover_">
+          <DataField>V4thapprover_</DataField>
+        </Field>
+        <Field Name="V4thapproverdate_">
+          <DataField>V4thapproverdate_</DataField>
+        </Field>
+        <Field Name="UserRecApp5_Picture">
+          <DataField>UserRecApp5_Picture</DataField>
+        </Field>
+        <Field Name="V5thapprover_">
+          <DataField>V5thapprover_</DataField>
+        </Field>
+        <Field Name="V5thapproverdate_">
+          <DataField>V5thapproverdate_</DataField>
+        </Field>
+        <Field Name="INSPECTION_AND_ACCEPTANCE_COMMITTEE__IAC__REPORTCaption">
+          <DataField>INSPECTION_AND_ACCEPTANCE_COMMITTEE__IAC__REPORTCaption</DataField>
+        </Field>
+        <Field Name="INSPECTION_NOCaption">
+          <DataField>INSPECTION_NOCaption</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Order_No_Caption">
+          <DataField>Inspection_Header1__Order_No_Caption</DataField>
+        </Field>
+        <Field Name="Inspection_Header1__Supplier_Name_Caption">
+          <DataField>Inspection_Header1__Supplier_Name_Caption</DataField>
+        </Field>
+        <Field Name="DepartmentCaption">
+          <DataField>DepartmentCaption</DataField>
+        </Field>
+        <Field Name="Invoice_NoCaption">
+          <DataField>Invoice_NoCaption</DataField>
+        </Field>
+        <Field Name="Officer_In_Charge_of_stores_Name_and_Signature_Caption">
+          <DataField>Officer_In_Charge_of_stores_Name_and_Signature_Caption</DataField>
+        </Field>
+        <Field Name="User_Department__Name___Signature_Caption">
+          <DataField>User_Department__Name___Signature_Caption</DataField>
+        </Field>
+        <Field Name="Committee_Member__Name___Signature_Caption">
+          <DataField>Committee_Member__Name___Signature_Caption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000061">
+          <DataField>DateCaption_Control1000000061</DataField>
+        </Field>
+        <Field Name="DateCaption_Control1000000062">
+          <DataField>DateCaption_Control1000000062</DataField>
+        </Field>
+        <Field Name="Committee_Member__Name___Signature_Caption_Control1000000067">
+          <DataField>Committee_Member__Name___Signature_Caption_Control1000000067</DataField>
+        </Field>
+        <Field Name="Date_Caption">
+          <DataField>Date_Caption</DataField>
+        </Field>
+        <Field Name="Chairman__Name___Signature_Caption">
+          <DataField>Chairman__Name___Signature_Caption</DataField>
+        </Field>
+        <Field Name="CertificationCaption">
+          <DataField>CertificationCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Date_Caption_Control1000000013">
+          <DataField>Date_Caption_Control1000000013</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1_Description">
+          <DataField>Inspection_Lines1_Description</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Unit_of_Measure_">
+          <DataField>Inspection_Lines1__Unit_of_Measure_</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Quantity_Ordered_">
+          <DataField>Inspection_Lines1__Quantity_Ordered_</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Quantity_Ordered_Format">
+          <DataField>Inspection_Lines1__Quantity_Ordered_Format</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Inspection_Decision_">
+          <DataField>Inspection_Lines1__Inspection_Decision_</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1__Inspection_Lines1___Reasons_for_Rejection_">
+          <DataField>Inspection_Lines1__Inspection_Lines1___Reasons_for_Rejection_</DataField>
+        </Field>
+        <Field Name="QTYCaption">
+          <DataField>QTYCaption</DataField>
+        </Field>
+        <Field Name="STATUSCaption">
+          <DataField>STATUSCaption</DataField>
+        </Field>
+        <Field Name="UNITCaption">
+          <DataField>UNITCaption</DataField>
+        </Field>
+        <Field Name="ITEM_DESCRIPTIONCaption">
+          <DataField>ITEM_DESCRIPTIONCaption</DataField>
+        </Field>
+        <Field Name="NOCaption">
+          <DataField>NOCaption</DataField>
+        </Field>
+        <Field Name="REASONSCaption">
+          <DataField>REASONSCaption</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1_Inspection_No">
+          <DataField>Inspection_Lines1_Inspection_No</DataField>
+        </Field>
+        <Field Name="Inspection_Lines1_Line_No">
+          <DataField>Inspection_Lines1_Line_No</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

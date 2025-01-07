@@ -1,0 +1,36 @@
+{
+ "id": "b06c7a74-3d28-4761-8652-7910dd34f68d",
+  "name": "spaBC2023",
+  "publisher": "SPA",
+  "version": "23.0.0.129",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "23.0.0.1",
+  "target": "OnPrem",
+    "idRanges": [
+    {
+      "from": 50000,
+
+      "to": 99999
+
+
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "12.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

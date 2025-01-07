@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CName">
+          <DataField>CName</DataField>
+        </Field>
+        <Field Name="CAddress">
+          <DataField>CAddress</DataField>
+        </Field>
+        <Field Name="CPhone">
+          <DataField>CPhone</DataField>
+        </Field>
+        <Field Name="CEmail">
+          <DataField>CEmail</DataField>
+        </Field>
+        <Field Name="CVATNo">
+          <DataField>CVATNo</DataField>
+        </Field>
+        <Field Name="CPic">
+          <DataField>CPic</DataField>
+        </Field>
+        <Field Name="CBankName">
+          <DataField>CBankName</DataField>
+        </Field>
+        <Field Name="CBankBranch">
+          <DataField>CBankBranch</DataField>
+        </Field>
+        <Field Name="CBankAccountNo">
+          <DataField>CBankAccountNo</DataField>
+        </Field>
+        <Field Name="LoanProduct">
+          <DataField>LoanProduct</DataField>
+        </Field>
+        <Field Name="No_LoanAccountInvoice">
+          <DataField>No_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="DocumentType_LoanAccountInvoice">
+          <DataField>DocumentType_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="DocumentDate_LoanAccountInvoice">
+          <DataField>DocumentDate_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PostingDate_LoanAccountInvoice">
+          <DataField>PostingDate_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="CustomerNo_LoanAccountInvoice">
+          <DataField>CustomerNo_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="CustomerName_LoanAccountInvoice">
+          <DataField>CustomerName_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="LoanAccountNo_LoanAccountInvoice">
+          <DataField>LoanAccountNo_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="LoanAccountName_LoanAccountInvoice">
+          <DataField>LoanAccountName_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="CurrencyCode_LoanAccountInvoice">
+          <DataField>CurrencyCode_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_LoanAccountInvoice">
+          <DataField>CurrencyFactor_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PrincipalArrears_LoanAccountInvoice">
+          <DataField>PrincipalArrears_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PrincipalArrearsLCY_LoanAccountInvoice">
+          <DataField>PrincipalArrearsLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="InterestArrears_LoanAccountInvoice">
+          <DataField>InterestArrears_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="InterestArrearsLCY_LoanAccountInvoice">
+          <DataField>InterestArrearsLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PenaltyInterestArrears_LoanAccountInvoice">
+          <DataField>PenaltyInterestArrears_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PenaltyInterestArrearsLCY_LoanAccountInvoice">
+          <DataField>PenaltyInterestArrearsLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="LoanFeeArrears_LoanAccountInvoice">
+          <DataField>LoanFeeArrears_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="LoanFeeArrearsLCY_LoanAccountInvoice">
+          <DataField>LoanFeeArrearsLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PrincipalAmount_LoanAccountInvoice">
+          <DataField>PrincipalAmount_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="PrincipalAmountLCY_LoanAccountInvoice">
+          <DataField>PrincipalAmountLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="InterestAmount_LoanAccountInvoice">
+          <DataField>InterestAmount_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="InterestAmountLCY_LoanAccountInvoice">
+          <DataField>InterestAmountLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="TotalAmount_LoanAccountInvoice">
+          <DataField>TotalAmount_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="TotalAmountLCY_LoanAccountInvoice">
+          <DataField>TotalAmountLCY_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_LoanAccountInvoice">
+          <DataField>GlobalDimension1Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_LoanAccountInvoice">
+          <DataField>GlobalDimension2Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_LoanAccountInvoice">
+          <DataField>ShortcutDimension3Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_LoanAccountInvoice">
+          <DataField>ShortcutDimension4Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_LoanAccountInvoice">
+          <DataField>ShortcutDimension5Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_LoanAccountInvoice">
+          <DataField>ShortcutDimension6Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_LoanAccountInvoice">
+          <DataField>ShortcutDimension7Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_LoanAccountInvoice">
+          <DataField>ShortcutDimension8Code_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_LoanAccountInvoice">
+          <DataField>ResponsibilityCenter_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="Description_LoanAccountInvoice">
+          <DataField>Description_LoanAccountInvoice</DataField>
+        </Field>
+        <Field Name="ProductCategory_LoanAccounts">
+          <DataField>ProductCategory_LoanAccounts</DataField>
+        </Field>
+        <Field Name="ProductCode_LoanAccounts">
+          <DataField>ProductCode_LoanAccounts</DataField>
+        </Field>
+        <Field Name="No_LoanAccounts">
+          <DataField>No_LoanAccounts</DataField>
+        </Field>
+        <Field Name="DocumentDate_LoanAccounts">
+          <DataField>DocumentDate_LoanAccounts</DataField>
+        </Field>
+        <Field Name="CustomerRegistrationNo_LoanAccounts">
+          <DataField>CustomerRegistrationNo_LoanAccounts</DataField>
+        </Field>
+        <Field Name="Name_LoanAccounts">
+          <DataField>Name_LoanAccounts</DataField>
+        </Field>
+        <Field Name="CustomerNo_LoanAccounts">
+          <DataField>CustomerNo_LoanAccounts</DataField>
+        </Field>
+        <Field Name="CustomerName_LoanAccounts">
+          <DataField>CustomerName_LoanAccounts</DataField>
+        </Field>
+        <Field Name="CompanyRegistrationNo_LoanAccounts">
+          <DataField>CompanyRegistrationNo_LoanAccounts</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

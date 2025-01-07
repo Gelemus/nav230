@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LineNo_ImprestSurrenderLine">
+          <DataField>LineNo_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="DocumentNo_ImprestSurrenderLine">
+          <DataField>DocumentNo_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="DocumentType_ImprestSurrenderLine">
+          <DataField>DocumentType_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ImprestCode_ImprestSurrenderLine">
+          <DataField>ImprestCode_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ImprestCodeDescription_ImprestSurrenderLine">
+          <DataField>ImprestCodeDescription_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="AccountType_ImprestSurrenderLine">
+          <DataField>AccountType_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="AccountNo_ImprestSurrenderLine">
+          <DataField>AccountNo_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="AccountName_ImprestSurrenderLine">
+          <DataField>AccountName_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="PostingGroup_ImprestSurrenderLine">
+          <DataField>PostingGroup_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="Description_ImprestSurrenderLine">
+          <DataField>Description_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="PostingDate_ImprestSurrenderLine">
+          <DataField>PostingDate_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="CurrencyCode_ImprestSurrenderLine">
+          <DataField>CurrencyCode_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_ImprestSurrenderLine">
+          <DataField>CurrencyFactor_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="CurrencyFactor_ImprestSurrenderLineFormat">
+          <DataField>CurrencyFactor_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="GrossAmount_ImprestSurrenderLine">
+          <DataField>GrossAmount_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="GrossAmount_ImprestSurrenderLineFormat">
+          <DataField>GrossAmount_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="GrossAmountLCY_ImprestSurrenderLine">
+          <DataField>GrossAmountLCY_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="GrossAmountLCY_ImprestSurrenderLineFormat">
+          <DataField>GrossAmountLCY_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="ActualSpent_ImprestSurrenderLine">
+          <DataField>ActualSpent_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ActualSpent_ImprestSurrenderLineFormat">
+          <DataField>ActualSpent_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="ActualSpentLCY_ImprestSurrenderLine">
+          <DataField>ActualSpentLCY_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ActualSpentLCY_ImprestSurrenderLineFormat">
+          <DataField>ActualSpentLCY_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="Difference_ImprestSurrenderLine">
+          <DataField>Difference_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="Difference_ImprestSurrenderLineFormat">
+          <DataField>Difference_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="DifferenceLCY_ImprestSurrenderLine">
+          <DataField>DifferenceLCY_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="DifferenceLCY_ImprestSurrenderLineFormat">
+          <DataField>DifferenceLCY_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="ReceiptNo_ImprestSurrenderLine">
+          <DataField>ReceiptNo_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="CashReceipt_ImprestSurrenderLine">
+          <DataField>CashReceipt_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="CashReceipt_ImprestSurrenderLineFormat">
+          <DataField>CashReceipt_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="CashReceiptLCY_ImprestSurrenderLine">
+          <DataField>CashReceiptLCY_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="CashReceiptLCY_ImprestSurrenderLineFormat">
+          <DataField>CashReceiptLCY_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="PaidAmount_ImprestSurrenderLine">
+          <DataField>PaidAmount_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="PaidAmount_ImprestSurrenderLineFormat">
+          <DataField>PaidAmount_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="TaxAmount_ImprestSurrenderLine">
+          <DataField>TaxAmount_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="TaxAmount_ImprestSurrenderLineFormat">
+          <DataField>TaxAmount_ImprestSurrenderLineFormat</DataField>
+        </Field>
+        <Field Name="Committed_ImprestSurrenderLine">
+          <DataField>Committed_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="BudgetCode_ImprestSurrenderLine">
+          <DataField>BudgetCode_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_ImprestSurrenderLine">
+          <DataField>GlobalDimension1Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_ImprestSurrenderLine">
+          <DataField>GlobalDimension2Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension3Code_ImprestSurrenderLine">
+          <DataField>ShortcutDimension3Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension4Code_ImprestSurrenderLine">
+          <DataField>ShortcutDimension4Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension5Code_ImprestSurrenderLine">
+          <DataField>ShortcutDimension5Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension6Code_ImprestSurrenderLine">
+          <DataField>ShortcutDimension6Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension7Code_ImprestSurrenderLine">
+          <DataField>ShortcutDimension7Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ShortcutDimension8Code_ImprestSurrenderLine">
+          <DataField>ShortcutDimension8Code_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ResponsibilityCenter_ImprestSurrenderLine">
+          <DataField>ResponsibilityCenter_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="Status_ImprestSurrenderLine">
+          <DataField>Status_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="Posted_ImprestSurrenderLine">
+          <DataField>Posted_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="PostedBy_ImprestSurrenderLine">
+          <DataField>PostedBy_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="DatePosted_ImprestSurrenderLine">
+          <DataField>DatePosted_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="TimePosted_ImprestSurrenderLine">
+          <DataField>TimePosted_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="Reversed_ImprestSurrenderLine">
+          <DataField>Reversed_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ReversedBy_ImprestSurrenderLine">
+          <DataField>ReversedBy_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ReversalDate_ImprestSurrenderLine">
+          <DataField>ReversalDate_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="ReversalTime_ImprestSurrenderLine">
+          <DataField>ReversalTime_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="FADepreciationBook_ImprestSurrenderLine">
+          <DataField>FADepreciationBook_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="EmployeeNo_ImprestSurrenderLine">
+          <DataField>EmployeeNo_ImprestSurrenderLine</DataField>
+        </Field>
+        <Field Name="EmployeeName_ImprestSurrenderLine">
+          <DataField>EmployeeName_ImprestSurrenderLine</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

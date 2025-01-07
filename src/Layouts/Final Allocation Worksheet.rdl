@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_PropertyCostAllocation">
+          <DataField>No_PropertyCostAllocation</DataField>
+        </Field>
+        <Field Name="PropertyNo_PropertyCostAllocation">
+          <DataField>PropertyNo_PropertyCostAllocation</DataField>
+        </Field>
+        <Field Name="PropertyDescription_PropertyCostAllocation">
+          <DataField>PropertyDescription_PropertyCostAllocation</DataField>
+        </Field>
+        <Field Name="TotalAreaSqFtUnit_PropertyCostAllocation">
+          <DataField>TotalAreaSqFtUnit_PropertyCostAllocation</DataField>
+        </Field>
+        <Field Name="AmountToAllocate_PropertyCostAllocation">
+          <DataField>AmountToAllocate_PropertyCostAllocation</DataField>
+        </Field>
+        <Field Name="AllocationDescription_PropertyCostAllocation">
+          <DataField>AllocationDescription_PropertyCostAllocation</DataField>
+        </Field>
+        <Field Name="LineNo_PropertyCostAllocationLines">
+          <DataField>LineNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="DocumentNo_PropertyCostAllocationLines">
+          <DataField>DocumentNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="PropertyNo_PropertyCostAllocationLines">
+          <DataField>PropertyNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="BlockCode_PropertyCostAllocationLines">
+          <DataField>BlockCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="FloorCode_PropertyCostAllocationLines">
+          <DataField>FloorCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="UnitCode_PropertyCostAllocationLines">
+          <DataField>UnitCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="TotalAreaSqFtUnit_PropertyCostAllocationLines">
+          <DataField>TotalAreaSqFtUnit_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AccountType_PropertyCostAllocationLines">
+          <DataField>AccountType_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AccountNo_PropertyCostAllocationLines">
+          <DataField>AccountNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AccountName_PropertyCostAllocationLines">
+          <DataField>AccountName_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Description_PropertyCostAllocationLines">
+          <DataField>Description_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Amount_PropertyCostAllocationLines">
+          <DataField>Amount_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AllocatedAmount_PropertyCostAllocationLines">
+          <DataField>AllocatedAmount_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="Allocation_PropertyCostAllocationLines">
+          <DataField>Allocation_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="TenantNo_PropertyCostAllocationLines">
+          <DataField>TenantNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="TenantName_PropertyCostAllocationLines">
+          <DataField>TenantName_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="LeaseNo_PropertyCostAllocationLines">
+          <DataField>LeaseNo_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="AssignedtoInvoice_PropertyCostAllocationLines">
+          <DataField>AssignedtoInvoice_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="ChargeCode_PropertyCostAllocationLines">
+          <DataField>ChargeCode_PropertyCostAllocationLines</DataField>
+        </Field>
+        <Field Name="ChargeName_PropertyCostAllocationLines">
+          <DataField>ChargeName_PropertyCostAllocationLines</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

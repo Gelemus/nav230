@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address2">
+          <DataField>CompanyInfo_Address2</DataField>
+        </Field>
+        <Field Name="pic">
+          <DataField>pic</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Phone">
+          <DataField>CompanyInfo_Phone</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Fax">
+          <DataField>CompanyInfo_Fax</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Picture">
+          <DataField>CompanyInfo_Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Email">
+          <DataField>CompanyInfo_Email</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Web">
+          <DataField>CompanyInfo_Web</DataField>
+        </Field>
+        <Field Name="DocumentNo_FDProcessing">
+          <DataField>DocumentNo_FDProcessing</DataField>
+        </Field>
+        <Field Name="FDAmount_FDProcessing">
+          <DataField>FDAmount_FDProcessing</DataField>
+        </Field>
+        <Field Name="FDAmount_FDProcessingFormat">
+          <DataField>FDAmount_FDProcessingFormat</DataField>
+        </Field>
+        <Field Name="FDAccount_FDProcessing">
+          <DataField>FDAccount_FDProcessing</DataField>
+        </Field>
+        <Field Name="FDAccountName_FDProcessing">
+          <DataField>FDAccountName_FDProcessing</DataField>
+        </Field>
+        <Field Name="FDMaturityDate_FDProcessing">
+          <DataField>FDMaturityDate_FDProcessing</DataField>
+        </Field>
+        <Field Name="FixedDepositStatus_FDProcessing">
+          <DataField>FixedDepositStatus_FDProcessing</DataField>
+        </Field>
+        <Field Name="FixedDepositStartDate_FDProcessing">
+          <DataField>FixedDepositStartDate_FDProcessing</DataField>
+        </Field>
+        <Field Name="FixedDuration_FDProcessing">
+          <DataField>FixedDuration_FDProcessing</DataField>
+        </Field>
+        <Field Name="ExpectedMaturityDate_FDProcessing">
+          <DataField>ExpectedMaturityDate_FDProcessing</DataField>
+        </Field>
+        <Field Name="Interestrate_FDProcessing">
+          <DataField>Interestrate_FDProcessing</DataField>
+        </Field>
+        <Field Name="Interestrate_FDProcessingFormat">
+          <DataField>Interestrate_FDProcessingFormat</DataField>
+        </Field>
+        <Field Name="InterestEarned_FDProcessing">
+          <DataField>InterestEarned_FDProcessing</DataField>
+        </Field>
+        <Field Name="InterestEarned_FDProcessingFormat">
+          <DataField>InterestEarned_FDProcessingFormat</DataField>
+        </Field>
+        <Field Name="LastInterestEarnedDate_FDProcessing">
+          <DataField>LastInterestEarnedDate_FDProcessing</DataField>
+        </Field>
+        <Field Name="ExpectedInterestOnTermDep_FDProcessing">
+          <DataField>ExpectedInterestOnTermDep_FDProcessing</DataField>
+        </Field>
+        <Field Name="ExpectedInterestOnTermDep_FDProcessingFormat">
+          <DataField>ExpectedInterestOnTermDep_FDProcessingFormat</DataField>
+        </Field>
+        <Field Name="UntranferedInterest_FDProcessing">
+          <DataField>UntranferedInterest_FDProcessing</DataField>
+        </Field>
+        <Field Name="UntranferedInterest_FDProcessingFormat">
+          <DataField>UntranferedInterest_FDProcessingFormat</DataField>
+        </Field>
+        <Field Name="InterestAmount">
+          <DataField>InterestAmount</DataField>
+        </Field>
+        <Field Name="InterestAmountFormat">
+          <DataField>InterestAmountFormat</DataField>
+        </Field>
+        <Field Name="STARTDATE">
+          <DataField>STARTDATE</DataField>
+        </Field>
+        <Field Name="ENDDATE">
+          <DataField>ENDDATE</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="PayrollSetupEmployerPINNo">
+          <DataField>PayrollSetupEmployerPINNo</DataField>
+        </Field>
+        <Field Name="EMPLOYERSNAMEPayrollSetupEmployerName">
+          <DataField>EMPLOYERSNAMEPayrollSetupEmployerName</DataField>
+        </Field>
+        <Field Name="PayrollSetupEmployerName">
+          <DataField>PayrollSetupEmployerName</DataField>
+        </Field>
+        <Field Name="Year">
+          <DataField>Year</DataField>
+        </Field>
+        <Field Name="EmployeeGlobalDimension1Code">
+          <DataField>EmployeeGlobalDimension1Code</DataField>
+        </Field>
+        <Field Name="ColumnD20">
+          <DataField>ColumnD20</DataField>
+        </Field>
+        <Field Name="ColumnD20Format">
+          <DataField>ColumnD20Format</DataField>
+        </Field>
+        <Field Name="ColumnL">
+          <DataField>ColumnL</DataField>
+        </Field>
+        <Field Name="ColumnLFormat">
+          <DataField>ColumnLFormat</DataField>
+        </Field>
+        <Field Name="ColumnL1">
+          <DataField>ColumnL1</DataField>
+        </Field>
+        <Field Name="ColumnL1Format">
+          <DataField>ColumnL1Format</DataField>
+        </Field>
+        <Field Name="ColumnD201">
+          <DataField>ColumnD201</DataField>
+        </Field>
+        <Field Name="ColumnD201Format">
+          <DataField>ColumnD201Format</DataField>
+        </Field>
+        <Field Name="ColumnLINTPENALTY">
+          <DataField>ColumnLINTPENALTY</DataField>
+        </Field>
+        <Field Name="ColumnLINTPENALTYFormat">
+          <DataField>ColumnLINTPENALTYFormat</DataField>
+        </Field>
+        <Field Name="INTPENALTY">
+          <DataField>INTPENALTY</DataField>
+        </Field>
+        <Field Name="INTPENALTYFormat">
+          <DataField>INTPENALTYFormat</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="ColumnL2">
+          <DataField>ColumnL2</DataField>
+        </Field>
+        <Field Name="ColumnL2Format">
+          <DataField>ColumnL2Format</DataField>
+        </Field>
+        <Field Name="EmployeeFirstNameEmployeeMiddleNameEmployeeLastName">
+          <DataField>EmployeeFirstNameEmployeeMiddleNameEmployeeLastName</DataField>
+        </Field>
+        <Field Name="PinCode">
+          <DataField>PinCode</DataField>
+        </Field>
+        <Field Name="ColumnD202">
+          <DataField>ColumnD202</DataField>
+        </Field>
+        <Field Name="ColumnD202Format">
+          <DataField>ColumnD202Format</DataField>
+        </Field>
+        <Field Name="EmployeeNo">
+          <DataField>EmployeeNo</DataField>
+        </Field>
+        <Field Name="Payroll_Header_Payroll_ID">
+          <DataField>Payroll_Header_Payroll_ID</DataField>
+        </Field>
+        <Field Name="Payroll_Header_Employee_no_">
+          <DataField>Payroll_Header_Employee_no_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
